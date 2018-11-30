@@ -7,28 +7,29 @@ include 'header.php';
 <html>
 <head>
 	<title>PvPTemple - Support</title>
-    <link rel="stylesheet" type="text/css" href="support.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/support.css">
 </head>
 
     <?php
 
-    function get_name($uuid) {
 
-        $uuid = str_replace("-", "", $_SESSION['uuid']);
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        $json_response = file_get_contents('https://api.minetools.eu/uuid/' . $uuid);
-
-        $obj = json_decode($json_response);
-
-    return $obj->name;
-}
-
+        if(isset($_POST['reply-submit'])) {
+            require 'reply-create.php';
+        } elseif(isset($_POST['accept-submit'])) {
+             require 'accept-support.php';
+        } elseif(isset($_POST['deny-submit'])) {
+            require 'deny-support.php';
+        }
+    }
+    
     ?>
 
-<body>
+<body style="background-color: #ffffe5;">
 
-    <div class="jumbotron text-center">
-      <h1>Support Tickets</h1>
+    <div class="jumbotron">
     </div>
 
     <?php
@@ -62,9 +63,10 @@ include 'header.php';
 
         $query = "SELECT * FROM ticket WHERE id='$id'";
         $result = mysqli_query($connection, $query);
+    
         $rows = mysqli_num_rows($result);
 
-        if($rows < 1) {
+        if(!$result || $rows < 1) {
     ?>
 
     <h3>There are no support ticket with that ID!</h3>
@@ -76,14 +78,162 @@ include 'header.php';
       $info = mysqli_fetch_assoc($result);
     ?>
 
+        <div class="wrapper" style="background-color: #ffffe5;">
+            
+            <div class="title-wrapper" style="background-color: white;">
+                <div class="title">
+                    <p id="title"><?php echo($info['title']); ?></p>
+                    <?php
+                        if($info['resolved'] == -1) {
+                    ?>
+                     <p id="resolved" style="background-color: #f2c521;">Pending</p>
+                     
+                    <?php 
+                        } elseif($info['resolved'] == 0) {     
+                    ?>
+                    
+                    <p id="resolved" style="background-color: #f25f54;">Denied</p>
+                    
+                    <?php 
+                        } elseif($info['resolved'] == 1) {  
+                     ?> 
+                    
+                    <p id="resolved" style="background-color: #7fc47f;">Accepted</p>
+                    
+                    <?php 
+                        }
+                    ?> 
+                            
+                </div>
+            </div>
+            
+            <div class="reply-wrapper" style="background-color: white;"> 
+                <div class="user">
+                    <ul class="user-info">
+                        <li><img src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=80&default=MHF_Steve&overlay"></li>
+                        <li id="user"><a href="user.php?id=<?php echo($info['uuid']); ?>"><?php echo(get_name($info['uuid'])); ?></a></li>
+                        <li><?php echo($info['date']) ?></li>
+                    </ul>
+                </div>
+                
+                <div class="reply">
+                    <ul class="reply-list">
+                        <li><p class="text"><?php echo($info['body']); ?></p></li>
+                    </ul>
+                </div>
+            </div> 
+            
+            <?php
+                if($info['resolved'] < 0) {
+            ?>
+            
+            <div class="button-wrapper">
+                <form action="accept-support.php?id=<?php echo($info['id']) ?>" method="POST">
+                    <button type="submit" class="accept-button" name="accept-submit">Accept</button>     
+                </form>
 
-    <div class="container">
-        <h3>Ticket created by <a href="user.php?id=<?php echo($info['uuid']) ?>"><?php echo(get_name($info['uuid'])) ?></a></h3>
-        <br>
-        <h4>Title: <?php echo($info['title']); ?></h4>
-        <br>
-        <p>Body: <?php echo($info['body']); ?></p>
-    </div>
+                <form action="deny-support.php?id=<?php echo($info['id']) ?>" method="POST">
+                    <button type="submit" class="deny-button" name="deny-submit">Deny</button>
+                </form>
+            </div>
+            <br>
+            <?php               
+                } elseif($info['resolved'] == 0) {
+            ?>
+                <p id="accepted-message">Denied by <?php echo(get_name($info['resolved_uuid'])) ?></p>
+    
+            <?php
+              
+                } elseif($info['resolved'] == 1) {
+              
+            ?>
+                <p id="accepted-message">Accepted by <?php echo(get_name($info['resolved_uuid'])) ?></p>
+            <?php
+            
+                }
+            ?>
+            
+            <br>
+            <hr>
+            <br>
+           
+            <?php
+                
+            if($info['resolved'] < 0) {
+                
+            ?>
+            
+            <form action="reply-create.php?id=<?php echo($info['id']) ?>" method="POST">
+
+                <textarea class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea>
+
+                <button type="submit" class="reply-button" name="reply-submit">Reply</button>
+                <br>
+                 <br>
+            </form>
+            
+            <?php
+            } else {
+            ?>
+            
+<!--
+            <form action="reply-create.php?id=<?php echo($info['id']) ?>" method="POST">
+
+                <textarea disabled class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea>
+-->
+
+          <!--      <button type="submit" class="reply-button" name="reply-submit">Reply</button>
+                <br>-->
+<!--                 <br>
+            </form>  
+            -->
+            <?php
+            }
+            ?>
+        </div>
+  
+
+    
+        <?php
+            
+      
+            
+            $query = "SELECT * FROM replies WHERE tid='$id'";
+            $result = mysqli_query($connection, $query);
+    
+            $rows = mysqli_num_rows($result);
+            
+                    if(!$result || $rows < 1) {
+            ?>
+            <?php
+                    exit();
+                }
+            
+              while($reply = mysqli_fetch_assoc($result)) {
+                  
+            ?>
+            <div class="wrapper">
+                <div class="reply-wrapper"> 
+                    <div class="user">
+                        <ul class="user-info">
+                            <li><img src="https://crafatar.com/avatars/<?php echo($reply['uuid']); ?>?size=80&default=MHF_Steve&overlay"></li>
+                            <li id="user"><a href="user.php?id=<?php echo($reply['uuid']); ?>"><?php echo(get_name($reply['uuid'])); ?></a></li>
+                            <li><?php echo($reply['date']); ?></li>
+                        </ul>
+                    </div>
+
+                    <div class="reply">
+                        <ul class="reply-list">
+                            <li><p class="text"><?php echo($reply['text']); ?></p></li>
+                        </ul>
+
+                    </div>
+                </div> 
+            </div>
+            <?php
+              }
+            ?>
+    
 </body>
 
 </html>

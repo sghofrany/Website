@@ -3,12 +3,12 @@ session_start();
 require 'support-database.php';
 
 if(!isset($_POST['support-submit'])) {
-     header("Location: support.php");
+    header("Location: support.php");
     exit();
 }
 
 if(empty($_POST['support-title']) || empty($_POST['support-body'])) {
-     header("Location: support.php");
+    header("Location: support.php");
     exit();
 }
 
@@ -20,24 +20,46 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 $uuid = $_SESSION['uuid'];
 $title = $_POST['support-title'];
 $body = $_POST['support-body'];
-$date = date("Y-m-d H:m:s");
+$date = "Date";
+$resolved = -1;
+$resolved_uuid = "";
 
+/*
 $exists = "SELECT * FROM ticket WHERE uuid='$uuid'";
 
 $result = mysqli_query($connection, $exists);
 $rows = mysqli_num_rows($result);
+*/
 
-if($rows > 0) {
-    //header("Location: support.php");
+/*if($rows > 0) {
+    
+    while($ticket = mysqli_fetch_assoc($result)) {
+        
+        if($ticket['resolved'] < 0) {
+            
+            exit();
+        }
+        
+    }
+    
+    header("Location: support.php");
+    exit();
+}*/
+
+echo("1");
+
+$query = "INSERT INTO ticket (uuid, title, body, date, resolved, resolved_uuid) VALUES ('$uuid', '$title', '$body', '$date', '$resolved', '$resolved_uuid')";
+
+//mysqli_query($connection, $query);
+
+echo("2");
+
+if($connection->query($query) === TRUE) {
+    echo("");
+    header("Location: support-list.php");
+    $connection->close();
     exit();
 }
 
-//echo("<br>" . $uuid . "<br>" . $title . "<br>" . $body . "<br>" . $date);
-
-$query = "INSERT INTO ticket (uuid, title, body, date) VALUES ('$uuid', '$title', '$body', '$date')";
-
-mysqli_query($connection, $query);
-
 $connection->close();
 
-header("Location: support-list.php");

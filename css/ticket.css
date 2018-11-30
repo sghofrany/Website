@@ -1,0 +1,86 @@
+.ticket-wrapper {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+    border-radius: 3px;
+    display: flex;
+    
+    margin-bottom: 10px;
+    
+}
+
+.ticket-title {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    
+}
+
+.ticket-sender {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    
+    margin-left: auto;
+}
+
+.ticket-status {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    margin-left: auto;
+}
+
+.ticket-title p {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.ticket-sender p {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+        
+/*    margin-left: 100px;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    
+}
+
+.ticket-status p {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    padding-right: 10px;
+    
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+}
+
+table th {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+table td {
+    border: 1px solid #e2e2e2;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+

@@ -7,6 +7,7 @@ include 'header.php';
 <html>
 <head>
 	<title>PvPTemple</title>
+    <link rel="stylesheet" type="text/css" href="css/support.css">
 </head>
 
     <?php
@@ -22,20 +23,15 @@ include 'header.php';
 
 <body>
 
-    <div class="jumbotron text-center">
-      <h1>Support Tickets</h1>
+    <div class="jumbotron">
     </div>
 
     <?php
-
         if(!isset($_SESSION['status']) || $_SESSION['status'] == 0) {
-
     ?>
 
     <div class="container">
-
-        <h3>You need to be <a href="index.php">logged</a> in before making a support ticket!</h3>
-
+        <h3 style="text-align: center;">You need to be <a href="index.php">logged</a> in before making a support ticket!</h3>
     </div>
 
     <?php
@@ -52,16 +48,14 @@ include 'header.php';
 
           <div class="form-group">
             <label for="textAreaForm">Reason</label>
-            <textarea class="form-control" id="textAreaForm" rows="10" placeholder="Explain your reasoning behind this post" name="support-body"></textarea>
+            <textarea class="form-control" id="textAreaForm" rows="10" placeholder="Explain your reasoning behind this post" name="support-body">Reason: </textarea>
           </div>
 
-            <div class="col-xs-1">
-                <button type="submit" class="btn btn-primary" name="support-submit">Submit</button>
+         <div class="col-xs-1">
+            <button type="submit" class="btn btn-primary" name="support-submit">Submit</button>
 
-                <a onclick="location.href='support-list.php'" class="btn btn-warning">Current Tickets</a>
-            </div>
-
-
+            <a onclick="location.href='support-list.php'" class="btn btn-warning">Current Tickets</a>
+         </div>
 
         </form>
     </div>

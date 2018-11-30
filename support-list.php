@@ -7,21 +7,60 @@ include 'header.php';
 <html>
 <head>
 	<title>PvPTemple - Support</title>
+    <link rel="stylesheet" type="text/css" href="css/support.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/ticket.css">
 </head>
 
-<body>
+<?php
 
-    <div class="jumbotron text-center">
-      <h1>Support Tickets</h1>
+    function get_resolved($resolved) {
+        
+        if($resolved == 0) {
+            return "Denied";
+        } elseif($resolved == 1) {
+            return "Accepted";
+        }
+        
+        
+        return "Pending";
+        
+    }
+    
+?>
+    
+<body style="background-color: white;">
+
+    <div class="jumbotron">
     </div>
 
-    <?php
+<!--
+   <div class="wrapper" style="background-color: #ffffe5;">
 
+        <div class="ticket-wrapper" style="background-color: white;">
+           
+            <div class="ticket-title">
+                <p>Title</p>
+            </div>
+
+            <div class="ticket-sender">
+                <p>Irantwomiles</p>
+            </div>
+            
+            <div class="ticket-status">
+                <p>Pending</p>
+            </div>
+        </div>
+    
+    </div>
+-->
+   
+    <?php
         if(!isset($_SESSION['status']) || $_SESSION['status'] == 0) {
 
     ?>
 
-    <div class="container">
+    <div class="wrapper" style="text-align: center;">
 
         <h3>You need to be <a href="index.php">logged</a> in before viewing support tickets!</h3>
 
@@ -54,23 +93,42 @@ include 'header.php';
     ?>
 
 
-    <div class="container">
+    <div class="wrapper">
 
-        <table class="table table-bordered">
-            <th>ID</th>
-            <th>UUID</th>
+        <table style="background-color:white;">
             <th>Title</th>
+            <th>User</th>
             <th>Date</th>
+            <th>Status</th>
     <?php
 
         while($ticket = mysqli_fetch_assoc($result)) {
     ?>
 
             <tr>
-                <td><a href="support-view.php?id=<?php echo($ticket['id']) ?>"><?php echo($ticket['id']) ?></a></td>
-                <td><?php echo($ticket['uuid']) ?></td>
-                <td><?php echo($ticket['title']) ?></td>
-                <td><?php echo($ticket['date']) ?></td>
+               
+               
+                <td><a href="support-view.php?id=<?php echo($ticket['id']) ?>"><?php echo($ticket['title']); ?></a></td>
+                <td><?php echo(get_name($ticket['uuid'])); ?></td>
+                <td><?php echo($ticket['date']); ?></td>
+                
+                <?php
+                
+                if($ticket['resolved'] == -1) {
+            
+                ?>
+                <td style="background-color: #f2c521; color: white"><?php echo(get_resolved($ticket['resolved'])); ?></td>
+                <?php
+                    } elseif($ticket['resolved'] == 0) {
+                ?>
+                <td style="background-color: #f25f54; color: white;"><?php echo(get_resolved($ticket['resolved'])); ?></td>
+                <?php
+                    } elseif($ticket['resolved'] == 1) {
+                ?>  
+                 <td style="background-color: #7fc47f; color: white;"><?php echo(get_resolved($ticket['resolved'])); ?></td>
+                <?php
+                }
+                ?>
             </tr>
 
 

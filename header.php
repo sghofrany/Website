@@ -6,8 +6,7 @@ session_start();
 <html>
 <head>
 	<title>PvPTemple</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
@@ -22,7 +21,39 @@ session_start();
 </head>
 
    <?php
+    
+    if(!isset($_SESSION['usernames'])) {
+         $_SESSION['usernames'] = array();
+    }
+   
+    function get_name($uuid) {
 
+        return "Name";
+        
+        if(array_key_exists($uuid, $_SESSION['usernames'])) {
+            return $_SESSION['usernames'][$uuid];
+        }
+        
+        
+        $clean_uuid = str_replace("-", "", $uuid);
+
+        $json_response = file_get_contents('https://api.minetools.eu/uuid/' . $clean_uuid);
+
+        $obj = json_decode($json_response);
+
+        $_SESSION['usernames'][$uuid] = $obj->name; 
+        
+        return $obj->name;
+    }
+    
+    function get_status() {
+        if(isset($_SESSION['status'])) {
+            return $_SESSION['status'];
+        }
+        
+        return 0;
+    }
+    
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if(isset($_POST['login'])) {
@@ -45,7 +76,7 @@ session_start();
 
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
-       <a class="navbar-brand ml-" href="#">Logo</a>
+       <a class="navbar-brand ml-" href="index.php"><img src="images/X5-2.png"></a>
         <ul class="navbar-nav">
 
             <li class="nav-item">
@@ -53,11 +84,11 @@ session_start();
             </li>
         </ul>
 
-    <?php
+        <?php
           if(isset($_SESSION['status'])) {
               if($_SESSION['status'] == 1) {
 
-    ?>
+        ?>
 
         <!-- USER IS LOGGED IN -->
         <a class="navbar-brand ml-auto" href="#">

@@ -1,0 +1,24 @@
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px; 0px; 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*TITLE*/
+
+.header-title-wrapper {    
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px; 0px; 0px;
+    
+    height: 20vh; 
+    width: 100vw;
+    background-image: url(images/pvptemple.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.main-header-wrapper {
+    height: 12vh;
+}

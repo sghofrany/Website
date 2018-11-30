@@ -1,0 +1,146 @@
+.wrapper {
+    margin-left: 12vw;
+    margin-right: 12vw; 
+}
+
+.reply-wrapper {
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    
+    min-height: 240px;
+}
+
+.user {
+    display: flex;
+    float: left;
+}
+
+.reply {
+    display: flex;
+}
+
+.reply-list {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.user-info {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+    
+    padding: 30px 30px 30px 30px;
+    list-style: none;
+    height: 200px;
+    width: 150px;
+}
+
+.reply-list {
+    padding: 0px 0px 0px 0px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.reply-list li {
+    list-style: none;
+}
+
+.reply-list p {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.title-wrapper {
+    
+    border-radius: 3px;
+    margin: 0px 0px 0px 0px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+    padding-left: 20px;
+    /*padding-right: 20px;*/
+/*    padding-top: 10px;
+    padding-bottom: 10px;*/
+
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.title-wrapper .title #title {
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
+    
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.title-wrapper .title #resolved {
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
+    float: right;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    color: white;
+
+}
+
+#user {
+    margin-top: 5px;
+}
+
+.button-wrapper {
+    display: flex;
+    float: right;
+}
+
+.accept-button {
+    text-align: center;
+    margin-right: 5px;
+    background-color: #7fc47f;
+    color: white;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    
+    border-radius: 3px;
+}
+
+.deny-button {
+    text-align: center;
+    background-color: #f25f54;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    
+    border: none;
+    
+    border-radius: 3px;
+}
+
+.reply-button {
+    text-align: center;
+    background-color: #007fc4;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    
+    margin-top: 5px;
+    
+    border: none;
+    
+    float: right;
+    
+    border-radius: 3px;
+}
+
+#accepted-message {
+    float: right;
+}
+

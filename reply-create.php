@@ -1,0 +1,33 @@
+<?php
+session_start();
+require 'support-database.php';
+
+if(!isset($_POST['reply-submit'])) {
+     header("Location: support-list.php");
+    exit();
+}
+
+if(empty($_POST['reply-body'])) {
+    exit();
+}
+
+if($_SERVER['REQUEST_METHOD'] != 'POST') {
+    header("Location: support.php");
+    exit();
+}
+
+$uuid = $_SESSION['uuid'];
+$tid = $_GET['id'];
+$body = $_POST['reply-body'];
+
+$date = date("Y-m-d H:m:s");
+
+$query = "INSERT INTO replies (tid, uuid, text, date) VALUES ('$tid','$uuid', '$body', '$date')";
+
+mysqli_query($connection, $query);
+
+echo($tid);
+
+$connection->close();
+
+header("Location: support-view.php?id=" . $tid);

@@ -6,9 +6,9 @@ include 'header.php';
 <html>
 <head>
 	<title>PvPTemple</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+<!--    <link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
     <!-- jQuery library -->
@@ -42,11 +42,9 @@ include 'header.php';
 ?>
 
 <body>
-
-    <div class="jumbotron text-center">
-      <h1>PvPTemple</h1>
-      <p>Home of competitive PvP!</p>
+    
+    <div class="jumbotron" style="border-radius: 0px;">
     </div>
-
+    
 </body>
 </html>
