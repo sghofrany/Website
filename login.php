@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'database.php';
+require 'database/database.php';
 
 if(isset($_POST['login']) == FALSE) {
     header("Location: index.php");

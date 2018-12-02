@@ -1,0 +1,120 @@
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Navigation bar */
+
+.navigation {
+    background-color: #262626;
+    
+    margin: 0px 0px 0px 0px;
+
+    display: flex;
+
+    width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.left-nav {
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    width: 50%;
+
+    list-style: none;
+
+    margin-left: 10%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    align-items: center;
+
+}
+
+.right-nav {
+    
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    width: 50%;
+
+    list-style: none;
+
+    margin-right: 10%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.right-li {
+    float: right;
+
+    color: white;
+}
+
+.left-li {
+    float: left;
+
+    margin-right: 3%;
+
+    color: white;
+}
+
+.left-li a, .right-li a {
+    color: white;
+
+    transition: color 300ms ease-out;
+}
+
+.left-li a:hover, .right-li a:hover {
+    color: #F7C204;
+    text-decoration: none;
+}
+
+/* Banner */
+
+.banner {
+
+    text-align: center;
+    
+    background-color: #F7C204;
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+
+}
+
+.banner-text {
+
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    font-size: 35px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+
+    color: white;
+
+    border-bottom: 2px solid #262626;
+    text-shadow: 2px 2px #262626;
+}
+
+.info-text{
+    text-align: center;
+
+    margin-top: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}

@@ -74,7 +74,7 @@ include 'header.php';
 
     <?php
 
-        require 'support-database.php';
+        require 'database/support-database.php';
 
         $query = "SELECT * FROM ticket";
         $result = mysqli_query($connection, $query);

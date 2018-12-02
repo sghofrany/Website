@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'support-database.php';
+require 'database/support-database.php';
 
 if(!isset($_POST['deny-submit'])) {
      header("Location: support.php");

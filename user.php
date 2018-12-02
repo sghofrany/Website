@@ -12,19 +12,46 @@
     </head> 
      
     <body>
-        <div>
-            <p>testing</p>
-        </div>
+
+        <?php
+        if(!isset($_GET['id'])) {
+        ?>
+            <div class="wrapper">That user could not be found</div>
+        <?php
+        exit();
+        } else {
+            require 'database/database.php';
+
+            $id = $_GET['id'];
+
+            $query = "SELECT * FROM user WHERE id='$id'";
+            $result = mysqli_query($connection, $query);
+            $rows = mysqli_num_rows($result);
+
+            if($rows < 0) {
+        ?>
         
+        <div class="wrapper">That user could not be found</div>
+
+        <?php
+                exit();
+            }
+
+            $info = mysqli_fetch_assoc($result);
+        }
+        ?>
+
+
         <div class="wrapper">
         
                 <div class="user">
                     <div class="user-image">
-                        <img class="image" src="https://crafatar.com/avatars/8667ba71-b85a-4004-af54-457a9734eed7?size=128&default=MHF_Steve&overlay">
+                    <!-- <img src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=128&default=MHF_Steve&overlay"> -->
+                    <img class="image" src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=128&default=MHF_Steve&overlay">
                     </div>
 
                     <div class="user-text">
-                        <p>Irantwomiles</p>
+                        <p><?php echo(get_name($info['uuid'])); ?></p>
                     </div>
 
                     <div class="user-rank">

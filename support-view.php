@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+require_once 'libs/Parsedown.php';
 ?>
 
 
@@ -12,7 +13,7 @@ include 'header.php';
 </head>
 
     <?php
-
+    $parse = new Parsedown();
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -27,9 +28,11 @@ include 'header.php';
     
     ?>
 
-<body style="background-color: #ffffe5;">
+<body style="background-color: #f2f3f4;">
 
-    <div class="jumbotron">
+    <div>
+    
+    
     </div>
 
     <?php
@@ -52,7 +55,7 @@ include 'header.php';
 
     <?php
 
-        require 'support-database.php';
+        require 'database/support-database.php';
 
         if(!isset($_GET['id'])) {
             header("Location: support-list.php");
@@ -78,7 +81,7 @@ include 'header.php';
       $info = mysqli_fetch_assoc($result);
     ?>
 
-        <div class="wrapper" style="background-color: #ffffe5;">
+        <div class="wrapper" style="background-color: #f2f3f4;">
             
             <div class="title-wrapper" style="background-color: white;">
                 <div class="title">
@@ -118,7 +121,7 @@ include 'header.php';
                 
                 <div class="reply">
                     <ul class="reply-list">
-                        <li><p class="text"><?php echo($info['body']); ?></p></li>
+                        <li><p class="text"><?php echo($parse->text($info['body'])); ?></p></li>
                     </ul>
                 </div>
             </div> 
@@ -173,22 +176,7 @@ include 'header.php';
             </form>
             
             <?php
-            } else {
-            ?>
-            
-<!--
-            <form action="reply-create.php?id=<?php echo($info['id']) ?>" method="POST">
-
-                <textarea disabled class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea>
--->
-
-          <!--      <button type="submit" class="reply-button" name="reply-submit">Reply</button>
-                <br>-->
-<!--                 <br>
-            </form>  
-            -->
-            <?php
-            }
+            } 
             ?>
         </div>
   
@@ -212,8 +200,8 @@ include 'header.php';
               while($reply = mysqli_fetch_assoc($result)) {
                   
             ?>
-            <div class="wrapper">
-                <div class="reply-wrapper"> 
+            <div class="wrapper" style="background-color: #f2f3f4;">
+                <div class="reply-wrapper" style="background-color: white;"> 
                     <div class="user">
                         <ul class="user-info">
                             <li><img src="https://crafatar.com/avatars/<?php echo($reply['uuid']); ?>?size=80&default=MHF_Steve&overlay"></li>
@@ -224,7 +212,7 @@ include 'header.php';
 
                     <div class="reply">
                         <ul class="reply-list">
-                            <li><p class="text"><?php echo($reply['text']); ?></p></li>
+                            <li><p class="text"><?php echo($parse->text($reply['text'])); ?></p></li>
                         </ul>
 
                     </div>

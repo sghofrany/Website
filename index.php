@@ -1,13 +1,16 @@
 <?php
-include 'header.php';
+//include 'header.php';
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>PvPTemple</title>
-<!--    <link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
@@ -43,8 +46,30 @@ include 'header.php';
 
 <body>
     
-    <div class="jumbotron" style="border-radius: 0px;">
+    <div class="navigation">
+        <ul class="left-nav">
+            <li class="left-li"><a href="#">PvPTemple</a></li>
+            <li class="left-li"><a href="#">Shop</a></li>
+            <li class="left-li"><a href="#">Support</a></li>
+        </ul>
+
+        <ul class="right-nav">
+            <li class="right-li"><a href="#">Login</a></li>
+        </ul>
+    </div>
+
+
+    <div class="banner">
+        <label class="banner-text">pvptemple</label>
     </div>
     
+    <div class="wrapper">
+
+        <div class="info">
+            <p class="info-text">Some text about PvPTemple</p>
+        </div>
+
+    </div>
+
 </body>
 </html>
