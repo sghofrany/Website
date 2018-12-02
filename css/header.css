@@ -5,6 +5,7 @@ body {
 /* Navigation bar */
 
 .navigation {
+    /* font-family: 'Oswald', sans-serif; */
     background-color: #262626;
     
     margin: 0px 0px 0px 0px;
@@ -75,6 +76,45 @@ body {
     text-decoration: none;
 }
 
+.logout-button {
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    background-color: #262626;
+    border: none;
+
+    float: right;
+
+    margin-right: 3%;
+    margin-left: 3%;
+    color: white;
+
+    transition: color 300ms ease-out;
+}
+
+.logout-button:hover {
+    color: #F7C204;
+    cursor: pointer;
+}
+
+.right-li #alert {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    background-color: #262626;
+}
+
+#alert-count {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    margin-left: 1px;
+
+    font-size: 10px;
+    color: rgb(199, 13, 13);
+}
+
 /* Banner */
 
 .banner {
@@ -111,7 +151,12 @@ body {
     text-shadow: 2px 2px #262626;
 }
 
-.info-text{
+.banner-subtext {
+    display: block;
+}
+
+
+.info-text {
     text-align: center;
 
     margin-top: 30px;

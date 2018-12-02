@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+<ul class="reply-list">
+<li><p class="text"><?php echo($parse->text($reply['text'])); ?></p></li>
+</ul>
 
 print_r($_SESSION['usernames']);
 
