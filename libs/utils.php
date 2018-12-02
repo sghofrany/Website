@@ -36,3 +36,23 @@ function get_name($uuid) {
     
     return $obj->name;
 }
+
+function check_tag($text) {
+
+    $words = explode(" ", $text);
+
+    foreach($words as $word) {
+
+        $pos = strpos($word, '@');
+
+        if($pos !== false) {
+
+            if($pos === 0) {
+                $text = str_replace($word, "<a href='#'>$word</a>", $text);
+            }
+        }
+    }
+
+    return $text;
+
+}

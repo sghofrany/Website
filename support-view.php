@@ -119,13 +119,32 @@ session_start();
         </div>
     </div>
 
+    <!-- <div class="wrapper" style="background-color: #f2f3f4;">
+		<div class="reply-wrapper" style="background-color: white;"> 
+			<div class="user">
+				<ul class="user-info">
+					<li><img src="https://crafatar.com/avatars/?size=80&default=MHF_Steve&overlay"></li>
+					<li id="user"><a href="#">User</a></li>
+					<li>Date</li>
+				</ul>
+			</div>
+
+			<div class="reply">
+				
+				<p>aaaaaaaaaaaaaaaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaAaaaaaA</p>
+
+			</div>
+		</div> 
+	</div> -->
+
     <?php
 
         if(!isset($_SESSION['status']) || $_SESSION['status'] == 0) {
 
     ?>
 
-    <div class="container">
+
+    <div class="warpper">
 
         <h3>You need to be <a href="index.php">logged</a> in before viewing support tickets!</h3>
 
@@ -197,16 +216,13 @@ session_start();
             <div class="reply-wrapper" style="background-color: white;"> 
                 <div class="user">
                     <ul class="user-info">
-                        <li><img src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=80&default=MHF_Steve&overlay"></li>
+                        <li><img id="image" src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=80&default=MHF_Steve&overlay"></li>
                         <li id="user"><a href="user.php?id=<?php echo($info['uuid']); ?>"><?php echo(get_name($info['uuid'])); ?></a></li>
                         <li><?php echo($info['date']) ?></li>
                     </ul>
                 </div>
-                
-                <div class="reply">
-                    <ul class="reply-list">
-                        <li><p class="text"><?php echo($parse->text($info['body'])); ?></p></li>
-                    </ul>
+                <div class="reply">   
+                        <p><?php echo($parse->text($info['body'])); ?></p>
                 </div>
             </div> 
             
@@ -265,11 +281,8 @@ session_start();
         </div>
   
 
-    
         <?php
-            
-      
-            
+                  
             $query = "SELECT * FROM replies WHERE tid='$id'";
             $result = mysqli_query($connection, $query);
     
@@ -288,18 +301,16 @@ session_start();
                 <div class="reply-wrapper" style="background-color: white;"> 
                     <div class="user">
                         <ul class="user-info">
-                            <li><img src="https://crafatar.com/avatars/<?php echo($reply['uuid']); ?>?size=80&default=MHF_Steve&overlay"></li>
+                            <li><img id="image" src="https://crafatar.com/avatars/<?php echo($reply['uuid']); ?>?size=80&default=MHF_Steve&overlay"></li>
                             <li id="user"><a href="user.php?id=<?php echo($reply['uuid']); ?>"><?php echo(get_name($reply['uuid'])); ?></a></li>
                             <li><?php echo($reply['date']); ?></li>
                         </ul>
                     </div>
 
-                    <div class="reply">
-                        <ul class="reply-list">
-                            <li><p class="text"><?php echo($parse->text($reply['text'])); ?></p></li>
-                        </ul>
-
+                    <div class="reply">   
+                        <p><?php echo($parse->text(check_tag($reply['text']))); ?></p>
                     </div>
+            
                 </div> 
             </div>
             <?php
