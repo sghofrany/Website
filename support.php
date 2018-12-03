@@ -117,7 +117,7 @@ session_start();
         if(!isset($_SESSION['status']) || $_SESSION['status'] == 0) {
     ?>
 
-    <div class="container">
+    <div class="wrapper">
         <h3 style="text-align: center;">You need to be <a href="index.php">logged</a> in before making a support ticket!</h3>
     </div>
 
@@ -126,7 +126,7 @@ session_start();
         }
     ?>
 
-    <div class="container">
+    <div class="wrapper">
         <form action="support-create.php" method="POST">
           <div class="form-group">
             <label for="titleFrom">Title</label>
@@ -135,7 +135,7 @@ session_start();
 
           <div class="form-group">
             <label for="textAreaForm">Reason</label>
-            <textarea class="form-control" id="textAreaForm" rows="10" placeholder="Explain your reasoning behind this post" name="support-body">Reason: </textarea>
+            <textarea class="form-control" id="textAreaForm" rows="5" placeholder="Explain your reasoning behind this post" name="support-body"></textarea>
           </div>
 
          <div class="col-xs-1">

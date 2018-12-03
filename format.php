@@ -1,5 +1,7 @@
 <?php
     include "libs/utils.php";
+    include "libs/Parsedown.php";
+    $parse = new Parsedown();
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +39,7 @@
                 <li class="left-li"><a href="support.php">Support</a></li>
             </ul>
 
-        <ul class="right-nav">
+            <ul class="right-nav">
                 <?php
                     if(logged_in()) {
                 ?>
@@ -59,66 +61,14 @@
             </ul>
         </div>
 
-
         <div class="banner">
             <label class="banner-text">pvptemple</label>
-            <label class="banner-subtext">profile</label>
+            <label class="banner-subtext">formatting</label>
         </div>
-        <?php
-        if(!isset($_GET['id'])) {
-        ?>
-            <div class="wrapper">That user could not be found</div>
-        <?php
-        exit();
-        } else {
-            require 'database/database.php';
-
-            $id = $_GET['id'];
-
-            $query = "SELECT * FROM user WHERE id='$id'";
-            $result = mysqli_query($connection, $query);
-            $rows = mysqli_num_rows($result);
-
-            if($rows < 0) {
-        ?>
-        
-        <div class="wrapper">That user could not be found</div>
-
-        <?php
-                exit();
-            }
-
-            $info = mysqli_fetch_assoc($result);
-        }
-        ?>
-
 
         <div class="wrapper">
-        
-                <div class="user">
-                    <div class="user-image">
-                    <!-- <img src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=128&default=MHF_Steve&overlay"> -->
-                    <img class="image" src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=128&default=MHF_Steve&overlay">
-                    </div>
-
-                    <div class="user-text">
-                        <p><?php echo(get_name($info['uuid'])); ?></p>
-                    </div>
-
-                    <div class="user-rank">
-                        <p class="rank">Developer</p>
-                    </div>
-                </div>      
-         
-   
-            <div class="info">
-               <div class="user-stats">
-                    <label class="practice">Practice</label>
-                    <label class="uhc">UHC</label>
-                    <label class="skywars">Skywars</label>  
-               </div>
-            </div>
-            
+            <br>
+            <p  style="text-align: center;">You can visit <a href="https://en.support.wordpress.com/markdown-quick-reference/">this</a> website for quick information about Markdown language, or you can simply look up Markdown and follow a website of your choosing!</p>
         </div>
         
     </body>

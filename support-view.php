@@ -222,7 +222,7 @@ session_start();
                     </ul>
                 </div>
                 <div class="reply">   
-                        <p><?php echo($parse->text($info['body'])); ?></p>
+                    <p><?php echo($parse->text($info['body'])); ?></p>
                 </div>
             </div> 
             
