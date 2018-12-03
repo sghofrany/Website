@@ -56,3 +56,15 @@ function check_tag($text) {
     return $text;
 
 }
+
+function get_resolved($resolved) {
+        
+    if($resolved == 0) {
+        return "Denied";
+    } elseif($resolved == 1) {
+        return "Accepted";
+    }
+    
+    return "Pending";
+    
+}
