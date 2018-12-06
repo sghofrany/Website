@@ -81,8 +81,9 @@ session_start();
                     } else  {
                     
                 ?>
+
                 <li class="right-li"><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
-                
+            
                 <?php
                 }
                 ?>
@@ -119,6 +120,7 @@ session_start();
 
 
                             <button type="submit" class="btn btn-info" name="login">Login</button>
+
                         </form>
                     </div>
 

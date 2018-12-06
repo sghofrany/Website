@@ -60,7 +60,7 @@ body {
 .left-li {
     float: left;
 
-    margin-right: 3%;
+    margin-right: 5%;
 
     color: white;
 }
@@ -162,4 +162,33 @@ body {
     margin-top: 30px;
     font-family: 'Oswald', sans-serif;
     font-size: 25px;
+}
+
+ .right-nav #nav-mobile {
+    visibility: hidden;
+} 
+
+@media (max-width: 576px) {
+    
+    .right-nav {
+        width: 30%;
+    }
+
+    .left-nav { 
+        width: 70%;
+        border-right: 1px solid white;
+    }
+
+    .righ-li {
+        height: 100%;
+    }
+
+    .righ-left {
+        height: 100%;
+    }
+
+    #nav-mobile {
+        transition: visibility 300ms ease-in-out;
+    }
+
 }

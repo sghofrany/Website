@@ -41,7 +41,7 @@ require 'header.php';
 
     <div class="wrapper">
         <form action="support-create.php" method="POST">
-          <div class="form-group">
+          <div class="form-group" style="margin-top: 30px;">
             <label for="titleFrom">Title</label>
             <input type="text" class="form-control" id="titleFrom" placeholder="Title of your post" name="support-title">
           </div>
