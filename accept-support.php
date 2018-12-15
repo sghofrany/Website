@@ -1,9 +1,15 @@
 <?php
 session_start();
 require 'database/support-database.php';
+require 'libs/utils.php';
 
 if(!isset($_POST['accept-submit'])) {
      header("Location: support.php");
+    exit();
+}
+
+if(!has_permission($_SESSION['uuid'])) {
+    header("Location: support-list.php");
     exit();
 }
 

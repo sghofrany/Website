@@ -122,73 +122,76 @@ include 'header.php';
 
                     <div class="user-rank">
                     <?php
-                            if(get_rank($info['uuid']) === "Owner") {
+                        
+                        $player_rank = get_rank($info['uuid']);
+
+                            if($player_rank === "Owner") {
                         ?>
-                            <p id="owner"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="owner"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Developer") {
+                            } elseif($player_rank === "Developer") {
                         ?>
-                            <p id="developer"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="developer"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Platform-Admin") {
+                            } elseif($player_rank === "Platform-Admin") {
                         ?>
-                            <p id="plat-admin"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="plat-admin"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Senior-Admin") {
+                            } elseif($player_rank === "Senior-Admin") {
                         ?>
-                            <p id="senior-admin"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="senior-admin"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Admin") {
+                            } elseif($player_rank === "Admin") {
                         ?>
-                            <p id="admin"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="admin"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Senior-Mod") {
+                            } elseif($player_rank === "Senior-Mod") {
                         ?>
-                            <p id="senior-mod"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="senior-mod"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Mod") {
+                            } elseif($player_rank === "Mod") {
                         ?>
-                            <p id="mod"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="mod"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Partner") {
+                            } elseif($player_rank === "Partner") {
                         ?>
-                            <p id="partner"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="partner"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Famous") {
+                            } elseif($player_rank === "Famous") {
                         ?>
-                            <p id="famous"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="famous"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "YouTuber") {
+                            } elseif($player_rank === "YouTuber") {
                         ?>
-                            <p id="youtuber"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="youtuber"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Master") {
+                            } elseif($player_rank === "Master") {
                         ?>
-                            <p id="master"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="master"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Elite") {
+                            } elseif($player_rank === "Elite") {
                         ?>
-                            <p id="elite"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="elite"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Prime") {
+                            } elseif($player_rank === "Prime") {
                         ?>
-                            <p id="prime"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="prime"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Basic") {
+                            } elseif($player_rank === "Basic") {
                         ?>
-                            <p id="basic"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="basic"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Normal") {
+                            } elseif($player_rank === "Normal") {
                         ?>
-                            <p id="normal"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="normal"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Trainee") {
+                            } elseif($player_rank === "Trainee") {
                         ?>
-                            <p id="trainee"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="trainee"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Host") {
+                            } elseif($player_rank === "Host") {
                         ?>
-                            <p id="host"><?php echo(get_rank($info['uuid'])); ?></p>
+                            <p id="host"><?php echo($player_rank); ?></p>
                         <?php
                             }
                         ?>
@@ -203,7 +206,7 @@ include 'header.php';
             </div>
             
             <?php
-                if($info['resolved'] < 0) {
+                if($info['resolved'] < 0 && has_permission($_SESSION['uuid'])) {
             ?>
             
             <div class="button-wrapper">
@@ -294,69 +297,73 @@ include 'header.php';
 
                     <div class="user-rank">
                         <?php
-                            if(get_rank($reply['uuid']) === "Owner") {
+
+                        $player_rank = get_rank($reply['uuid']);
+
+
+                            if($player_rank === "Owner") {
                         ?>
-                            <p id="owner"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="owner"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Developer") {
+                            } elseif($player_rank === "Developer") {
                         ?>
-                            <p id="developer"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="developer"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Platform-Admin") {
+                            } elseif($player_rank === "Platform-Admin") {
                         ?>
-                            <p id="plat-admin"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="plat-admin"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Senior-Admin") {
+                            } elseif($player_rank === "Senior-Admin") {
                         ?>
-                            <p id="senior-admin"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="senior-admin"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Admin") {
+                            } elseif($player_rank === "Admin") {
                         ?>
-                            <p id="admin"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="admin"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Senior-Mod") {
+                            } elseif($player_rank === "Senior-Mod") {
                         ?>
-                            <p id="senior-mod"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="senior-mod"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Mod") {
+                            } elseif($player_rank === "Mod") {
                         ?>
-                            <p id="mod"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="mod"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Partner") {
+                            } elseif($player_rank === "Partner") {
                         ?>
-                            <p id="partner"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="partner"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Famous") {
+                            } elseif($player_rank === "Famous") {
                         ?>
-                            <p id="famous"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="famous"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "YouTuber") {
+                            } elseif($player_rank === "YouTuber") {
                         ?>
-                            <p id="youtuber"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="youtuber"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Master") {
+                            } elseif($player_rank === "Master") {
                         ?>
-                            <p id="master"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="master"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Elite") {
+                            } elseif($player_rank === "Elite") {
                         ?>
-                            <p id="elite"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="elite"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Prime") {
+                            } elseif($player_rank === "Prime") {
                         ?>
-                            <p id="prime"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="prime"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Basic") {
+                            } elseif($player_rank === "Basic") {
                         ?>
-                            <p id="basic"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="basic"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Normal") {
+                            } elseif($player_rank === "Normal") {
                         ?>
-                            <p id="normal"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="normal"><?php echo($player_rank); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Trainee") {
+                            } elseif($player_rank === "Trainee") {
                         ?>
-                            <p id="trainee"><?php echo(get_rank($reply['uuid'])); ?></p>
+                            <p id="trainee"><?php echo($player_rank); ?></p>
                         <?php
                             }
                         ?>

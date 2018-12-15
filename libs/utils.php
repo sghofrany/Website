@@ -2,12 +2,13 @@
 
 function get_rank($uuid) {
 
-    include 'database/rank-database.php';
+    require 'database/rank-database.php';
 
     $ugly = ugly_uuid($uuid);
 
     $query = "SELECT * FROM players WHERE uuid='$ugly'";
     $result = mysqli_query($connection, $query);
+
     $rows = mysqli_num_rows($result);
 
     if($rows < 1) {
@@ -20,6 +21,19 @@ function get_rank($uuid) {
 
 }
 
+function has_permission($uuid) {
+
+    $clean_uuid = str_replace("-", "", $uuid);
+
+    $rank = get_rank($clean_uuid);
+
+    if($rank === "Owner" || $rank === "Developer" || $rank === "Platform-Admin" || $rank === "Senior-Admin" || $rank === "Admin" || $rank === "Senior-Mod") {
+        return true;
+    }
+
+    return false;
+
+}
 
 function logged_in() {
     if(isset($_SESSION['status'])) {
@@ -91,7 +105,9 @@ function check_tag($text) {
         if($pos !== false) {
 
             if($pos === 0) {
-                $text = str_replace($word, "<a href='#'>$word</a>", $text);
+
+                $user = str_replace("@", "", $word);
+                $text = str_replace($word, "<a href='user.php?name=$user'>$word</a>", $text);
             }
         }
     }
