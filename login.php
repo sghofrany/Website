@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'database/database.php';
+include 'libs/utils.php';
 
 if(isset($_POST['login']) == FALSE) {
     header("Location: index.php");
@@ -26,7 +27,7 @@ $query = "SELECT * FROM user WHERE email='$email'";
 $result = mysqli_query($connection, $query);
 $rows = mysqli_num_rows($result);
 
-if($rows < 0) {
+if($rows < 1) {
     //Add message "User not found"
     //header("Location: index.php/login=error");
     exit();
@@ -43,15 +44,3 @@ if($password == $info['password']) {
 } else {
     exit();
 }
-
-function get_name($uuid) {
-
-    $uuid = str_replace("-", "", $_SESSION['uuid']);
-
-    $json_response = file_get_contents('https://api.minetools.eu/uuid/' . $uuid);
-
-    $obj = json_decode($json_response);
-
-    return $obj->name;
-}
-

@@ -12,9 +12,11 @@ session_start();
         <link rel="stylesheet" type="text/css" href="css/header.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/reply.css">
 
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
         <!-- jQuery library -->
@@ -36,6 +38,10 @@ session_start();
     */
     if(!isset($_SESSION['usernames'])) {
          $_SESSION['usernames'] = array();
+    }
+
+    if(!isset($_SESSION['cache_uuid'])) {
+        $_SESSION['cache_uuid'] = array();
     }
 
     /*

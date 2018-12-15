@@ -50,15 +50,16 @@ echo("1");
 
 $query = "INSERT INTO ticket (uuid, title, body, date, resolved, resolved_uuid) VALUES ('$uuid', '$title', '$body', '$date', '$resolved', '$resolved_uuid')";
 
-//mysqli_query($connection, $query);
+// mysqli_query($connection, $query);
 
 echo("2");
 
 if($connection->query($query) === TRUE) {
-    echo("");
     header("Location: support-list.php");
     $connection->close();
     exit();
+} else {
+    echo("<br> What is going on?");
 }
 
 $connection->close();

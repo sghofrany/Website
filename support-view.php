@@ -26,7 +26,7 @@ include 'header.php';
     
     ?>
 
-<body style="background-color: #f2f3f4;">
+<body style="background-color: #fbfbfb;">
 
     <script>
         document.getElementById('subtext').innerHTML = "support";
@@ -75,7 +75,7 @@ include 'header.php';
       $info = mysqli_fetch_assoc($result);
     ?>
 
-        <div class="wrapper" style="background-color: #f2f3f4;">
+        <div class="wrapper" style="background-color: #fbfbfb;">
             
             <div class="title-wrapper" style="background-color: white; margin-top: 20px;">
                 <div class="title">
@@ -104,18 +104,94 @@ include 'header.php';
                 </div>
             </div>
             
-            <div class="reply-wrapper" style="background-color: white;"> 
-                <div class="user">
-                    <ul class="user-info">
-                        <li><img id="image" src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=80&default=MHF_Steve&overlay"></li>
-                        <li id="user"><a href="user.php?id=<?php echo($info['uuid']); ?>"><?php echo(get_name($info['uuid'])); ?></a></li>
-                        <li><?php echo($info['date']) ?></li>
-                    </ul>
+            <div class="body-wrapper">
+
+                <div class="user-wrapper">
+
+                    <div class="user-img">
+                        <img id="avatar" src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=80&default=MHF_Steve&overlay">
+                    </div>
+                    
+                    <div class="user-name">
+                        <p><a href="user.php?name=<?php echo(get_name($info['uuid'])); ?>"><?php echo(get_name($info['uuid'])); ?></a></p>
+                    </div>
+
+                    <div class="user-date">
+                        <p><?php echo($info['date']); ?></p>
+                    </div>
+
+                    <div class="user-rank">
+                    <?php
+                            if(get_rank($info['uuid']) === "Owner") {
+                        ?>
+                            <p id="owner"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Developer") {
+                        ?>
+                            <p id="developer"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Platform-Admin") {
+                        ?>
+                            <p id="plat-admin"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Senior-Admin") {
+                        ?>
+                            <p id="senior-admin"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Admin") {
+                        ?>
+                            <p id="admin"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Senior-Mod") {
+                        ?>
+                            <p id="senior-mod"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Mod") {
+                        ?>
+                            <p id="mod"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Partner") {
+                        ?>
+                            <p id="partner"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Famous") {
+                        ?>
+                            <p id="famous"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Youtuber") {
+                        ?>
+                            <p id="youtuber"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Master") {
+                        ?>
+                            <p id="master"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Elite") {
+                        ?>
+                            <p id="elite"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Prime") {
+                        ?>
+                            <p id="prime"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Basic") {
+                        ?>
+                            <p id="basic"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Normal") {
+                        ?>
+                            <p id="normal"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            }
+                        ?>
+                    </div>
                 </div>
-                <div class="reply">   
-                    <p><?php echo($parse->text($info['body'])); ?></p>
+
+                <div class="text-wrapper">
+                    <p class="text"><?php echo($parse->text($info['body'])); ?></p>
                 </div>
-            </div> 
+
+            </div>
             
             <?php
                 if($info['resolved'] < 0) {
@@ -188,25 +264,105 @@ include 'header.php';
               while($reply = mysqli_fetch_assoc($result)) {
                   
             ?>
-            <div class="wrapper" style="background-color: #f2f3f4;">
-                <div class="reply-wrapper" style="background-color: white;"> 
-                    <div class="user">
-                        <ul class="user-info">
-                            <li><img id="image" src="https://crafatar.com/avatars/<?php echo($reply['uuid']); ?>?size=80&default=MHF_Steve&overlay"></li>
-                            <li id="user"><a href="user.php?id=<?php echo($reply['uuid']); ?>"><?php echo(get_name($reply['uuid'])); ?></a></li>
-                            <li><?php echo($reply['date']); ?></li>
-                        </ul>
+
+            <div class="wrapper">
+
+            <div class="body-wrapper">
+                
+                <div class="user-wrapper">
+                
+                    <div class="user-img">
+                        <img id="avatar" src="https://crafatar.com/avatars/<?php echo($reply['uuid']); ?>?size=80&default=MHF_Steve&overlay">
+                    </div>
+                    
+                    <div class="user-name">
+                        <p><a href="user.php?name=<?php echo(get_name($reply['uuid'])); ?>"><?php echo(get_name($reply['uuid'])); ?></a></p>
                     </div>
 
-                    <div class="reply">   
-                        <p><?php echo($parse->text(check_tag($reply['text']))); ?></p>
+                    <div class="user-date">
+                        <p><?php echo($reply['date']); ?></p>
                     </div>
-            
-                </div> 
+
+                    <div class="user-rank">
+                        <?php
+                            if(get_rank($reply['uuid']) === "Owner") {
+                        ?>
+                            <p id="owner"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Developer") {
+                        ?>
+                            <p id="developer"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Platform-Admin") {
+                        ?>
+                            <p id="plat-admin"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Senior-Admin") {
+                        ?>
+                            <p id="senior-admin"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Admin") {
+                        ?>
+                            <p id="admin"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Senior-Mod") {
+                        ?>
+                            <p id="senior-mod"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Mod") {
+                        ?>
+                            <p id="mod"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Partner") {
+                        ?>
+                            <p id="partner"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Famous") {
+                        ?>
+                            <p id="famous"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Youtuber") {
+                        ?>
+                            <p id="youtuber"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Master") {
+                        ?>
+                            <p id="master"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Elite") {
+                        ?>
+                            <p id="elite"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Prime") {
+                        ?>
+                            <p id="prime"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Basic") {
+                        ?>
+                            <p id="basic"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Normal") {
+                        ?>
+                            <p id="normal"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            }
+                        ?>
+
+                    </div>
+                </div>
+
+                <div class="text-wrapper">
+                    <p><?php echo($parse->text(check_tag($reply['text']))); ?></p>
+                </div>
+
             </div>
+
+            </div>
+
             <?php
               }
             ?>
+        </div>
     
 </body>
 

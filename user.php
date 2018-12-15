@@ -1,5 +1,5 @@
 <?php
-    include "libs/utils.php";
+    require "header.php";
 ?>
 
 <!DOCTYPE html>
@@ -30,42 +30,9 @@
      
     <body>
 
-        <div class="navigation">
-            <ul class="left-nav">
-                <li class="left-li"><a href="index.php">PvPTemple</a></li>
-                <li class="left-li"><a href="#">Shop</a></li>
-                <li class="left-li"><a href="support.php">Support</a></li>
-            </ul>
 
-        <ul class="right-nav">
-                <?php
-                    if(logged_in()) {
-                ?>
-                <form class="form-wrapper" action="logout.php" method="POST">
-                    <button class="logout-button" type="submit" name="logout">Logout</button>
-                </form>
-                <li class="right-li"><a id="alert-count" href="#">(2)</a></li>
-                <li id="alert" class="right-li"><i class="far fa-bell"></i></li>
-
-                <?php
-                    } else  {
-                    
-                ?>
-                <li class="right-li"><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
-                
-                <?php
-                }
-                ?>
-            </ul>
-        </div>
-
-
-        <div class="banner">
-            <label class="banner-text">pvptemple</label>
-            <label class="banner-subtext">profile</label>
-        </div>
         <?php
-        if(!isset($_GET['id'])) {
+        if(!isset($_GET['name'])) {
         ?>
             <div class="wrapper">That user could not be found</div>
         <?php
@@ -73,20 +40,25 @@
         } else {
             require 'database/database.php';
 
-            $id = $_GET['id'];
+            $name = $_GET['name'];
+            $uuid = get_uuid($name);
 
-            $query = "SELECT * FROM user WHERE id='$id'";
+            echo(get_name($uuid) . $uuid . " - ");
+
+            $query = "SELECT * FROM user WHERE uuid='$uuid'";
             $result = mysqli_query($connection, $query);
             $rows = mysqli_num_rows($result);
 
-            if($rows < 0) {
+            if($rows < 1) {
         ?>
         
-        <div class="wrapper">That user could not be found</div>
+            <div class="wrapper">That user could not be found</div>
 
         <?php
                 exit();
             }
+
+            echo($rows);
 
             $info = mysqli_fetch_assoc($result);
         }
@@ -97,7 +69,6 @@
         
                 <div class="user">
                     <div class="user-image">
-                    <!-- <img src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=128&default=MHF_Steve&overlay"> -->
                     <img class="image" src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=128&default=MHF_Steve&overlay">
                     </div>
 
