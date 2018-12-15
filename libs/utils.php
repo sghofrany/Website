@@ -21,6 +21,56 @@ function get_rank($uuid) {
 
 }
 
+function is_blacklisted($uuid) {
+
+    require 'database/rank-database.php';
+
+    $ugly = ugly_uuid($uuid);
+
+    $query = "SELECT * FROM players WHERE uuid='$ugly'";
+    $result = mysqli_query($connection, $query);
+
+    $rows = mysqli_num_rows($result);
+
+    if($rows < 1) {
+        exit();
+    }
+
+    $info = mysqli_fetch_assoc($result);
+    
+    if($info['blacklisted'] == 1) {
+        return true;
+    }
+
+    return false;
+
+}
+
+function is_banned($uuid) {
+
+    require 'database/rank-database.php';
+
+    $ugly = ugly_uuid($uuid);
+
+    $query = "SELECT * FROM players WHERE uuid='$ugly'";
+    $result = mysqli_query($connection, $query);
+
+    $rows = mysqli_num_rows($result);
+
+    if($rows < 1) {
+        exit();
+    }
+
+    $info = mysqli_fetch_assoc($result);
+
+    if($info['banned'] === 1) {
+        return true;
+    }
+
+    return false;
+
+}
+
 function has_permission($uuid) {
 
     $clean_uuid = str_replace("-", "", $uuid);

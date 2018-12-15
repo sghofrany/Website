@@ -43,8 +43,6 @@
             $name = $_GET['name'];
             $uuid = get_uuid($name);
 
-            echo(get_name($uuid) . $uuid . " - ");
-
             $query = "SELECT * FROM user WHERE uuid='$uuid'";
             $result = mysqli_query($connection, $query);
             $rows = mysqli_num_rows($result);
@@ -57,17 +55,17 @@
         <?php
                 exit();
             }
-
-            echo($rows);
-
             $info = mysqli_fetch_assoc($result);
         }
         ?>
 
 
         <div class="wrapper">
-        
+
                 <div class="user">
+                <video autoplay loop muted id="monkey">
+                    <source src="video/monkey.mp4" type="video/mp4">
+                </video>
                     <div class="user-image">
                     <img class="image" src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=128&default=MHF_Steve&overlay">
                     </div>

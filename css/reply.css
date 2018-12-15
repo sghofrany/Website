@@ -86,6 +86,27 @@
     font-weight: bold;
 }
 
+.user-status p {
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    text-align: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-color: #3a3a3a;
+
+    width: 100%;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: white;
+
+    font-weight: bold;
+}
+
 .text-wrapper {
 
     display: flex;
@@ -516,3 +537,49 @@
 
     font-weight: bold;
 }
+
+/* #blacklisted {
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-color: #651d8c;
+
+    width: 100%;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+#banned {
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-color: #651d8c;
+
+    width: 100%;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: white;
+
+    font-weight: bold;
+} */

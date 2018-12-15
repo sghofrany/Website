@@ -2,6 +2,11 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+#monkey {
+    min-width: 100%;
+    min-height: 100%;
+}
+
 .user {
     display: block;
     background-color: white;
@@ -11,6 +16,8 @@ body {
     
     transition: transform 300ms ease-out, box-shadow 300ms ease-out;
     height: 100%;
+
+    z-index: 1;
 }
 
 .user:hover {

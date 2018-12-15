@@ -197,6 +197,22 @@ include 'header.php';
                         ?>
 
                     </div>
+
+                    <div class="user-status">
+
+                        <?php
+                            if(is_blacklisted($info['uuid'])) {
+                        ?>
+                            <p id="blacklisted">Blacklisted</p>
+                        <?php
+                            } elseif(is_banned($info['uuid'])) {
+                        ?>
+                            <p id="banned">Banned</p>
+                        <?php
+                            }
+                        ?>
+
+                    </div>
                 </div>
 
                 <div class="text-wrapper">
@@ -364,6 +380,22 @@ include 'header.php';
                             } elseif($player_rank === "Trainee") {
                         ?>
                             <p id="trainee"><?php echo($player_rank); ?></p>
+                        <?php
+                            }
+                        ?>
+
+                    </div>
+
+                    <div class="user-status">
+
+                        <?php
+                            if(is_blacklisted($reply['uuid'])) {
+                        ?>
+                            <p id="blacklisted">Blacklisted</p>
+                        <?php
+                            } elseif(is_banned($reply['uuid'])) {
+                        ?>
+                            <p id="banned">Banned</p>
                         <?php
                             }
                         ?>
