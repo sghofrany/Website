@@ -470,3 +470,49 @@
 
     font-weight: bold;
 }
+
+#trainee {
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-color: #f9f148;
+
+    width: 100%;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+#host {
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-color: #651d8c;
+
+    width: 100%;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: white;
+
+    font-weight: bold;
+}

@@ -158,7 +158,7 @@ include 'header.php';
                         ?>
                             <p id="famous"><?php echo(get_rank($info['uuid'])); ?></p>
                         <?php
-                            } elseif(get_rank($info['uuid']) === "Youtuber") {
+                            } elseif(get_rank($info['uuid']) === "YouTuber") {
                         ?>
                             <p id="youtuber"><?php echo(get_rank($info['uuid'])); ?></p>
                         <?php
@@ -182,8 +182,17 @@ include 'header.php';
                         ?>
                             <p id="normal"><?php echo(get_rank($info['uuid'])); ?></p>
                         <?php
+                            } elseif(get_rank($info['uuid']) === "Trainee") {
+                        ?>
+                            <p id="trainee"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($info['uuid']) === "Host") {
+                        ?>
+                            <p id="host"><?php echo(get_rank($info['uuid'])); ?></p>
+                        <?php
                             }
                         ?>
+
                     </div>
                 </div>
 
@@ -321,7 +330,7 @@ include 'header.php';
                         ?>
                             <p id="famous"><?php echo(get_rank($reply['uuid'])); ?></p>
                         <?php
-                            } elseif(get_rank($reply['uuid']) === "Youtuber") {
+                            } elseif(get_rank($reply['uuid']) === "YouTuber") {
                         ?>
                             <p id="youtuber"><?php echo(get_rank($reply['uuid'])); ?></p>
                         <?php
@@ -344,6 +353,10 @@ include 'header.php';
                             } elseif(get_rank($reply['uuid']) === "Normal") {
                         ?>
                             <p id="normal"><?php echo(get_rank($reply['uuid'])); ?></p>
+                        <?php
+                            } elseif(get_rank($reply['uuid']) === "Trainee") {
+                        ?>
+                            <p id="trainee"><?php echo(get_rank($reply['uuid'])); ?></p>
                         <?php
                             }
                         ?>
