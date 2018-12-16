@@ -20,7 +20,7 @@ $uuid = $_SESSION['uuid'];
 $tid = $_GET['id'];
 $body = $_POST['reply-body'];
 
-$date = date("Y-m-d H:m:s");
+$date = date("Y-m-d");
 
 $query = "INSERT INTO replies (tid, uuid, text, date) VALUES ('$tid','$uuid', '$body', '$date')";
 

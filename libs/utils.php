@@ -235,3 +235,21 @@ function get_resolved($resolved) {
     return "Pending";
     
 }
+
+function pending_tickets($uuid) {
+
+    require 'database/support-database.php';
+
+    $query = "SELECT * FROM ticket WHERE (resolved = -1 AND uuid = '$uuid')";
+
+    $result = mysqli_query($connection, $query);
+
+    $rows = mysqli_num_rows($result);
+
+    if($rows < 1) {
+        return 0;
+    } 
+
+    return $result;
+
+}

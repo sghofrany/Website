@@ -265,13 +265,13 @@ include 'header.php';
                 
             ?>
             
-            <form action="reply-create.php?id=<?php echo($info['id']) ?>" method="POST">
+            <form id="form-id" onclick="timeOutSubmit()" action="reply-create.php?id=<?php echo($info['id']) ?>" method="POST">
 
                 <textarea class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea>
 
-                <button type="submit" class="reply-button" name="reply-submit">Reply</button>
+                <button type="submit" class="reply-button" name="reply-submit" id="reply-id">Reply</button>
                 <br>
-                 <br>
+                <br>
             </form>
             
             <?php
@@ -419,7 +419,16 @@ include 'header.php';
               }
             ?>
         </div>
-    
+
+        <script>
+            function timeOutSubmit() {
+
+                var button = document.getElementById("reply-id");
+                button.style.display = "none";
+
+            }
+        </script>
+
 </body>
 
 </html>
