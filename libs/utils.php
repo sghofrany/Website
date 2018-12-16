@@ -64,8 +64,13 @@ function get_name_by_id($playerId) {
     $rows = mysqli_num_rows($result);
 
     if($rows < 1) {
-        echo("Exited: " . $playerId);
-        exit();
+        
+        $delete_query = "DELETE FROM practice_season_4_data WHERE player_id='$playerId'";
+   
+        if (mysqli_query($connection, $delete_query)) {
+            echo "Deleted " . $playerId . " from the records";
+            exit();
+        }
     }
 
     $info = mysqli_fetch_assoc($result);
@@ -73,9 +78,10 @@ function get_name_by_id($playerId) {
     $value = $info['name'];
 
     $connection->close();
-
+    
     return $value;
 }
+
 
 function is_banned($uuid) {
 

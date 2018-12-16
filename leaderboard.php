@@ -37,8 +37,6 @@
         </ul>
       
         <table>
-)
-
             <th>Rank</th>
             <th>Player</th>
             <th>Elo</th>
@@ -48,30 +46,26 @@
             require 'database/rank-database.php';
             $elo = "";
 
-            echo(get_name_by_id(8));
-
             if(!isset($_GET['game'])) {
                 $elo = "nodebuff_elo";
             } else {
                 $elo  = $_GET['game'];
             }
 
-            $query = "SELECT player_id, $elo FROM practice_season_4_data ORDER BY $elo DESC LIMIT 20";
+            $query = "SELECT practice_season_4_data.player_id, practice_season_4_data.$elo, players.player_id, players.name FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id ORDER BY $elo DESC LIMIT 20";
+
             $result = mysqli_query($connection, $query);
-        
+
             $num = 1;
 
             while($rows = $result->fetch_assoc()) {
-
             ?>
                 <tr>
                     <td><?php echo($num); ?></td>
-                    <td><?php echo($rows['player_id'] . " " . get_name_by_id($rows['player_id'])); ?></td>
+                    <td><?php echo($rows['name']); ?></td>
                     <td><?php echo($rows[$elo]); ?></td>
                 </tr>
-
             <?php
-            //     echo($num . " " . $rows[$elo] . "<br>");
               $num++;
             }
             ?>
