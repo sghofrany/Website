@@ -17,7 +17,11 @@ function get_rank($uuid) {
 
     $info = mysqli_fetch_assoc($result);
 
-    return $info['rank'];
+    $value = $info['rank'];
+
+    $connection->close();
+
+    return $value;
 
 }
 
@@ -37,13 +41,40 @@ function is_blacklisted($uuid) {
     }
 
     $info = mysqli_fetch_assoc($result);
-    
-    if($info['blacklisted'] == 1) {
+
+    $value = $info['blacklisted'];
+
+    $connection->close();
+
+    if($value == 1) {
         return true;
     }
 
     return false;
 
+}
+
+function get_name_by_id($playerId) {
+
+    require 'database/rank-database.php';
+
+    $query = "SELECT name FROM players WHERE player_id='$playerId'";
+    $result = mysqli_query($connection, $query);
+
+    $rows = mysqli_num_rows($result);
+
+    if($rows < 1) {
+        echo("Exited: " . $playerId);
+        exit();
+    }
+
+    $info = mysqli_fetch_assoc($result);
+
+    $value = $info['name'];
+
+    $connection->close();
+
+    return $value;
 }
 
 function is_banned($uuid) {
@@ -63,7 +94,11 @@ function is_banned($uuid) {
 
     $info = mysqli_fetch_assoc($result);
 
-    if($info['banned'] === 1) {
+    $value = $info['banned'];
+
+    $connection->close();
+
+    if($value === 1) {
         return true;
     }
 
