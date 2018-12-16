@@ -31,7 +31,7 @@ if($connection->query($query) === TRUE) {
     $connection->close();
     exit();
 } else {
-    echo("<br> What is going on?");
+    header("Location: support.php");
 }
 
 $connection->close();

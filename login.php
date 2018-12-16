@@ -28,19 +28,26 @@ $result = mysqli_query($connection, $query);
 $rows = mysqli_num_rows($result);
 
 if($rows < 1) {
-    //Add message "User not found"
-    //header("Location: index.php/login=error");
     exit();
 }
 
 $info = mysqli_fetch_assoc($result);
-if($password == $info['password']) {
+
+$compare = mysqli_real_escape_string($connection, $info['password']);
+
+if($password == $compare) {
     $_SESSION['status'] = 1;
     $_SESSION['uuid'] = $info['uuid'];
 
 
     $_SESSION['name'] = get_name($_SESSION['uuid']);
+    echo($info['password'] . "<br>");
+    echo($_POST['password'] . "<br>");
+    echo($password . " equals");
     header("Location: index.php");
 } else {
+    echo($info['password'] . "<br>");
+    echo($_POST['password'] . "<br>");
+    echo($password . " equals");
     exit();
 }
