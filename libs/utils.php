@@ -4,8 +4,14 @@ function get_rank($uuid) {
 
     require 'database/rank-database.php';
 
-    $ugly = ugly_uuid($uuid);
+    $ugly = $uuid;
 
+    $pos = strpos($ugly, '-');
+
+    if($pos === false) {
+        $ugly = ugly_uuid($ugly);
+    }
+ 
     $query = "SELECT * FROM players WHERE uuid='$ugly'";
     $result = mysqli_query($connection, $query);
 
@@ -29,7 +35,13 @@ function is_blacklisted($uuid) {
 
     require 'database/rank-database.php';
 
-    $ugly = ugly_uuid($uuid);
+    $ugly = $uuid;
+
+    $pos = strpos($ugly, '-');
+
+    if($pos === false) {
+        $ugly = ugly_uuid($ugly);
+    }
 
     $query = "SELECT * FROM players WHERE uuid='$ugly'";
     $result = mysqli_query($connection, $query);
@@ -82,12 +94,17 @@ function get_name_by_id($playerId) {
     return $value;
 }
 
-
 function is_banned($uuid) {
 
     require 'database/rank-database.php';
 
-    $ugly = ugly_uuid($uuid);
+    $ugly = $uuid;
+
+    $pos = strpos($ugly, '-');
+
+    if($pos === false) {
+        $ugly = ugly_uuid($ugly);
+    }
 
     $query = "SELECT * FROM players WHERE uuid='$ugly'";
     $result = mysqli_query($connection, $query);

@@ -24,35 +24,7 @@ $date = "Date";
 $resolved = -1;
 $resolved_uuid = "";
 
-/*
-$exists = "SELECT * FROM ticket WHERE uuid='$uuid'";
-
-$result = mysqli_query($connection, $exists);
-$rows = mysqli_num_rows($result);
-*/
-
-/*if($rows > 0) {
-    
-    while($ticket = mysqli_fetch_assoc($result)) {
-        
-        if($ticket['resolved'] < 0) {
-            
-            exit();
-        }
-        
-    }
-    
-    header("Location: support.php");
-    exit();
-}*/
-
-echo("1");
-
 $query = "INSERT INTO ticket (uuid, title, body, date, resolved, resolved_uuid) VALUES ('$uuid', '$title', '$body', '$date', '$resolved', '$resolved_uuid')";
-
-// mysqli_query($connection, $query);
-
-echo("2");
 
 if($connection->query($query) === TRUE) {
     header("Location: support-list.php");

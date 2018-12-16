@@ -3,7 +3,6 @@ require_once 'libs/Parsedown.php';
 include 'header.php';
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,6 +72,7 @@ include 'header.php';
         }
 
       $info = mysqli_fetch_assoc($result);
+
     ?>
 
         <div class="wrapper" style="background-color: #fbfbfb;">
@@ -120,8 +120,10 @@ include 'header.php';
                         <p><?php echo($info['date']); ?></p>
                     </div>
 
+                    
                     <div class="user-rank">
-                    <?php
+                    
+                        <?php
                         
                         $player_rank = get_rank($info['uuid']);
 
@@ -213,10 +215,12 @@ include 'header.php';
                         ?>
 
                     </div>
+             
                 </div>
-
+           
                 <div class="text-wrapper">
-                    <p class="text"><?php echo($parse->text($info['body'])); ?></p>
+                    <p><?php echo($parse->text(check_tag($info['body']))); ?></p>
+                   
                 </div>
 
             </div>
