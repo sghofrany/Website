@@ -7,6 +7,7 @@ include 'header.php';
 <html>
 <head>
 	<title>PvPTemple - Support</title>
+
 </head>
 
     <?php
@@ -28,7 +29,26 @@ include 'header.php';
 <body style="background-color: #fbfbfb;">
 
     <script>
+        
         document.getElementById('subtext').innerHTML = "support";
+    
+        document.getElementById('reply-button').disabled = false;
+
+        var buttonClicked = false;
+
+        function stopSpam () {
+            
+            if(buttonClicked) {
+                return;
+            }
+
+
+            buttonClicked = true;
+
+            document.getElementById('reply-button').disabled = true;
+
+        }
+
     </script>
 
     <?php
@@ -265,13 +285,15 @@ include 'header.php';
                 
             ?>
             
-            <form id="form-id" onclick="timeOutSubmit()" action="reply-create.php?id=<?php echo($info['id']) ?>" method="POST">
+            <form id="form-id" action="reply-create.php?id=<?php echo($info['id']); ?>" method="POST">
 
                 <textarea class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea>
 
-                <button type="submit" class="reply-button" name="reply-submit" id="reply-id">Reply</button>
+                <input class="reply-button" type="submit" onclick="setTimeout(stopSpam, 5)" id="reply-button" name="reply-submit" value="Reply">
+
                 <br>
                 <br>
+
             </form>
             
             <?php
@@ -419,15 +441,6 @@ include 'header.php';
               }
             ?>
         </div>
-
-        <script>
-            function timeOutSubmit() {
-
-                var button = document.getElementById("reply-id");
-                button.style.display = "none";
-
-            }
-        </script>
 
 </body>
 

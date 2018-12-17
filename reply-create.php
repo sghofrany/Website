@@ -3,11 +3,12 @@ session_start();
 require 'database/support-database.php';
 
 if(!isset($_POST['reply-submit'])) {
-     header("Location: support-list.php");
+    header("Location: support.php");
     exit();
 }
 
 if(empty($_POST['reply-body'])) {
+    header("Location: support.php");
     exit();
 }
 
@@ -18,6 +19,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 $uuid = $_SESSION['uuid'];
 $tid = $_GET['id'];
+
 $body = $_POST['reply-body'];
 
 $date = date("Y-m-d");
@@ -31,3 +33,4 @@ echo($tid);
 $connection->close();
 
 header("Location: support-view.php?id=" . $tid);
+
