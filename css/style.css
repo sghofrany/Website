@@ -80,6 +80,21 @@
     border-radius: 3px;
 }
 
+.reply-button:hover {
+    background-color: #006aa3;
+    cursor: pointer;
+}
+
+.accept-button:hover {
+    background-color: #57a357;
+    cursor: pointer;
+}
+
+.deny-button:hover {
+    background-color: #d43d32;
+    cursor: pointer;
+}
+
 #accepted-message {
     float: right;
 }
