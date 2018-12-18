@@ -278,29 +278,7 @@ include 'header.php';
             <br>
             <hr>
             <br>
-           
-            <?php
-                
-            if($info['resolved'] < 0) {
-                
-            ?>
             
-            <form id="form-id" action="reply-create.php?id=<?php echo($info['id']); ?>" method="POST">
-
-                <!-- <textarea class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea> -->
-
-                <textarea class="ckeditor" name="editor"></textarea>
-
-                <input class="reply-button" type="submit" onclick="setTimeout(stopSpam, 5)" id="reply-button" name="reply-submit" value="Reply">
-
-                <br>
-                <br>
-
-            </form>
-            
-            <?php
-            } 
-            ?>
         </div>
   
 
@@ -433,7 +411,7 @@ include 'header.php';
                 </div>
 
                 <div class="text-wrapper">
-                    <p><?php echo($parse->text(check_tag($reply['text']))); ?></p>
+                    <p><?php echo(check_tag($reply['text'])); ?></p>
                 </div>
 
             </div>
@@ -443,6 +421,31 @@ include 'header.php';
             <?php
               }
             ?>
+            <div class="wrapper">
+                <?php
+                    
+                    if($info['resolved'] < 0) {
+                        
+                    ?>
+                    
+                    <form id="form-id" action="reply-create.php?id=<?php echo($info['id']); ?>" method="POST">
+        
+                        <!-- <textarea class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea> -->
+        
+                        <textarea class="ckeditor" name="editor"></textarea>
+        
+                        <input class="reply-button" type="submit" onclick="setTimeout(stopSpam, 5)" id="reply-button" name="reply-submit" value="Reply">
+        
+                        <br>
+                        <br>
+        
+                    </form>
+                    
+                    <?php
+                    } 
+                    ?>
+            
+            </div>
         </div>
 
 </body>
