@@ -284,13 +284,54 @@ include 'header.php';
 
             <?php
                   
-            $query = "SELECT * FROM replies WHERE tid='$id'";
+            
+            $offset = ($_GET['page'] - 1) * 5;
+
+            $query = "SELECT * FROM replies WHERE tid='$id' LIMIT 5 OFFSET $offset";
+            
             $result = mysqli_query($connection, $query);
     
             $rows = mysqli_num_rows($result);
-            
-                if(!$result || $rows < 1) {
+
+                if($rows < 1) {   
             ?>
+
+                <?php
+                    if($offset > 0) {
+                ?>
+                    <script>
+                    
+                        window.location.href = 'support-view?id=<?php echo($id); ?>&page=1';
+
+                    </script>
+                <?php
+                    }
+                ?>
+            <div class="wrapper">
+                <?php
+                 
+                    if($info['resolved'] < 0) {
+                        
+                    ?>
+                    
+                    <form id="form-id" action="reply-create.php?id=<?php echo($info['id']); ?>" method="POST">
+        
+                        <!-- <textarea class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea> -->
+        
+                        <textarea class="ckeditor" name="editor"></textarea>
+        
+                        <input class="reply-button" type="submit" onclick="setTimeout(stopSpam, 5)" id="reply-button" name="reply-submit" value="Reply">
+        
+                        <br>
+                        <br>
+        
+                    </form>
+                    
+                    <?php
+                    } 
+                    ?>
+            
+            </div>
 
             <?php
                     exit();
@@ -320,7 +361,6 @@ include 'header.php';
 
                     <div class="user-rank">
                         <?php
-
                         $player_rank = get_rank($reply['uuid']);
 
 

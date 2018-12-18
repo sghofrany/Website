@@ -30,63 +30,45 @@
      
     <body>
 
-
-        <?php
-        if(!isset($_GET['name'])) {
-        ?>
-            <div class="wrapper">That user could not be found</div>
-        <?php
-        exit();
-        } else {
-            require 'database/database.php';
-
-            $name = $_GET['name'];
-            $uuid = get_uuid($name);
-
-            $query = "SELECT * FROM user WHERE uuid='$uuid'";
-            $result = mysqli_query($connection, $query);
-            $rows = mysqli_num_rows($result);
-
-            if($rows < 1) {
-        ?>
-        
-            <div class="wrapper">That user could not be found</div>
-
-        <?php
-                exit();
-            }
-            $info = mysqli_fetch_assoc($result);
-        }
-        ?>
-
-
         <div class="wrapper">
 
-                <div class="user">
-                <video autoplay loop muted id="monkey">
-                    <source src="video/monkey.mp4" type="video/mp4">
-                </video>
-                    <div class="user-image">
-                    <img class="image" src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=128&default=MHF_Steve&overlay">
-                    </div>
+                <table>
+                    <th>Player</th>
+                    <th>Bans</th>
 
-                    <div class="user-text">
-                        <p><?php echo(get_name($info['uuid'])); ?></p>
-                    </div>
+                    <?php
 
-                    <div class="user-rank">
-                        <p class="rank">Developer</p>
-                    </div>
-                </div>      
+                    require 'database/rank-database.php';
+                    $user = "";
+
+                    if(!isset($_GET['name'])) {
+                        $user = "Irantwomiles";
+                    } else {
+                        $user  = $_GET['name'];
+                    }
+
+                    $id = get_id_by_name($user);
+
+                    $query = "SELECT players.name FROM players JOIN punishments ON (punishments.punisher_id = players.player_id AND players.name = '$user')";
+
+                    $result = mysqli_query($connection, $query);
+
+                    $count = mysqli_num_rows($result);
+
+                    $info = mysqli_fetch_assoc($result);
+
+                    if($count < 1) {
+                        echo("$user has not bans");
+                        exit();
+                    }
+
+                    ?>
          
-   
-            <div class="info">
-               <div class="user-stats">
-                    <label class="practice">Practice</label>
-                    <label class="uhc">UHC</label>
-                    <label class="skywars">Skywars</label>  
-               </div>
-            </div>
+                    <tr>
+                        <td><?php echo($info['name']); ?></td>
+                        <td><?php echo($count); ?></td>
+                    </tr>
+                </table>
             
         </div>
         

@@ -94,6 +94,34 @@ function get_name_by_id($playerId) {
     return $value;
 }
 
+function get_id_by_name($playerName) {
+
+    require 'database/rank-database.php';
+
+    $query = "SELECT player_id FROM players WHERE name='$playerName'";
+    $result = mysqli_query($connection, $query);
+
+    $rows = mysqli_num_rows($result);
+
+    if($rows < 1) {
+        
+        $delete_query = "DELETE FROM practice_season_4_data WHERE name='$playerName'";
+   
+        if (mysqli_query($connection, $delete_query)) {
+            echo "Deleted " . $playerName . " from the records";
+            exit();
+        }
+    }
+
+    $info = mysqli_fetch_assoc($result);
+
+    $value = $info['player_id'];
+
+    $connection->close();
+    
+    return $value;
+}
+
 function is_banned($uuid) {
 
     require 'database/rank-database.php';
@@ -252,4 +280,10 @@ function pending_tickets($uuid) {
 
     return $result;
 
+}
+
+function microtime_float()
+{
+    list($usec, $sec) = explode(" ", microtime());
+    return ((float)$usec + (float)$sec);
 }
