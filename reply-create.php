@@ -7,7 +7,7 @@ if(!isset($_POST['reply-submit'])) {
     exit();
 }
 
-if(empty($_POST['reply-body'])) {
+if(empty($_POST['editor'])) {
     header("Location: support.php");
     exit();
 }
@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 $uuid = $_SESSION['uuid'];
 $tid = $_GET['id'];
 
-$body = $_POST['reply-body'];
+$body = $_POST['editor'];
 
 $date = date("Y-m-d");
 

@@ -7,7 +7,7 @@ include 'header.php';
 <html>
 <head>
 	<title>PvPTemple - Support</title>
-
+    <script src="ckeditor/ckeditor.js"></script>
 </head>
 
     <?php
@@ -287,7 +287,9 @@ include 'header.php';
             
             <form id="form-id" action="reply-create.php?id=<?php echo($info['id']); ?>" method="POST">
 
-                <textarea class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea>
+                <!-- <textarea class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea> -->
+
+                <textarea class="ckeditor" name="editor"></textarea>
 
                 <input class="reply-button" type="submit" onclick="setTimeout(stopSpam, 5)" id="reply-button" name="reply-submit" value="Reply">
 
@@ -302,15 +304,16 @@ include 'header.php';
         </div>
   
 
-        <?php
+            <?php
                   
             $query = "SELECT * FROM replies WHERE tid='$id'";
             $result = mysqli_query($connection, $query);
     
             $rows = mysqli_num_rows($result);
             
-                    if(!$result || $rows < 1) {
+                if(!$result || $rows < 1) {
             ?>
+
             <?php
                     exit();
                 }
