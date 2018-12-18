@@ -36,18 +36,13 @@ $info = mysqli_fetch_assoc($result);
 $compare = mysqli_real_escape_string($connection, $info['password']);
 
 if($password == $compare) {
+
     $_SESSION['status'] = 1;
     $_SESSION['uuid'] = $info['uuid'];
-
-
     $_SESSION['name'] = get_name($_SESSION['uuid']);
-    echo($info['password'] . "<br>");
-    echo($_POST['password'] . "<br>");
-    echo($password . " equals");
     header("Location: index.php");
+
 } else {
-    echo($info['password'] . "<br>");
-    echo($_POST['password'] . "<br>");
-    echo($password . " equals");
+    header("Location: index.php");
     exit();
 }
