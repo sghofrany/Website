@@ -66,7 +66,7 @@ require 'header.php';
                 <tr>
                 
                 
-                    <td><a href="support-view.php?id=<?php echo($ticket['id']) ?>"><?php echo($ticket['title']); ?></a></td>
+                    <td><a href="support-view.php?id=<?php echo($ticket['id']) ?>&page=1"><?php echo($ticket['title']); ?></a></td>
                     <td><?php echo(get_name($ticket['uuid'])); ?></td>
                     <td><?php echo($ticket['date']); ?></td>
                     

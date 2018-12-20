@@ -14,7 +14,6 @@ session_start();
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/reply.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -66,9 +65,11 @@ session_start();
         <div class="navigation">
 
             <ul class="left-nav">
-                <li class="left-li"><a href="index.php">PvPTemple</a></li>
-                <li class="left-li"><a href="#">Shop</a></li>
-                <li class="left-li"><a href="support.php">Support</a></li>
+                <li class="left-li"><a href="index.php"><img class="header-logo" src="img/logo.png" alt="logo"></a></li>
+                <li class="left-li"><a class="item" href="support.php">support</a></li>
+                <li class="left-li"><a class="item" href="#">shop</a></li>
+                <li class="left-li"><a class="item" href="support.php">stats</a></li>
+                <li class="left-li"><a class="item" href="support.php">staff</a></li>
             </ul>
 
             <ul class="right-nav">
@@ -77,7 +78,7 @@ session_start();
                 ?>
 
                 <form class="form-wrapper" action="logout.php" method="POST">
-                    <button class="logout-button" type="submit" name="logout">Logout</button>
+                    <button class="logout-button" type="submit" name="logout">logout</button>
                     
                     <!-- <li class="right-li"><a id="alert-count" href="#">(2)</a></li>
                     <li id="alert" class="right-li"><i class="far fa-bell"></i></li> -->
@@ -88,7 +89,7 @@ session_start();
                     
                 ?>
 
-                <li class="right-li"><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+                <li class="right-li"><a href="#" data-toggle="modal" data-target="#loginModal">sign in</a></li>
             
                 <?php
                 }

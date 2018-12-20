@@ -239,7 +239,7 @@ include 'header.php';
                 </div>
            
                 <div class="text-wrapper">
-                    <p><?php echo($parse->text(check_tag($info['body']))); ?></p>
+                    <p><?php echo($info['body']); ?></p>
                    
                 </div>
 
@@ -284,6 +284,12 @@ include 'header.php';
 
             <?php
                   
+            $offset = 1;
+
+            if(!isset($_GET['page'])) {
+                echo("<script> window.location.href = 'support-view?id=$id&page=1'; </script>");
+                exit();
+            }
             
             $offset = ($_GET['page'] - 1) * 5;
 
@@ -451,7 +457,7 @@ include 'header.php';
                 </div>
 
                 <div class="text-wrapper">
-                    <p><?php echo(check_tag($reply['text'])); ?></p>
+                    <p><?php echo($reply['text']); ?></p>
                 </div>
 
             </div>

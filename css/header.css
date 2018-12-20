@@ -1,21 +1,22 @@
 body {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Navigation bar */
 
 .navigation {
-    /* font-family: 'Oswald', sans-serif; */
-    background-color: #262626;
+
+    background-color: white;
     
     margin: 0px 0px 0px 0px;
 
     display: flex;
+    align-items: center;
 
     width: 100%;
-
     padding-top: 10px;
     padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .left-nav {
@@ -32,6 +33,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
 
+    display: flex;
     align-items: center;
 
 }
@@ -54,7 +56,7 @@ body {
 .right-li {
     float: right;
 
-    color: white;
+    color: #3d3d3d;
 }
 
 .left-li {
@@ -62,17 +64,21 @@ body {
 
     margin-right: 5%;
 
-    color: white;
+    color: #3d3d3d;
+}
+
+.left-li .item {
+    margin-top: 5px;
 }
 
 .left-li a, .right-li a {
-    color: white;
+    color: #3d3d3d;
 
     transition: color 300ms ease-out;
 }
 
 .left-li a:hover, .right-li a:hover {
-    color: #F7C204;
+    color: #08B2B2;
     text-decoration: none;
 }
 
@@ -81,20 +87,20 @@ body {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 
-    background-color: #262626;
+    background-color: white;
     border: none;
 
     float: right;
 
     margin-right: 3%;
     margin-left: 3%;
-    color: white;
+    color: #3d3d3d;
 
     transition: color 300ms ease-out;
 }
 
 .logout-button:hover {
-    color: #F7C204;
+    color: #08B2B2;
     cursor: pointer;
 }
 
@@ -121,7 +127,7 @@ body {
 
     text-align: center;
     
-    background-color: #F7C204;
+    background: linear-gradient(to right, #0D788A,	#07626E, #0A5862);
 
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
@@ -133,7 +139,7 @@ body {
 
 .banner-text {
 
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
 
     margin: 0px 0px 0px 0px;
@@ -160,13 +166,18 @@ body {
     text-align: center;
 
     margin-top: 30px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 25px;
 }
 
  .right-nav #nav-mobile {
     visibility: hidden;
 } 
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+}
 
 @media (max-width: 576px) {
     
