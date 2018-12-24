@@ -32,5 +32,5 @@ echo($tid);
 
 $connection->close();
 
-header("Location: support-view.php?id=" . $tid . "&page=1");
+header("Location: ticket.php?id=" . $tid . "&page=1");
 

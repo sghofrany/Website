@@ -23,7 +23,7 @@ $query = "UPDATE ticket SET resolved='$resolved',resolved_uuid='$resolved_uuid' 
 echo($tid);
 
 if($connection->query($query) === TRUE) {
-    header("Location: support-view.php?id=" . $tid);
+    header("Location: ticket.php?id=" . $tid . "&page=1");
     $connection->close();
     exit();
 } else {

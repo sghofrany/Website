@@ -287,7 +287,7 @@ include 'header.php';
             $offset = 1;
 
             if(!isset($_GET['page'])) {
-                echo("<script> window.location.href = 'support-view?id=$id&page=1'; </script>");
+                echo("<script> window.location.href = 'ticket?id=$id&page=1'; </script>");
                 exit();
             }
             
@@ -307,7 +307,7 @@ include 'header.php';
                 ?>
                     <script>
                     
-                        window.location.href = 'support-view?id=<?php echo($id); ?>&page=1';
+                        window.location.href = 'ticket?id=<?php echo($id); ?>&page=1';
 
                     </script>
                 <?php
@@ -344,6 +344,13 @@ include 'header.php';
                 }
             
               while($reply = mysqli_fetch_assoc($result)) {
+
+                // echo("UUID: " . $reply['uuid']. "<br>");
+                // echo("Name: " . get_name($reply['uuid']). "<br>");
+                // echo("Date: " . $reply['date']. "<br>");
+                // echo("Rank: " . get_rank($reply['uuid']). "<br>");
+                // echo("Text: " . $reply['text']. "<br>");
+                // echo("------------------------------ <br>");
                   
             ?>
 
@@ -439,21 +446,6 @@ include 'header.php';
 
                     </div>
 
-                    <div class="user-status">
-
-                        <?php
-                            if(is_blacklisted($reply['uuid'])) {
-                        ?>
-                            <p id="blacklisted">Blacklisted</p>
-                        <?php
-                            } elseif(is_banned($reply['uuid'])) {
-                        ?>
-                            <p id="banned">Banned</p>
-                        <?php
-                            }
-                        ?>
-
-                    </div>
                 </div>
 
                 <div class="text-wrapper">

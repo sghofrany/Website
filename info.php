@@ -19,7 +19,7 @@ print_r($_SESSION['usernames']);
         <div class="ticket-wrapper" style="background-color: white;">
            
             <div class="ticket-title">
-                <p><a href="support-view.php?id=<?php echo($ticket['id']) ?>"><?php echo($ticket['title']); ?></a></p>
+                <p><a href="ticket.php?id=<?php echo($ticket['id']) ?>"><?php echo($ticket['title']); ?></a></p>
             </div>
 
             <div class="ticket-sender">
