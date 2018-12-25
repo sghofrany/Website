@@ -99,3 +99,12 @@
     float: right;
 }
 
+.page {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.page li {
+    margin-right: 3px;
+}

@@ -68,8 +68,8 @@ session_start();
                 <li class="left-li"><a href="index.php"><img class="header-logo" src="img/logo.png" alt="logo"></a></li>
                 <li class="left-li"><a class="item" href="support.php">support</a></li>
                 <li class="left-li"><a class="item" href="#">shop</a></li>
-                <li class="left-li"><a class="item" href="support.php">stats</a></li>
-                <li class="left-li"><a class="item" href="support.php">staff</a></li>
+                <li class="left-li"><a class="item" href="leaderboard.php">stats</a></li>
+                <li class="left-li"><a class="item" href="staff.php">staff</a></li>
             </ul>
 
             <ul class="right-nav">

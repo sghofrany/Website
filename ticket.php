@@ -286,7 +286,7 @@ include 'header.php';
                   
             $offset = 1;
 
-            if(!isset($_GET['page'])) {
+            if(!isset($_GET['page']) || !is_numeric($_GET['page'])) {
                 echo("<script> window.location.href = 'ticket?id=$id&page=1'; </script>");
                 exit();
             }
@@ -302,40 +302,36 @@ include 'header.php';
                 if($rows < 1) {   
             ?>
 
-                <?php
-                    if($offset > 0) {
-                ?>
-                    <script>
-                    
-                        window.location.href = 'ticket?id=<?php echo($id); ?>&page=1';
-
-                    </script>
-                <?php
-                    }
-                ?>
+            <?php
+                if($offset > 0) {
+            ?>
+                <script>
+                    window.location.href = 'ticket?id=<?php echo($id); ?>&page=1';
+                </script>
+            <?php
+                }
+            ?>
             <div class="wrapper">
+            <?php
+                
+                if($info['resolved'] < 0) {
+                    
+                ?>
+                
+                <form id="form-id" action="reply-create.php?id=<?php echo($info['id']); ?>" method="POST">
+    
+                    <textarea class="ckeditor" name="editor"></textarea>
+    
+                    <input class="reply-button" type="submit" onclick="setTimeout(stopSpam, 5)" id="reply-button" name="reply-submit" value="Reply">
+    
+                    <br>
+                    <br>
+    
+                </form>
+                
                 <?php
-                 
-                    if($info['resolved'] < 0) {
-                        
-                    ?>
-                    
-                    <form id="form-id" action="reply-create.php?id=<?php echo($info['id']); ?>" method="POST">
-        
-                        <!-- <textarea class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea> -->
-        
-                        <textarea class="ckeditor" name="editor"></textarea>
-        
-                        <input class="reply-button" type="submit" onclick="setTimeout(stopSpam, 5)" id="reply-button" name="reply-submit" value="Reply">
-        
-                        <br>
-                        <br>
-        
-                    </form>
-                    
-                    <?php
-                    } 
-                    ?>
+                } 
+                ?>
             
             </div>
 
@@ -344,13 +340,6 @@ include 'header.php';
                 }
             
               while($reply = mysqli_fetch_assoc($result)) {
-
-                // echo("UUID: " . $reply['uuid']. "<br>");
-                // echo("Name: " . get_name($reply['uuid']). "<br>");
-                // echo("Date: " . $reply['date']. "<br>");
-                // echo("Rank: " . get_rank($reply['uuid']). "<br>");
-                // echo("Text: " . $reply['text']. "<br>");
-                // echo("------------------------------ <br>");
                   
             ?>
 
@@ -468,8 +457,6 @@ include 'header.php';
                     
                     <form id="form-id" action="reply-create.php?id=<?php echo($info['id']); ?>" method="POST">
         
-                        <!-- <textarea class="form-control" id="replyAreaForm" rows="5" placeholder="Post reply" name="reply-body"></textarea> -->
-        
                         <textarea class="ckeditor" name="editor"></textarea>
         
                         <input class="reply-button" type="submit" onclick="setTimeout(stopSpam, 5)" id="reply-button" name="reply-submit" value="Reply">
@@ -484,6 +471,42 @@ include 'header.php';
                     ?>
             
             </div>
+
+
+            <div class="wrapper">
+
+                <ul class="page">
+
+                    <?php
+                        $query = "SELECT * FROM replies WHERE tid='$id'";
+                                    
+                        $result = mysqli_query($connection, $query);
+
+                        $rows = mysqli_num_rows($result);
+
+                        $pages = 1;
+
+                        if(($rows % 5) === 0) {
+                            $pages = $rows / 5;
+                        } else {
+                            $pages = ($rows / 5) + 1;
+                        }
+
+                        for($i = 1; $i <= $pages; $i++) {
+
+                            if($i == $_GET['page']) {
+                                echo("<li style='color: #007fc4; border-bottom: 1px solid black;'>$i</li>");
+                            } else {
+                                echo("<li><a href='ticket.php?id=$id&page=$i'>$i</a></li>");
+                            }
+                    
+                        }
+                    ?>
+
+                </ul>
+                
+            </div>
+
         </div>
 
 </body>

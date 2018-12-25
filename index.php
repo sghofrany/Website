@@ -18,7 +18,7 @@ require 'header.php';
     <div class="wrapper">
 
         <div class="info-wrapper">
-            <div class="info">
+            <div class="info" style="margin-right: 1.5%;">
                 <div class="info-title" id="ticket-title">
                     <p>NETWORK SUPPORT</p>
                 </div>
@@ -27,10 +27,10 @@ require 'header.php';
                     <p>Here at PvPTemple, we strive to provide the best possible support for our players. We offer a ticket system here on our website which includes appeals, staff applications, and overall general support (reporting, etc..)</p>
                 </div>
 
-                <div class="ticket-info"><p><a href="#">create a ticket</a></p></div>
+                <div class="ticket-info"><p><a href="support.php">create a ticket</a></p></div>
             </div>
 
-            <div class="info">
+            <div class="info" style="margin-right: 1.5%;">
                 <div class="info-title" id="about-title">
                     <p>ABOUT US</p>
                 </div>
