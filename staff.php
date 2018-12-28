@@ -37,7 +37,7 @@ require 'header.php';
         ?>
      
 
-        <p>Owner</p>
+        <p class="staff-title">Owner</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -59,7 +59,7 @@ require 'header.php';
 
         <hr>
 
-        <p>Developer</p>
+        <p class="staff-title">Developer</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -81,7 +81,7 @@ require 'header.php';
         
         <hr>
 
-        <p>Platform-Admin</p>
+        <p class="staff-title">Platform-Admin</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -103,7 +103,7 @@ require 'header.php';
         
         <hr>
 
-        <p>Senior-Admin</p>
+        <p class="staff-title">Senior-Admin</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -125,7 +125,7 @@ require 'header.php';
         
         <hr>
 
-        <p>Admin</p>
+        <p class="staff-title">Admin</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -147,7 +147,7 @@ require 'header.php';
                 
         <hr>
 
-        <p>Senior-Mod</p>
+        <p class="staff-title">Senior-Mod</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -169,7 +169,7 @@ require 'header.php';
                
         <hr>
 
-        <p>Mod</p>
+        <p class="staff-title">Mod</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -192,7 +192,7 @@ require 'header.php';
                       
         <hr>
 
-        <p>Trainee</p>
+        <p class="staff-title">Trainee</p>
         <div class="main-wrapper">
             <?php
                 //Owner

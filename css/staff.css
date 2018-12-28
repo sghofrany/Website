@@ -18,3 +18,9 @@
     font-family: 'Roboto', sans-serif;
     width: 14.5vw;
 }
+
+.staff-title {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; 
+    margin-top: 20px;
+}
