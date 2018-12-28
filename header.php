@@ -79,7 +79,7 @@ session_start();
 
                 <form class="form-wrapper" action="logout.php" method="POST">
                     <button class="logout-button" type="submit" name="logout">logout</button>
-                    
+                    <li class="right-li"><img id="avatar" src="https://crafatar.com/avatars/<?php echo($_SESSION['uuid']); ?>?size=25&default=MHF_Steve&overlay"></li>
                     <!-- <li class="right-li"><a id="alert-count" href="#">(2)</a></li>
                     <li id="alert" class="right-li"><i class="far fa-bell"></i></li> -->
                 </form>
