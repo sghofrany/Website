@@ -1,7 +1,5 @@
 <?php
-    include 'database/rank-database.php';
-    include 'libs/utils.php';
-
+    require 'header.php';
     $string = "05cc5c6a48534abfa4c807372696dc0f";
 
     get_rank($string);
@@ -12,36 +10,89 @@
 
     <head>
         <title>Test</title>
-        <link rel="stylesheet" type="text/css" href="css/reply.css">
+        <link rel="stylesheet" type="text/css" href="css/staff.css">
     </head>
 
 <body>
     
     <div class="wrapper">
     
-        <div class="body-wrapper">
-        
-            <div class="user-wrapper">
+        <div class="main-wrapper">
 
-                <div class="user-img">
-                    <img id="avatar" src="https://crafatar.com/avatars/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
-                </div>
-                
-                <div class="user-name">
-                    <p>Irantwomiles</p>
+            <div class="staff-wrapper">
+                <div class="staff-img">
+                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
                 </div>
 
-                <div class="user-rank">
-                    <p>Developer</p>
-                </div>
+                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
             </div>
 
-            <div class="text-wrapper">
-                <p class="text">Here is some text for this paragraph</p>
+            <div class="staff-wrapper">
+                <div class="staff-img">
+                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
+                </div>
+
+                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+            </div>
+
+            <div class="staff-wrapper">
+                <div class="staff-img">
+                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
+                </div>
+
+                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+            </div>
+
+            <div class="staff-wrapper">
+                <div class="staff-img">
+                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
+                </div>
+
+                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+            </div>
+
+            <div class="staff-wrapper">
+                <div class="staff-img">
+                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
+                </div>
+
+                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+            </div>
+
+            <div class="staff-wrapper">
+                <div class="staff-img">
+                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
+                </div>
+
+                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+            </div>
+
+            <div class="staff-wrapper">
+                <div class="staff-img">
+                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
+                </div>
+
+                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+            </div>
+
+            <div class="staff-wrapper">
+                <div class="staff-img">
+                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
+                </div>
+
+                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+            </div>
+
+            <div class="staff-wrapper">
+                <div class="staff-img">
+                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
+                </div>
+
+                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
             </div>
 
         </div>
-    
+
     </div>
 
 

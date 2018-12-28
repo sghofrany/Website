@@ -33,7 +33,7 @@ require 'header.php';
     ?>
 
     <div class="wrapper">
-        <p style="text-align: center; margin-top: 20px;">You need to be <a href="index.php">logged</a> in before making a support ticket!</p>
+        <p style="text-align: center; margin-top: 20px;">You need to be <a href="index">logged</a> in before making a support ticket!</p>
     </div>
 
     <?php
@@ -66,7 +66,7 @@ require 'header.php';
                 <tr>
                 
                 
-                    <td><a href="ticket.php?id=<?php echo($ticket['id']) ?>&page=1"><?php echo($ticket['title']); ?></a></td>
+                    <td><a href="ticket?id=<?php echo($ticket['id']) ?>&page=1"><?php echo($ticket['title']); ?></a></td>
                     <td><?php echo(get_name($ticket['uuid'])); ?></td>
                     <td><?php echo($ticket['date']); ?></td>
                     
@@ -97,14 +97,14 @@ require 'header.php';
         </table>
 
         <div style="margin-top: 10px; color: white;">
-            <a onclick="location.href='support-list.php'" class="btn btn-warning">Current Tickets</a>
+            <a onclick="location.href='support-list'" class="btn btn-warning">Current Tickets</a>
          </div>
 
         <?php
            exit();
            } 
         ?>
-        <form action="support-create.php" method="POST">
+        <form action="support-create" method="POST">
           <div class="form-group" style="margin-top: 30px;">
             <label for="titleFrom">Title</label>
             <input type="text" class="form-control" id="titleFrom" placeholder="Title of your post" name="support-title">
@@ -118,7 +118,7 @@ require 'header.php';
          <div>
             <button type="submit" class="btn btn-primary" name="support-submit">Submit</button>
 
-            <a onclick="location.href='support-list.php'" class="btn btn-warning">Current Tickets</a>
+            <a onclick="location.href='support-list'" class="btn btn-warning">Current Tickets</a>
          </div>
 
         </form>

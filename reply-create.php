@@ -3,17 +3,17 @@ session_start();
 require 'database/support-database.php';
 
 if(!isset($_POST['reply-submit'])) {
-    header("Location: support.php");
+    header("Location: support");
     exit();
 }
 
 if(empty($_POST['editor'])) {
-    header("Location: support.php");
+    header("Location: support");
     exit();
 }
 
 if($_SERVER['REQUEST_METHOD'] != 'POST') {
-    header("Location: support.php");
+    header("Location: support");
     exit();
 }
 
@@ -32,5 +32,5 @@ echo($tid);
 
 $connection->close();
 
-header("Location: ticket.php?id=" . $tid . "&page=1");
+header("Location: ticket?id=" . $tid . "&page=1");
 

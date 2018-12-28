@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include 'header';
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ include 'header.php';
         ?>
 
         <div class="wrapper">
-            <p style="text-align: center; margin-top: 20px;">You need to be <a href="index.php">logged</a> in before making a support ticket!</p>
+            <p style="text-align: center; margin-top: 20px;">You need to be <a href="index">logged</a> in before making a support ticket!</p>
         </div>
 
         <?php
@@ -70,7 +70,7 @@ include 'header.php';
                 <tr>
                 
                 
-                    <td><a href="ticket.php?id=<?php echo($ticket['id']) ?>&page=1"><?php echo($ticket['title']); ?></a></td>
+                    <td><a href="ticket?id=<?php echo($ticket['id']) ?>&page=1"><?php echo($ticket['title']); ?></a></td>
                     <td><?php echo(get_name($ticket['uuid'])); ?></td>
                     <td><?php echo($ticket['date']); ?></td>
                     

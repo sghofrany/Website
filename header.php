@@ -65,11 +65,11 @@ session_start();
         <div class="navigation">
 
             <ul class="left-nav">
-                <li class="left-li"><a href="index.php"><img class="header-logo" src="img/logo.png" alt="logo"></a></li>
-                <li class="left-li"><a class="item" href="support.php">support</a></li>
+                <li class="left-li"><a href="index"><img class="header-logo" src="img/logo.png" alt="logo"></a></li>
+                <li class="left-li"><a class="item" href="support">support</a></li>
                 <li class="left-li"><a class="item" href="#">shop</a></li>
-                <li class="left-li"><a class="item" href="leaderboard.php">stats</a></li>
-                <li class="left-li"><a class="item" href="staff.php">staff</a></li>
+                <li class="left-li"><a class="item" href="leaderboard">stats</a></li>
+                <li class="left-li"><a class="item" href="staff">staff</a></li>
             </ul>
 
             <ul class="right-nav">
@@ -77,7 +77,7 @@ session_start();
                     if(logged_in()) {
                 ?>
 
-                <form class="form-wrapper" action="logout.php" method="POST">
+                <form class="form-wrapper" action="logout" method="POST">
                     <button class="logout-button" type="submit" name="logout">logout</button>
                     <li class="right-li"><img id="avatar" src="https://crafatar.com/avatars/<?php echo($_SESSION['uuid']); ?>?size=25&default=MHF_Steve&overlay"></li>
                     <!-- <li class="right-li"><a id="alert-count" href="#">(2)</a></li>
@@ -113,7 +113,7 @@ session_start();
                     </div>
 
                     <div class="container">
-                        <form action="login.php" method="POST">
+                        <form action="login" method="POST">
                             <div class="form-group">
 
                                 <label for="usr">  Email</label>

@@ -27,7 +27,7 @@ require 'header.php';
                     <p>Here at PvPTemple, we strive to provide the best possible support for our players. We offer a ticket system here on our website which includes appeals, staff applications, and overall general support (reporting, etc..)</p>
                 </div>
 
-                <div class="ticket-info"><p><a href="support.php">create a ticket</a></p></div>
+                <div class="ticket-info"><p><a href="support">create a ticket</a></p></div>
             </div>
 
             <div class="info" style="margin-right: 1.5%;">
@@ -54,7 +54,7 @@ require 'header.php';
         </div>
     </div>
     <?php
-    //require 'footer.php';
+    //require 'footer';
     ?>
 </body>
 </html>

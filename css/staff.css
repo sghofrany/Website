@@ -1,0 +1,20 @@
+.main-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.staff-wrapper {
+    width: 14.5vw;
+}
+
+.staff-img {
+    text-align: center;
+}
+
+.staff-name {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    width: 14.5vw;
+}

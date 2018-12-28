@@ -1,5 +1,4 @@
 <?php
-require_once 'libs/Parsedown.php';
 include 'header.php';
 ?>
 
@@ -11,16 +10,15 @@ include 'header.php';
 </head>
 
     <?php
-    $parse = new Parsedown();
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if(isset($_POST['reply-submit'])) {
-            require 'reply-create.php';
+            require 'reply-create';
         } elseif(isset($_POST['accept-submit'])) {
-             require 'accept-support.php';
+             require 'accept-support';
         } elseif(isset($_POST['deny-submit'])) {
-            require 'deny-support.php';
+            require 'deny-support';
         }
     }
     
@@ -57,7 +55,7 @@ include 'header.php';
 
 
     <div class="wrapper">
-        <p style="text-align: center; margin-top: 20px;">You need to be <a href="index.php">logged</a> in before making a support ticket!</p>
+        <p style="text-align: center; margin-top: 20px;">You need to be <a href="index">logged</a> in before making a support ticket!</p>
     </div>
 
     <?php
@@ -71,7 +69,7 @@ include 'header.php';
         require 'database/support-database.php';
 
         if(!isset($_GET['id'])) {
-            header("Location: support-list.php");
+            header("Location: support-list");
             exit();
         }
 
@@ -133,7 +131,7 @@ include 'header.php';
                     </div>
                     
                     <div class="user-name">
-                        <p><a href="user.php?name=<?php echo(get_name($info['uuid'])); ?>"><?php echo(get_name($info['uuid'])); ?></a></p>
+                        <p><a href="user?name=<?php echo(get_name($info['uuid'])); ?>"><?php echo(get_name($info['uuid'])); ?></a></p>
                     </div>
 
                     <div class="user-date">
@@ -250,11 +248,11 @@ include 'header.php';
             ?>
             
             <div class="button-wrapper">
-                <form action="accept-support.php?id=<?php echo($info['id']) ?>" method="POST">
+                <form action="accept-support?id=<?php echo($info['id']) ?>" method="POST">
                     <button type="submit" class="accept-button" name="accept-submit">Accept</button>     
                 </form>
 
-                <form action="deny-support.php?id=<?php echo($info['id']) ?>" method="POST">
+                <form action="deny-support?id=<?php echo($info['id']) ?>" method="POST">
                     <button type="submit" class="deny-button" name="deny-submit">Deny</button>
                 </form>
             </div>
@@ -318,7 +316,7 @@ include 'header.php';
                     
                 ?>
                 
-                <form id="form-id" action="reply-create.php?id=<?php echo($info['id']); ?>" method="POST">
+                <form id="form-id" action="reply-create?id=<?php echo($info['id']); ?>" method="POST">
     
                     <textarea class="ckeditor" name="editor"></textarea>
     
@@ -354,7 +352,7 @@ include 'header.php';
                     </div>
                     
                     <div class="user-name">
-                        <p><a href="user.php?name=<?php echo(get_name($reply['uuid'])); ?>"><?php echo(get_name($reply['uuid'])); ?></a></p>
+                        <p><a href="user?name=<?php echo(get_name($reply['uuid'])); ?>"><?php echo(get_name($reply['uuid'])); ?></a></p>
                     </div>
 
                     <div class="user-date">
@@ -455,7 +453,7 @@ include 'header.php';
                         
                     ?>
                     
-                    <form id="form-id" action="reply-create.php?id=<?php echo($info['id']); ?>" method="POST">
+                    <form id="form-id" action="reply-create?id=<?php echo($info['id']); ?>" method="POST">
         
                         <textarea class="ckeditor" name="editor"></textarea>
         
@@ -497,7 +495,7 @@ include 'header.php';
                             if($i == $_GET['page']) {
                                 echo("<li style='color: #007fc4; border-bottom: 1px solid black;'>$i</li>");
                             } else {
-                                echo("<li><a href='ticket.php?id=$id&page=$i'>$i</a></li>");
+                                echo("<li><a href='ticket?id=$id&page=$i'>$i</a></li>");
                             }
                     
                         }

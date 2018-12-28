@@ -3,17 +3,17 @@ session_start();
 require 'database/support-database.php';
 
 if(!isset($_POST['support-submit'])) {
-    header("Location: support.php");
+    header("Location: support");
     exit();
 }
 
 if(empty($_POST['support-title']) || empty($_POST['support-body'])) {
-    header("Location: support.php");
+    header("Location: support");
     exit();
 }
 
 if($_SERVER['REQUEST_METHOD'] != 'POST') {
-    header("Location: support.php");
+    header("Location: support");
     exit();
 }
 
@@ -34,18 +34,18 @@ $check_rows = mysqli_num_rows($check_result);
 
 
 if($check_rows > 0) {
-    header("Location: support.php");
+    header("Location: support");
     exit();
 }
 
 $query = "INSERT INTO ticket (uuid, title, body, date, resolved, resolved_uuid) VALUES ('$uuid', '$title', '$body', '$date', '$resolved', '$resolved_uuid')";
 
 if($connection->query($query) === TRUE) {
-    header("Location: support.php");
+    header("Location: support");
     $connection->close();
     exit();
 } else {
-    header("Location: support.php");
+    header("Location: support");
 }
 
 $connection->close();

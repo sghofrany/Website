@@ -23,9 +23,9 @@
     <body>
         <div class="footer-wrapper">
             <ul class="footer">
-                <li class="footer-item"><a href="index.php">Staff</a></li>
+                <li class="footer-item"><a href="index">Staff</a></li>
                 <li class="footer-item"><a href="#">Shop</a></li>
-                <li class="footer-item"><a href="support.php">Support</a></li>
+                <li class="footer-item"><a href="support">Support</a></li>
             </ul>
         </div>
     

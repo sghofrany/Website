@@ -4,7 +4,7 @@ require 'database/database.php';
 include 'libs/utils.php';
 
 if(isset($_POST['login']) == FALSE) {
-    header("Location: index.php");
+    header("Location: index");
     exit();
 }
 
@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 //Inputs are empty
 if(empty($email) || empty($password)) {
-    header("Location: index.php");
+    header("Location: index");
     exit();
 }
 
@@ -40,9 +40,9 @@ if($password == $compare) {
     $_SESSION['status'] = 1;
     $_SESSION['uuid'] = $info['uuid'];
     $_SESSION['name'] = get_name($_SESSION['uuid']);
-    header("Location: index.php");
+    header("Location: index");
 
 } else {
-    header("Location: index.php");
+    header("Location: index");
     exit();
 }
