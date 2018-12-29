@@ -1,5 +1,5 @@
 <?php
-include 'header';
+include 'header.php';
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ include 'header';
         ?>
 
         <div class="wrapper">
-            <p style="text-align: center; margin-top: 20px;">There are no Support Tickets at this time!</p>
+            <p style="text-align: center; margin-top: 20px; font-family: 'Roboto', sans-serif;">There are no Support Tickets at this time!</p>
         </div>
 
         <?php

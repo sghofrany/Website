@@ -55,7 +55,7 @@ include 'header.php';
 
 
     <div class="wrapper">
-        <p style="text-align: center; margin-top: 20px;">You need to be <a href="index">logged</a> in before making a support ticket!</p>
+        <p style="text-align: center; margin-top: 20px; font-family: 'Roboto', sans-serif;">You need to be <a href="index">logged</a> in before making a support ticket!</p>
     </div>
 
     <?php

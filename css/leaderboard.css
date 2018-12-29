@@ -1,0 +1,46 @@
+.gamemodes {
+
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.game-item {
+    /* border: 1px solid black; */
+
+    border-radius: 5px;
+
+    width: 16.6%;
+
+   
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.game-title {
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    text-align: center;
+
+    padding-top: 5px;
+
+    font-family: 'Open Sans', sans-serif;
+
+    color: white;
+}
+
+.game-count {
+
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    padding-bottom: 5px;
+    
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: white;
+}
