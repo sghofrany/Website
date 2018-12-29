@@ -38,6 +38,9 @@ require 'header.php';
      
 
         <p class="staff-title">Owner</p>
+
+        <hr>
+
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -46,10 +49,9 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://crafatar.com/renders/body/" . $row['uuid'] . "?size=80&default=MHF_Steve&overlay' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
-
-                            <div><p class='staff-name'>" . $row['name'] . "</p></div>
+                            <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
                         );
                     }
@@ -57,9 +59,10 @@ require 'header.php';
             ?>
         </div>
 
+        <p class="staff-title">Developer</p>
+
         <hr>
 
-        <p class="staff-title">Developer</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -68,20 +71,20 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://crafatar.com/renders/body/" . $row['uuid'] . "?size=80&default=MHF_Steve&overlay' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
-
-                            <div><p class='staff-name'>" . $row['name'] . "</p></div>
+                            <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
                         );
                     }
                 }
             ?>
         </div>
-        
+
+        <p class="staff-title">Platform Admin</p>
+
         <hr>
 
-        <p class="staff-title">Platform-Admin</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -90,20 +93,20 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://crafatar.com/renders/body/" . $row['uuid'] . "?size=80&default=MHF_Steve&overlay' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
-
-                            <div><p class='staff-name'>" . $row['name'] . "</p></div>
+                            <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
                         );
                     }
                 }
             ?>
         </div>
-        
+
+        <p class="staff-title">Senior Admin</p>
+
         <hr>
 
-        <p class="staff-title">Senior-Admin</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -112,20 +115,20 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://crafatar.com/renders/body/" . $row['uuid'] . "?size=80&default=MHF_Steve&overlay' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
-
-                            <div><p class='staff-name'>" . $row['name'] . "</p></div>
+                            <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
                         );
                     }
                 }
             ?>
         </div>
-        
-        <hr>
 
         <p class="staff-title">Admin</p>
+
+        <hr>
+
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -134,20 +137,20 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://crafatar.com/renders/body/" . $row['uuid'] . "?size=80&default=MHF_Steve&overlay' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
-
-                            <div><p class='staff-name'>" . $row['name'] . "</p></div>
+                            <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
                         );
                     }
                 }
             ?>
         </div>
-                
+
+        <p class="staff-title">Senior Mod</p>
+
         <hr>
 
-        <p class="staff-title">Senior-Mod</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -156,20 +159,20 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://crafatar.com/renders/body/" . $row['uuid'] . "?size=80&default=MHF_Steve&overlay' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
-
-                            <div><p class='staff-name'>" . $row['name'] . "</p></div>
+                            <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
                         );
                     }
                 }
             ?>
         </div>
-               
-        <hr>
 
         <p class="staff-title">Mod</p>
+
+        <hr>
+
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -178,10 +181,10 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://crafatar.com/renders/body/" . $row['uuid'] . "?size=80&default=MHF_Steve&overlay' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
 
-                            <div><p class='staff-name'>" . $row['name'] . "</p></div>
+                            <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
                         );
                     }
@@ -189,10 +192,10 @@ require 'header.php';
             ?>
         </div>
 
-                      
+        <p class="staff-title">Trainee</p>
+
         <hr>
 
-        <p class="staff-title">Trainee</p>
         <div class="main-wrapper">
             <?php
                 //Owner
@@ -201,10 +204,10 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://crafatar.com/renders/body/" . $row['uuid'] . "?size=80&default=MHF_Steve&overlay' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
 
-                            <div><p class='staff-name'>" . $row['name'] . "</p></div>
+                            <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
                         );
                     }

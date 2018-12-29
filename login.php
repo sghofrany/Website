@@ -28,6 +28,7 @@ $result = mysqli_query($connection, $query);
 $rows = mysqli_num_rows($result);
 
 if($rows < 1) {
+    header("Location: index");
     exit();
 }
 
