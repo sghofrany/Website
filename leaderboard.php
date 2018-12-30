@@ -104,18 +104,32 @@
             <div class="table-wrapper">
 
                 <div class="table-title">
-                    <p><?php 
-                        if($elo == "nodebuff_elo") {
-                            echo("NoDebuff Elo");
-                        } elseif($elo == "debuff_elo") {
-                            echo("Debuff Elo");
-                        } elseif($elo == "builduhc_elo") {
-                            echo("BuildUHC Elo");
-                        } elseif($elo == "gapple_elo") {
-                            echo("Gapple Elo");
-                        }
-                    
-                    ?></p>
+                    <div style="width: 90%;">
+                        <p><?php 
+                            if($elo == "nodebuff_elo") {
+                                echo("NoDebuff Elo");
+                            } elseif($elo == "debuff_elo") {
+                                echo("Debuff Elo");
+                            } elseif($elo == "builduhc_elo") {
+                                echo("BuildUHC Elo");
+                            } elseif($elo == "gapple_elo") {
+                                echo("Gapple Elo");
+                            }
+                        
+                        ?></p>
+                    </div>
+
+
+                    <div class="dropdown" style="width: 10%;">
+                        <button class="dropbtn" style="width: 100%;"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                        <div class="dropdown-content">
+                            <a href="leaderboard?game=nodebuff_elo">NoDebuff</a>
+                            <a href="leaderboard?game=debuff_elo">Debuff</a>
+                            <a href="leaderboard?game=builduhc_elo">BuildUHC</a>
+                            <a href="leaderboard?game=gapple_elo">Gapple</a>
+                        </div>
+                    </div>
+
                 </div>
 
                 <table>
@@ -138,14 +152,6 @@
             </div>
         </div>
 
-
-        <ul>
-            <li><a href="leaderboard?game=nodebuff_elo">NoDebuff</a></li>
-            <li><a href="leaderboard?game=debuff_elo">Debuff</a></li>
-            <li><a href="leaderboard?game=builduhc_elo">BuildUHC</a></li>
-            <li><a href="leaderboard?game=gapple_elo">Gapple</a></li>
-        </ul>
-        
     </div>
 
 
