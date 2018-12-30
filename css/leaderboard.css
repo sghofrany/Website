@@ -26,8 +26,8 @@
 
     padding-top: 5px;
 
-    font-family: 'Open Sans', sans-serif;
-
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     color: white;
 }
 
@@ -44,3 +44,37 @@
 
     color: white;
 }
+
+.all-tables {
+    display: flex;
+    flex-direction: row;
+}
+
+.table-wrapper {
+    width: 33%;
+
+    border-radius: 5px;
+
+    background-color: #f6f6f6;
+}
+
+.table-title p {
+    text-align: center;
+    border-bottom: 1px solid #dbdbdb;
+    color: #b3b3b3;
+    margin-bottom: 10px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    color: #b3b3b3;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+

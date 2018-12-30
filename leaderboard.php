@@ -1,5 +1,29 @@
 <?php
     include 'header.php';
+    require 'database/rank-database.php';
+    
+    $elo = "";
+
+    if(!isset($_GET['game'])) {
+        $elo = "nodebuff_elo";
+    } else {
+        $elo  = $_GET['game'];
+    }
+
+    $win = str_replace("_elo", "_wins", $elo);
+    $loss = str_replace("_elo", "_losses", $elo);
+
+    $query = "SELECT practice_season_4_data.player_id, practice_season_4_data.$elo, practice_season_4_data.$win, practice_season_4_data.$loss, players.player_id, players.name FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id ORDER BY $elo DESC LIMIT 20";
+
+    $result = mysqli_query($connection, $query);
+
+    $num = 1;
+
+    $data = array();
+
+    while($info = mysqli_fetch_assoc($result)) {
+        $data[] = $info;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -7,40 +31,113 @@
 <head>
 	<title>PvPTemple</title>
     <link rel="stylesheet" type="text/css" href="css/leaderboard.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
     
     <div class="wrapper">
 
-
         <div class="gamemodes">
-            <div class="game-item" style="margin-right: 1%; background-color: #ffa8e3;">
+            <div class="game-item" style="margin-right: 1.6%; background-color: #ffa8e3;">
                 <p class="game-title">Practice</p>
                 <p class="game-count">395 players online</p>
             </div>
-            <div class="game-item" style="margin-right: 1%; background-color: #02d371;">
+            <div class="game-item" style="margin-right: 1.6%; background-color: #02d371;">
                 <p class="game-title">UHC</p>
                 <p class="game-count">395 players online</p>
             </div>
-            <div class="game-item" style="margin-right: 1%; background-color: #01bad2;">
+            <div class="game-item" style="margin-right: 1.6%; background-color: #01bad2;">
                 <p class="game-title">UHC Meetup</p>
                 <p class="game-count">395 players online</p>
             </div>
-            <div class="game-item" style="margin-right: 1%; background-color: #fc9850;">
+            <div class="game-item" style="margin-right: 1.6%; background-color: #fc9850;">
                 <p class="game-title">Survival Games</p>
                 <p class="game-count">395 players online</p>
             </div>
-            <div class="game-item" style="margin-right: 1%; background-color: #5990ea;">
+            <div class="game-item" style="margin-right: 1.6%; background-color: #5990ea;">
                 <p class="game-title">SkyWars</p>
                 <p class="game-count">395 players online</p>
             </div>
-            <div class="game-item" style="margin-right: 1%; background-color: #c44a64;">
+            <div class="game-item" style="background-color: #ff2d5a;">
                 <p class="game-title">HCF</p>
                 <p class="game-count">395 players online</p>
             </div>
+
         </div>
+
+        <br>
+        <hr>
+        <div class="all-tables">
+            <div class="table-wrapper" style="margin-right: 1%;">
+
+                <div class="table-title">
+                    <p>Global Elo</p>
+                </div>
+
+                <table>
+
+                    <tr>
+                        <td>1.</td>
+                        <td>Irantwomiles</td>
+                        <td>1000</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="table-wrapper" style="margin-right: 1%;">
+
+                <div class="table-title">
+                    <p>Win/Loss</p>
+                </div>
+
+                <table>
+
+                    <tr>
+                        <td>1.</td>
+                        <td>Irantwomiles</td>
+                        <td>1000</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="table-wrapper">
+
+                <div class="table-title">
+                    <p><?php 
+                        if($elo == "nodebuff_elo") {
+                            echo("NoDebuff Elo");
+                        } elseif($elo == "debuff_elo") {
+                            echo("Debuff Elo");
+                        } elseif($elo == "builduhc_elo") {
+                            echo("BuildUHC Elo");
+                        } elseif($elo == "gapple_elo") {
+                            echo("Gapple Elo");
+                        }
+                    
+                    ?></p>
+                </div>
+
+                <table>
+                
+                <?php
+
+                foreach($data as $row) {
+                ?>
+                <tr>
+                    <td><?php echo($num); ?></td>
+                    <td><?php echo($row['name']); ?></td>
+                    <td><?php echo($row[$elo]); ?></td>
+                </tr>
+                <?php
+                $num++;
+                }
+                ?>
+
+                </table>
+            </div>
+        </div>
+
 
         <ul>
             <li><a href="leaderboard?game=nodebuff_elo">NoDebuff</a></li>
@@ -48,42 +145,6 @@
             <li><a href="leaderboard?game=builduhc_elo">BuildUHC</a></li>
             <li><a href="leaderboard?game=gapple_elo">Gapple</a></li>
         </ul>
-      
-        <table>
-            <th>Rank</th>
-            <th>Player</th>
-            <th>Elo</th>
-        
-            <?php
-
-            require 'database/rank-database.php';
-            $elo = "";
-
-            if(!isset($_GET['game'])) {
-                $elo = "nodebuff_elo";
-            } else {
-                $elo  = $_GET['game'];
-            }
-
-            $query = "SELECT practice_season_4_data.player_id, practice_season_4_data.$elo, players.player_id, players.name FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id ORDER BY $elo DESC LIMIT 20";
-
-            $result = mysqli_query($connection, $query);
-
-            $num = 1;
-
-            while($rows = $result->fetch_assoc()) {
-            ?>
-                <tr>
-                    <td><?php echo($num); ?></td>
-                    <td><?php echo($rows['name']); ?></td>
-                    <td><?php echo($rows[$elo]); ?></td>
-                </tr>
-            <?php
-              $num++;
-            }
-            ?>
-
-        </table>
         
     </div>
 
