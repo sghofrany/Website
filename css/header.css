@@ -182,6 +182,14 @@ body {
     height: 35px;
 }
 
+.not-logged {
+    text-align: center; 
+    margin-top: 20%; 
+    font-size: 25px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
 @media (max-width: 576px) {
     
     .right-nav {

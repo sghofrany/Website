@@ -35,7 +35,10 @@ require 'header.php';
     ?>
 
     <div class="wrapper">
-        <p style="text-align: center; margin-top: 20px; font-family: 'Roboto', sans-serif;">You need to be <a href="index">logged</a> in before making a support ticket!</p>
+        <div class="not-logged-wrapper">
+            <p class="not-logged">You need to be <a href="index">logged</a> in before making a support ticket!</p>
+        </div>
+
     </div>
 
     <?php
