@@ -41,6 +41,8 @@
 .button-wrapper {
     display: flex;
     float: right;
+
+    align-items: center;
 }
 
 .accept-button {

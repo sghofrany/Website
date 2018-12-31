@@ -8,6 +8,8 @@ require 'header.php';
 <head>
 	<title>PvPTemple</title>
     <link rel="stylesheet" type="text/css" href="css/ticket.css">
+    <link rel="stylesheet" type="text/css" href="css/support.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
@@ -104,21 +106,31 @@ require 'header.php';
            exit();
            } 
         ?>
+
+        <div>
+           
+           <div class="support-info-wrapper">
+                <p class="support-title">NETWORK SUPPORT</p>
+                <p class="support-body">The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.</p>
+           
+           </div>
+        
+        </div>
+
+
         <form action="support-create" method="POST">
           <div class="form-group" style="margin-top: 30px;">
-            <label for="titleFrom">Title</label>
-            <input type="text" class="form-control" id="titleFrom" placeholder="Title of your post" name="support-title">
+            <input class="support-text-title" type="text" placeholder="Title of your post" name="support-title">
           </div>
 
           <div class="form-group">
-            <label for="textAreaForm">Reason</label>
-            <textarea class="form-control" id="textAreaForm" rows="5" placeholder="Explain your reasoning behind this post" name="support-body"></textarea>
+            <textarea class="support-text-body" placeholder="Explain your reasoning behind this post" name="support-body"></textarea>
           </div>
 
-         <div>
-            <button type="submit" class="btn btn-primary" name="support-submit">Submit</button>
+         <div class="button-wrapper">
+            <button type="submit" class="submit-button" name="support-submit">CREATE</button>
 
-            <a onclick="location.href='support-list'" class="btn btn-warning">Current Tickets</a>
+            <a onclick="location.href='support-list'" class="admin-button" style="color: white;">ADMIN VIEW</a>
          </div>
 
         </form>
