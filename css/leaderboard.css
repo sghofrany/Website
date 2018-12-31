@@ -85,6 +85,17 @@ td {
     font-family: 'Roboto', sans-serif;
 }
 
+td a {
+    color: #b3b3b3;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+td a:hover {
+    color: #494848;
+    text-decoration: none;
+}
+
 .dropbtn {
     background-color: white;
     color: #b3b3b3;

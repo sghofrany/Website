@@ -97,12 +97,6 @@ session_start();
             </ul>
         </div>
 
-
-        <div class="banner">
-            <label class="banner-text">pvptemple</label>
-            <label id="subtext" class="banner-subtext">connect</label>
-        </div>
-
         <div id="loginModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
 

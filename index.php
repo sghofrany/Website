@@ -10,48 +10,48 @@ require 'header.php';
 
 <body>
 
-    <!-- Changing the subtext of the banner to whatever the page is -->
-    <script>
-        document.getElementById('subtext').innerHTML = "welcome";
-    </script>
-
     <div class="wrapper">
 
-        <div class="info-wrapper">
-            <div class="info" style="margin-right: 1.5%;">
-                <div class="info-title" id="ticket-title">
-                    <p>NETWORK SUPPORT</p>
-                </div>
-
-                <div class="info-body">
-                    <p>Here at PvPTemple, we strive to provide the best possible support for our players. We offer a ticket system here on our website which includes appeals, staff applications, and overall general support (reporting, etc..)</p>
-                </div>
-
-                <div class="ticket-info"><p><a href="support">create a ticket</a></p></div>
-            </div>
-
-            <div class="info" style="margin-right: 1.5%;">
-                <div class="info-title" id="about-title">
-                    <p>ABOUT US</p>
-                </div>
-
-                <div class="info-body">
-                    <p>Here at PvPTemple, we strive to provide the best possible support for our players. We offer a ticket system here on our website which includes appeals, staff applications, and overall general support (reporting, etc..)</p>
-                </div>
-            </div>
-
-            <div class="info" id="no-margin">
-                <div class="info-title" id="staff-title">
-                    <p>OUR TEAM</p>
-                </div>
-                
-                <div class="info-body">
-                    <p>Here at PvPTemple, we strive to provide the best possible support for our players. We offer a ticket system here on our website which includes appeals, staff applications, and overall general support (reporting, etc..)</p>
-                </div>
-
-                <div class="staff-info"><p><a href="#">view our staff team</a></p></div>
-            </div>
+        <div class="banner">
+            <label class="banner-text">pvptemple</label>
         </div>
+
+        <div class="info-wrapper" style="margin-right: 2%;">
+
+            <div class="info">
+                <p class="info-title">OUR GOAL</p>
+                <p class="info-body">The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.</p>
+            </div>
+        
+        </div>
+
+        <div class="info-wrapper" style="margin-left: 2%;">
+
+            <div class="info">
+                <p class="info-title">MULTIPLE PROXIES</p>
+                <p class="info-body"> The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.</p>
+            </div>
+        
+        </div>
+
+        <div class="info-wrapper" style="margin-right: 2%;">
+
+            <div class="info">
+                <p class="info-title">NETWORK SUPPORT</p>
+                <p class="info-body">The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.</p>
+            </div>
+        
+        </div>
+
+        <div class="info-wrapper" style="margin-left: 2%;">
+
+            <div class="info">
+                <p class="info-title">THE STAFF TEAM</p>
+                <p class="info-body">The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.</p>
+            </div>
+        
+        </div>
+        
     </div>
     <?php
     //require 'footer';

@@ -1,137 +1,29 @@
+
 .info-wrapper {
-    display: flex;
-}
+    display: relative;
+    float: left;
 
-.info {
-    width: 32.33%;
-    height: 350px;
+    width: 48%;
+    height: 200px;
+    margin-top: 50px;
 
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
-    margin-top: 30px;
-
-    border-radius: 10px;
-
-    position: relative;
-
-}
-
-.info #no-margin {
-    width: 32.33%;
-    height: 350px;
-
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
-
-    margin-right: 0px;
-    margin-top: 30px;
-
-    border-radius: 10px;
-}
-
-#staff-title {
-    background-color: #3CB6C3;
-}
-
-#about-title {
-    background-color: #1C929C;
-}
-
-#ticket-title {
-    background-color: #0A7380;
+    box-shadow: 0px 3px 20px #a7a6a6;
+    /* opacity: 0.65; */
+ 
 }
 
 .info-title {
-
-    display: flex;
-    align-items: center;
-
-    justify-content: center;
-
-    width: 100%;
-    height: 60px;
-    background-color: #1C929C;
-
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.info-title p {
-    margin: 0px 0px 0px 0px;
-    color: white;
-    text-shadow: 1.5px 1.5px #262626;
-    font-weight: bold;
+    color:#CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
     font-family: 'Roboto', sans-serif;
+
+    margin: 20px;
+
 }
 
 .info-body {
+    color: #646464;
     font-family: 'Roboto', sans-serif;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+
+    margin: 20px;
 }
-
-.ticket-info {
-    display: flex;
-    justify-content: center;
-   
-}
-
-.ticket-info p {
-    position: absolute;
-    bottom: 0;
-
-    background-color: gray;
-    color: white;
-
-    box-shadow: 0px 1px 5px rgba(0,0,0,1);
-   
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    border-radius: 3px;
-
-    transition: transform 300ms ease-in;
-}
-
-.staff-info {
-    display: flex;
-    justify-content: center;
-}
-
-.staff-info p {
-    position: absolute;
-    bottom: 0;
-
-    background-color: gray;
- 
-
-    box-shadow: 0px 1px 5px rgba(0,0,0,1);
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    border-radius: 3px;
-
-    transition: transform 300ms ease-in;
-}
-
-.staff-info p a {
-    text-decoration: none;
-    color: white;
-}
-
-.ticket-info p a {
-    text-decoration: none;
-    color: white;
-}
-
-.staff-info p:hover {
-    transform: scale(1.05);
-}
-
-.ticket-info p:hover {
-    transform: scale(1.05);
-}
-

@@ -13,16 +13,16 @@
     $win = str_replace("_elo", "_wins", $elo);
     $loss = str_replace("_elo", "_losses", $elo);
 
-    $query = "SELECT practice_season_4_data.player_id, practice_season_4_data.$elo, practice_season_4_data.$win, practice_season_4_data.$loss, players.player_id, players.name FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id ORDER BY $elo DESC LIMIT 20";
+    $elo_query = "SELECT practice_season_4_data.player_id, practice_season_4_data.$elo, practice_season_4_data.$win, practice_season_4_data.$loss, players.player_id, players.name FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id ORDER BY $elo DESC LIMIT 20";
 
-    $result = mysqli_query($connection, $query);
+    $result = mysqli_query($connection, $elo_query);
 
     $num = 1;
 
-    $data = array();
+    $elo_data = array();
 
     while($info = mysqli_fetch_assoc($result)) {
-        $data[] = $info;
+        $elo_data[] = $info;
     }
 ?>
 
@@ -87,8 +87,41 @@
 
             <div class="table-wrapper" style="margin-right: 1%;">
 
+                <?php
+                    // $type = "";
+
+                    // if(!isset($_GET['type'])) {
+                    //     $elo = "win";
+                    // } else {
+                    //     $elo  = $_GET['type'];
+                    // }
+
+                    // $elo_query = "SELECT practice_season_4_data.player_id, practice_season_4_data.$elo, practice_season_4_data.$win, practice_season_4_data.$loss, players.player_id, players.name FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id ORDER BY $elo DESC LIMIT 20";
+
+                    // $result = mysqli_query($connection, $elo_query);
+
+                    // $num = 1;
+
+                    // $elo_data = array();
+
+                    // while($info = mysqli_fetch_assoc($result)) {
+                    //     $elo_data[] = $info;
+                    // }
+                ?>
+
                 <div class="table-title">
-                    <p>Win/Loss</p>
+                    <div style="width: 90%;">
+                        <p>Win/Loss</p>
+                    </div>  
+
+                    <div class="dropdown" style="width: 10%;">
+                        <button class="dropbtn" style="width: 100%;"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                        <div class="dropdown-content">
+                            <a href="leaderboard?type=win">Win</a>
+                            <a href="leaderboard?type=loss">Loss</a>
+                        </div>
+                    </div>
+                   
                 </div>
 
                 <table>
@@ -136,11 +169,11 @@
                 
                 <?php
 
-                foreach($data as $row) {
+                foreach($elo_data as $row) {
                 ?>
                 <tr>
                     <td><?php echo($num); ?></td>
-                    <td><?php echo($row['name']); ?></td>
+                    <td><a href="user?name=<?php echo($row['name']); ?>"><?php echo($row['name']); ?></a></td>
                     <td><?php echo($row[$elo]); ?></td>
                 </tr>
                 <?php
