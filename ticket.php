@@ -244,7 +244,7 @@ include 'header.php';
             </div>
             
             <?php
-                if($info['resolved'] < 0 && has_permission($_SESSION['uuid'])) {
+                if($info['resolved'] < 0 && has_modify_permission($_SESSION['uuid'])) {
             ?>
             
             <div class="button-wrapper">

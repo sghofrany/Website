@@ -7,7 +7,7 @@ require 'header.php';
 <html>
 <head>
 	<title>PvPTemple</title>
-    <link rel="stylesheet" type="text/css" href="css/ticket.css">
+    <link rel="stylesheet" type="text/css" href="css/support-list.css">
     <link rel="stylesheet" type="text/css" href="css/support.css">
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -53,56 +53,71 @@ require 'header.php';
             if(pending_tickets($_SESSION['uuid']) !== 0) {
         ?>
 
-        <p style="margin-top: 20px; font-family: 'Roboto', sans-serif; text-align: center; font-size: 35px;">Current Ticket(s)</p>
+        <div class="list-wrapper">
 
-        <table>
-            <th>Title</th>
-            <th>User</th>
-            <th>Date</th>
-            <th>Status</th>
+            <div class=list-header-info style="margin-bottom: 20px;">
+
+                <p class="list-header-ticket">TICKET NAME</p>
+                <p class="list-header-user">CREATOR NAME</p>
+                <p class="list-header-date">CREATION DATE</p>
+                <p class="list-header-status">TICKET STATUS</p>
+
+            </div>
+
+            <hr>
 
             <?php
 
-                $result = pending_tickets($_SESSION['uuid']);
+            $result = pending_tickets($_SESSION['uuid']);
 
-                while($ticket = mysqli_fetch_assoc($result)) {
+            while($ticket = mysqli_fetch_assoc($result)) {
             ?>
 
-                <tr>
-                
-                
-                    <td><a href="ticket?id=<?php echo($ticket['id']) ?>&page=1"><?php echo($ticket['title']); ?></a></td>
-                    <td><?php echo(get_name($ticket['uuid'])); ?></td>
-                    <td><?php echo($ticket['date']); ?></td>
+            <div class=list-info>
+
+                <p class="list-ticket"><a href="ticket?id=<?php echo($ticket['id']) ?>&page=1"><?php echo($ticket['title']); ?></a></p>
+                <p class="list-user"><?php echo(get_name($ticket['uuid'])); ?></p>
+                <p class="list-date"><?php echo($ticket['date']); ?></p>
+
+                <?php
                     
-                    <?php
-                    
-                    if($ticket['resolved'] == -1) {
-                
-                    ?>
-                    <td style="background-color: #f2c521; color: white"><?php echo(get_resolved($ticket['resolved'])); ?></td>
-                    <?php
-                        } elseif($ticket['resolved'] == 0) {
-                    ?>
-                    <td style="background-color: #f25f54; color: white;"><?php echo(get_resolved($ticket['resolved'])); ?></td>
-                    <?php
-                        } elseif($ticket['resolved'] == 1) {
-                    ?>  
-                    <td style="background-color: #7fc47f; color: white;"><?php echo(get_resolved($ticket['resolved'])); ?></td>
-                    <?php
-                    }
-                    ?>
-                </tr>
+                if($ticket['resolved'] == -1) {
+
+                ?>
+                <p class="list-status-pending" style="color:white;">PENDING</p>
+                <?php
+                    } elseif($ticket['resolved'] == 0) {
+                ?>
+                <p class="list-status-denied" style="color:white;">DENIED</p>
+                <?php
+                    } elseif($ticket['resolved'] == 1) {
+                ?>  
+                <p class="list-status-pending" style="color:white;">ACCEPTED</p>
+                <?php
+                }
+                ?>
+
+            </div>
+            <?php
+            }
+            ?>
 
 
+
+        </div>
+
+        <div class="button-wrapper">
+
+            <?php
+                if(has_view_permission($_SESSION['uuid'])) {
+            ?>
+            
+            <a onclick="location.href='support-list'" class="admin-button" style="color: white;">ADMIN VIEW</a>
+            
             <?php
                 }
             ?>
-
-        </table>
-
-        <div style="margin-top: 10px; color: white;">
-            <a onclick="location.href='support-list'" class="btn btn-warning">Current Tickets</a>
+            
          </div>
 
         <?php

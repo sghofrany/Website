@@ -291,7 +291,7 @@ function pending_tickets($uuid) {
     if($rows < 1) {
         return 0;
     } 
-
+    $connection->close();
     return $result;
 
 }
