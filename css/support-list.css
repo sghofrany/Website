@@ -1,0 +1,77 @@
+.list-wrapper {
+    margin-top: 40px;
+}
+
+.list-info {
+    display: flex;
+    flex-direction: row;
+
+    /* border: 1px solid black; */
+    font-family: 'Roboto', sans-serif;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    box-shadow: 0px 3px 20px #a7a6a6;
+}
+
+.list-info p {
+    width: 25%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+
+    align-items: center;
+    color: #646464;
+}
+
+.list-info a {
+    color: #646464;
+    text-decoration: none;
+    transition: color 300ms ease-in;
+}
+
+.list-info a:hover {
+    color: #3f3e3e;
+}
+
+.list-header-info {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0px 3px 20px #a7a6a6;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+
+.list-header-info p {
+    width: 25%;
+    text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+    font-family: 'Roboto', sans-serif;
+    color:#CCCCCC;
+}
+
+.list-status-pending {
+    background-color: #f2c521;
+    border-radius: 30px;
+
+    font-weight: bold;
+}
+
+.list-status-accepted {
+    background-color: #00AA00;
+    border-radius: 30px;
+
+    font-weight: bold;
+}
+
+.list-status-denied {
+    background-color: #FF5555;
+    border-radius: 30px;
+
+    font-weight: bold;
+}

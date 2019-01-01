@@ -133,7 +133,16 @@ require 'header.php';
          <div class="button-wrapper">
             <button type="submit" class="submit-button" name="support-submit">CREATE</button>
 
+            <?php
+                if(has_view_permission($_SESSION['uuid'])) {
+            ?>
+            
             <a onclick="location.href='support-list'" class="admin-button" style="color: white;">ADMIN VIEW</a>
+            
+            <?php
+                }
+            ?>
+            
          </div>
 
         </form>

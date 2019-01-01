@@ -1,8 +1,6 @@
 <?php
     require 'header.php';
-    $string = "05cc5c6a48534abfa4c807372696dc0f";
 
-    get_rank($string);
 
 ?>
 
@@ -10,88 +8,54 @@
 
     <head>
         <title>Test</title>
-        <link rel="stylesheet" type="text/css" href="css/staff.css">
+        <link rel="stylesheet" type="text/css" href="css/test.css">
     </head>
 
 <body>
     
     <div class="wrapper">
     
-        <div class="main-wrapper">
+       <div class="list-wrapper">
 
-            <div class="staff-wrapper">
-                <div class="staff-img">
-                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
-                </div>
+            <div class=list-header-info style="margin-bottom: 20px;">
 
-                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+                <p class="list-header-ticket">TICKET NAME</p>
+                <p class="list-header-user">CREATOR NAME</p>
+                <p class="list-header-date">CREATION DATE</p>
+                <p class="list-header-status">TICKET STATUS</p>
+
             </div>
 
-            <div class="staff-wrapper">
-                <div class="staff-img">
-                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
-                </div>
+            <hr>
 
-                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+            <div class=list-info>
+
+                <p class="list-ticket">some title that is long</p>
+                <p class="list-user">Irantwomiles</p>
+                <p class="list-date">2018-12-18</p>
+                <p class="list-status-pending" style="color:white;">PENDING</p>
+
             </div>
 
-            <div class="staff-wrapper">
-                <div class="staff-img">
-                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
-                </div>
+            <div class=list-info>
 
-                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+                <p class="list-ticket">short</p>
+                <p class="list-user">Irantwomiles1234</p>
+                <p class="list-date">2018-12-18</p>
+                <p class="list-status-accepted" style="color:white;">ACCEPTED</p>
+
             </div>
 
-            <div class="staff-wrapper">
-                <div class="staff-img">
-                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
-                </div>
+            <div class=list-info>
 
-                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
+                <p class="list-ticket">some t long</p>
+                <p class="list-user">name</p>
+                <p class="list-date">2018-12-18</p>
+                <p class="list-status-denied" style="color:white;">DENIED</p>
+
             </div>
-
-            <div class="staff-wrapper">
-                <div class="staff-img">
-                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
-                </div>
-
-                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
-            </div>
-
-            <div class="staff-wrapper">
-                <div class="staff-img">
-                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
-                </div>
-
-                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
-            </div>
-
-            <div class="staff-wrapper">
-                <div class="staff-img">
-                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
-                </div>
-
-                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
-            </div>
-
-            <div class="staff-wrapper">
-                <div class="staff-img">
-                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
-                </div>
-
-                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
-            </div>
-
-            <div class="staff-wrapper">
-                <div class="staff-img">
-                    <img id="avatar" src="https://crafatar.com/renders/body/8667ba71-b85a-4004-af54-457a9734eed7?size=80&default=MHF_Steve&overlay" alt="">
-                </div>
-
-                <div><p class="staff-name">GANGMEMBERHAXSHW</p></div>
-            </div>
-
-        </div>
+       
+       </div>
 
     </div>
 

@@ -6,7 +6,7 @@ include 'header.php';
 <html>
 <head>
 	<title>PvPTemple - Support</title>
-    <link rel="stylesheet" type="text/css" href="css/ticket.css">
+    <link rel="stylesheet" type="text/css" href="css/support-list.css">
 </head>
     
     <body style="background-color: white;">
@@ -27,12 +27,6 @@ include 'header.php';
                 exit();
             }
         ?>
-
-        <div class="wrapper">
-            <div class="list">
-                <p class="info-text">Current Tickets</p>
-            </div>
-        </div>
 
         <?php
 
@@ -56,52 +50,59 @@ include 'header.php';
 
 
         <div class="wrapper">
+        
+            <div class="list-wrapper">
+            
+                <div class=list-header-info>
 
-            <table style="background-color:white;">
-                <th>Title</th>
-                <th>User</th>
-                <th>Date</th>
-                <th>Status</th>
-            <?php
+                    <p class="list-header-ticket">TICKET NAME</p>
+                    <p class="list-header-user">CREATOR NAME</p>
+                    <p class="list-header-date">CREATION DATE</p>
+                    <p class="list-header-status">TICKET STATUS</p>
+
+                </div>
+
+                <hr>
+
+                <?php
 
                 while($ticket = mysqli_fetch_assoc($result)) {
-            ?>
+                ?>
 
-                <tr>
-                
-                
-                    <td><a href="ticket?id=<?php echo($ticket['id']) ?>&page=1"><?php echo($ticket['title']); ?></a></td>
-                    <td><?php echo(get_name($ticket['uuid'])); ?></td>
-                    <td><?php echo($ticket['date']); ?></td>
-                    
+
+                <div class=list-info>
+
+                    <p class="list-ticket"><a href="ticket?id=<?php echo($ticket['id']) ?>&page=1"><?php echo($ticket['title']); ?></a></p>
+                    <p class="list-user"><?php echo(get_name($ticket['uuid'])); ?></p>
+                    <p class="list-date"><?php echo($ticket['date']); ?></p>
                     <?php
                     
                     if($ticket['resolved'] == -1) {
                 
                     ?>
-                    <td style="background-color: #f2c521; color: white"><?php echo(get_resolved($ticket['resolved'])); ?></td>
+                    <p class="list-status-pending" style="color:white;">PENDING</p>
                     <?php
                         } elseif($ticket['resolved'] == 0) {
                     ?>
-                    <td style="background-color: #f25f54; color: white;"><?php echo(get_resolved($ticket['resolved'])); ?></td>
+                    <p class="list-status-denied" style="color:white;">DENIED</p>
                     <?php
                         } elseif($ticket['resolved'] == 1) {
                     ?>  
-                    <td style="background-color: #7fc47f; color: white;"><?php echo(get_resolved($ticket['resolved'])); ?></td>
+                    <p class="list-status-accepted" style="color:white;">ACCEPTED</p>
                     <?php
                     }
                     ?>
-                </tr>
+                    
 
+                </div>
 
-            <?php
+                <?php
                 }
-            ?>
+                ?>
 
-            </table>
 
+            </div>
         </div>
-
     </body>
 
 </html>

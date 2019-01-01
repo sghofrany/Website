@@ -157,13 +157,27 @@ function is_banned($uuid) {
 
 }
 
-function has_permission($uuid) {
+function has_modify_permission($uuid) {
 
     $clean_uuid = str_replace("-", "", $uuid);
 
     $rank = get_rank($clean_uuid);
 
     if($rank === "Owner" || $rank === "Developer" || $rank === "Platform-Admin" || $rank === "Senior-Admin" || $rank === "Admin" || $rank === "Senior-Mod") {
+        return true;
+    }
+
+    return false;
+
+}
+
+function has_view_permission($uuid) {
+
+    $clean_uuid = str_replace("-", "", $uuid);
+
+    $rank = get_rank($clean_uuid);
+
+    if($rank === "Owner" || $rank === "Developer" || $rank === "Platform-Admin" || $rank === "Senior-Admin" || $rank === "Admin" || $rank === "Senior-Mod" || $rank === "Mod" || $rank === "Trainee") {
         return true;
     }
 
@@ -280,10 +294,4 @@ function pending_tickets($uuid) {
 
     return $result;
 
-}
-
-function microtime_float()
-{
-    list($usec, $sec) = explode(" ", microtime());
-    return ((float)$usec + (float)$sec);
 }
