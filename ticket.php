@@ -5,7 +5,8 @@ include 'header.php';
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PvPTemple - Support</title>
+    <title>PvPTemple - Support</title>
+    <link rel="stylesheet" type="text/css" href="css/ticket.css">
     <script src="ckeditor/ckeditor.js"></script>
 </head>
 

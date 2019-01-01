@@ -1,7 +1,5 @@
 <?php
     require 'header.php';
-
-
 ?>
 
 <html>
@@ -15,47 +13,45 @@
     
     <div class="wrapper">
     
-       <div class="list-wrapper">
+        <div class="body-wrapper">
 
-            <div class=list-header-info style="margin-bottom: 20px;">
+            <div class="user-wrapper">
 
-                <p class="list-header-ticket">TICKET NAME</p>
-                <p class="list-header-user">CREATOR NAME</p>
-                <p class="list-header-date">CREATION DATE</p>
-                <p class="list-header-status">TICKET STATUS</p>
+                <div class="user-img">
+                    <img id="avatar" src="https://visage.surgeplay.com/head/80/05cc5c6a48534abfa4c807372696dc0f" alt='Staff Image'>
+                </div>
+                
+                <div class="user-name">
+                    <p><a href="#">Irantwomiles</a></p>
+                </div>
 
-            </div>
+                <div class="user-rank">
+                    <p id="developer">DEVELOPER</p>
+                </div>
 
-            <hr>
-
-            <div class=list-info>
-
-                <p class="list-ticket">some title that is long</p>
-                <p class="list-user">Irantwomiles</p>
-                <p class="list-date">2018-12-18</p>
-                <p class="list-status-pending" style="color:white;">PENDING</p>
-
-            </div>
-
-            <div class=list-info>
-
-                <p class="list-ticket">short</p>
-                <p class="list-user">Irantwomiles1234</p>
-                <p class="list-date">2018-12-18</p>
-                <p class="list-status-accepted" style="color:white;">ACCEPTED</p>
+                <div class="user-date">
+                    <p>12/12/12</p>
+                </div>
 
             </div>
 
-            <div class=list-info>
+            <div class="out-title-wrapper">
 
-                <p class="list-ticket">some t long</p>
-                <p class="list-user">name</p>
-                <p class="list-date">2018-12-18</p>
-                <p class="list-status-denied" style="color:white;">DENIED</p>
+                <div class="title-wrapper" style="background-color: white; margin-top: 20px;">
+                    <div class="title">
+                        <p id="title">Title of post</p>
+                        <p id="resolved" style="background-color: #f2c521;">Pending</p>                   
+                    </div>
+                </div>
+
+                <div class="text-wrapper">
+                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                </div>
 
             </div>
-       
-       </div>
+
+
+        </div>
 
     </div>
 

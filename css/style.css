@@ -8,7 +8,7 @@
     
     border-radius: 3px;
     margin: 0px 0px 0px 0px;
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+    /* box-shadow: 0px 1px 5px rgba(0,0,0,0.5); */
     padding-left: 20px;
 
     margin-top: 20px;
@@ -17,25 +17,38 @@
     font-size: 20px;
 }
 
+.title {
+    border-bottom: 1px solid #CCCCCC;
+}
+
 .title-wrapper .title #title {
-    margin: 0px 0px 0px 0px;
+  
     display: inline-block;
-    
+    margin: 0px;
+
     padding-bottom: 10px;
     padding-top: 10px;
+
+    font-size: 15px;
+
+    color: #CCCCCC;
+    font-family: 'Roboto', sans-serif;
 }
 
 .title-wrapper .title #resolved {
-    margin: 0px 0px 0px 0px;
+    
     float: right;
-    border-radius: 3px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    margin: 0px;
+    
+    border-radius: 30px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
     
-    color: white;
+    font-size: 15px;
 
+    color: white;
 }
 
 .button-wrapper {
