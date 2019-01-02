@@ -39,9 +39,7 @@ require 'header.php';
         ?>
      
 
-        <p class="staff-title">Owner</p>
-
-        <hr>
+        <p class="staff-title">OWNER</p>
 
         <div class="main-wrapper">
             <?php
@@ -51,7 +49,7 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/head/96/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
                             <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
@@ -61,9 +59,7 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">Developer</p>
-
-        <hr>
+        <p class="staff-title">DEVELOPER</p>
 
         <div class="main-wrapper">
             <?php
@@ -73,7 +69,7 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/head/96/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
                             <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
@@ -83,9 +79,7 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">Platform Admin</p>
-
-        <hr>
+        <p class="staff-title">PLATFORM ADMIN</p>
 
         <div class="main-wrapper">
             <?php
@@ -95,7 +89,7 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/head/96/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
                             <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
@@ -105,9 +99,7 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">Senior Admin</p>
-
-        <hr>
+        <p class="staff-title">SENIOR ADMIN</p>
 
         <div class="main-wrapper">
             <?php
@@ -117,7 +109,7 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/head/96/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
                             <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
@@ -127,9 +119,7 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">Admin</p>
-
-        <hr>
+        <p class="staff-title">ADMIN</p>
 
         <div class="main-wrapper">
             <?php
@@ -139,7 +129,7 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/head/96/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
                             <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
@@ -149,9 +139,7 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">Senior Mod</p>
-
-        <hr>
+        <p class="staff-title">SENIOR MOD</p>
 
         <div class="main-wrapper">
             <?php
@@ -161,7 +149,7 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/head/96/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
                             <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
                         </div>"
@@ -171,9 +159,7 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">Mod</p>
-
-        <hr>
+        <p class="staff-title">MOD</p>
 
         <div class="main-wrapper">
             <?php
@@ -183,7 +169,7 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/head/96/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
 
                             <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
@@ -194,9 +180,7 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">Trainee</p>
-
-        <hr>
+        <p class="staff-title">TRAINEE</p>
 
         <div class="main-wrapper">
             <?php
@@ -206,7 +190,7 @@ require 'header.php';
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>
-                                <img src='https://visage.surgeplay.com/full/230/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
+                                <img src='https://visage.surgeplay.com/head/96/" . $row['uuid'] . "?tilt=0' alt='Staff Image'>
                             </div>
 
                             <div><p class='staff-name'><a href='user?name=" . $row['name'] ."'>" . $row['name'] ."</a></p></div>
