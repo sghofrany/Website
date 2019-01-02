@@ -6,7 +6,7 @@ include 'header.php';
 <html>
 <head>
     <title>PvPTemple - Support</title>
-    <link rel="stylesheet" type="text/css" href="css/ticket.css">
+    <link rel="stylesheet" type="text/css" href="css/test.css">
     <script src="ckeditor/ckeditor.js"></script>
 </head>
 
@@ -96,52 +96,19 @@ include 'header.php';
 
         <div class="wrapper" style="background-color: #fbfbfb;">
             
-            <div class="title-wrapper" style="background-color: white; margin-top: 20px;">
-                <div class="title">
-                    <p id="title"><?php echo($info['title']); ?></p>
-                    <?php
-                        if($info['resolved'] == -1) {
-                    ?>
-                     <p id="resolved" style="background-color: #f2c521;">Pending</p>
-                     
-                    <?php 
-                        } elseif($info['resolved'] == 0) {     
-                    ?>
-                    
-                    <p id="resolved" style="background-color: #f25f54;">Denied</p>
-                    
-                    <?php 
-                        } elseif($info['resolved'] == 1) {  
-                     ?> 
-                    
-                    <p id="resolved" style="background-color: #7fc47f;">Accepted</p>
-                    
-                    <?php 
-                        }
-                    ?> 
-                            
-                </div>
-            </div>
-            
             <div class="body-wrapper">
 
                 <div class="user-wrapper">
 
                     <div class="user-img">
-                        <img id="avatar" src="https://crafatar.com/avatars/<?php echo($info['uuid']) ?>?size=80&default=MHF_Steve&overlay">
+                        <img id="avatar" src="https://visage.surgeplay.com/head/80/<?php echo($info['uuid']); ?>" alt='Staff Image'>
                     </div>
                     
                     <div class="user-name">
                         <p><a href="user?name=<?php echo(get_name($info['uuid'])); ?>"><?php echo(get_name($info['uuid'])); ?></a></p>
                     </div>
 
-                    <div class="user-date">
-                        <p><?php echo($info['date']); ?></p>
-                    </div>
-
-                    
                     <div class="user-rank">
-                    
                         <?php
                         
                         $player_rank = get_rank($info['uuid']);
@@ -216,33 +183,54 @@ include 'header.php';
                         <?php
                             }
                         ?>
-
                     </div>
 
-                    <div class="user-status">
-
-                        <?php
-                            if(is_blacklisted($info['uuid'])) {
-                        ?>
-                            <p id="blacklisted">Blacklisted</p>
-                        <?php
-                            } elseif(is_banned($info['uuid'])) {
-                        ?>
-                            <p id="banned">Banned</p>
-                        <?php
-                            }
-                        ?>
-
+                    <div class="user-date">
+                        <p>DATE: <?php echo(str_replace("-", "/", $info['date'])); ?></p>
                     </div>
-             
-                </div>
-           
-                <div class="text-wrapper">
-                    <p><?php echo($info['body']); ?></p>
-                   
+
                 </div>
 
-            </div>
+                <div class="out-title-wrapper">
+
+                    <div class="title-wrapper" style="background-color: white; margin-top: 20px;">
+                        <div class="title">
+                            <p id="title"><?php echo($info['title']); ?></p>
+                            
+                            <?php
+                            if($info['resolved'] == -1) {
+                            ?>
+                            <p id="resolved" style="background-color: #f2c521;">Pending</p>
+                            
+                            <?php 
+                                } elseif($info['resolved'] == 0) {     
+                            ?>
+                            
+                            <p id="resolved" style="background-color: #f25f54;">Denied</p>
+                            
+                            <?php 
+                                } elseif($info['resolved'] == 1) {  
+                            ?> 
+                            
+                            <p id="resolved" style="background-color: #7fc47f;">Accepted</p>
+                            
+                            <?php 
+                                }
+                            ?> 
+                            </p>                   
+                        </div>
+                    </div>
+
+                    <div class="text-wrapper">
+                        <p><?php echo($info['body']); ?></p>
+                    </div>
+
+                </div>
+
+
+                </div>
+
+
             
             <?php
                 if($info['resolved'] < 0 && has_modify_permission($_SESSION['uuid'])) {
@@ -280,6 +268,7 @@ include 'header.php';
             
         </div>
   
+        </div>
 
             <?php
                   
@@ -342,22 +331,19 @@ include 'header.php';
                   
             ?>
 
-            <div class="wrapper">
+        <div class="wrapper">
+
 
             <div class="body-wrapper">
-                
+
                 <div class="user-wrapper">
-                
+
                     <div class="user-img">
-                        <img id="avatar" src="https://crafatar.com/avatars/<?php echo($reply['uuid']); ?>?size=80&default=MHF_Steve&overlay">
+                        <img id="avatar" src="https://visage.surgeplay.com/head/80/<?php echo($reply['uuid']); ?>" alt='Staff Image'>
                     </div>
                     
                     <div class="user-name">
                         <p><a href="user?name=<?php echo(get_name($reply['uuid'])); ?>"><?php echo(get_name($reply['uuid'])); ?></a></p>
-                    </div>
-
-                    <div class="user-date">
-                        <p><?php echo($reply['date']); ?></p>
                     </div>
 
                     <div class="user-rank">
@@ -431,18 +417,27 @@ include 'header.php';
                         <?php
                             }
                         ?>
+                    </div>
 
+                    <div class="user-date">
+                        <p>DATE: <?php echo(str_replace("-", "/", $reply['date'])); ?></p>
                     </div>
 
                 </div>
 
-                <div class="text-wrapper">
-                    <p><?php echo($reply['text']); ?></p>
+                <div class="out-title-wrapper">
+
+                    <div class="text-wrapper">
+                        <p><p><?php echo($reply['text']); ?></p></p>
+                    </div>
+
                 </div>
 
-            </div>
 
             </div>
+
+
+        </div>
 
             <?php
               }
