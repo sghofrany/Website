@@ -24,6 +24,8 @@
     while($info = mysqli_fetch_assoc($result)) {
         $elo_data[] = $info;
     }
+
+    mysqli_close($connection);
 ?>
 
 <!DOCTYPE html>

@@ -21,6 +21,7 @@
     border-bottom: 1px solid #CCCCCC;
     display: flex;
     flex-direction: row;
+    padding-bottom: 3px;
 }
 
 #title {

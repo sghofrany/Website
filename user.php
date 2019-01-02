@@ -59,9 +59,10 @@
 
                     if($count < 1) {
                         echo("$user has not bans");
+                        mysqli_close($connection);
                         exit();
                     }
-
+                    mysqli_close($connection);
                     ?>
          
                     <tr>

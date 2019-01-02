@@ -1,5 +1,7 @@
 <?php
 
+
+
 function get_rank($uuid) {
 
     require 'database/rank-database.php';
@@ -25,7 +27,7 @@ function get_rank($uuid) {
 
     $value = $info['rank'];
 
-    $connection->close();
+    mysqli_close($connection);
 
     return $value;
 
@@ -56,7 +58,7 @@ function is_blacklisted($uuid) {
 
     $value = $info['blacklisted'];
 
-    $connection->close();
+    mysqli_close($connection);
 
     if($value == 1) {
         return true;
@@ -89,7 +91,7 @@ function get_name_by_id($playerId) {
 
     $value = $info['name'];
 
-    $connection->close();
+    mysqli_close($connection);
     
     return $value;
 }
@@ -117,7 +119,7 @@ function get_id_by_name($playerName) {
 
     $value = $info['player_id'];
 
-    $connection->close();
+    mysqli_close($connection);
     
     return $value;
 }
@@ -147,7 +149,7 @@ function is_banned($uuid) {
 
     $value = $info['banned'];
 
-    $connection->close();
+    mysqli_close($connection);
 
     if($value === 1) {
         return true;
@@ -291,7 +293,7 @@ function pending_tickets($uuid) {
     if($rows < 1) {
         return 0;
     } 
-    $connection->close();
+
     return $result;
 
 }

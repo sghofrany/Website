@@ -34,6 +34,8 @@ require 'header.php';
                 $data[] = $staff;
             }
 
+            mysqli_close($connection);
+
         ?>
      
 
