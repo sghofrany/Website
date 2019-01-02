@@ -489,9 +489,9 @@ include 'header.php';
                         for($i = 1; $i <= $pages; $i++) {
 
                             if($i == $_GET['page']) {
-                                echo("<li style='color: #007fc4; border-bottom: 1px solid black;'>$i</li>");
+                                echo("<li style='color: #646464; font-family: 'Roboto', sans-serif;'>$i</li>");
                             } else {
-                                echo("<li><a href='ticket?id=$id&page=$i'>$i</a></li>");
+                                echo("<li><a href='ticket?id=$id&page=$i' style='color: #a7a5a5; font-family: 'Roboto', sans-serif;'>$i</a></li>");
                             }
                     
                         }

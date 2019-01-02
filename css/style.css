@@ -70,54 +70,89 @@
 }
 
 .accept-button {
-    text-align: center;
-    margin-right: 5px;
-    background-color: #7fc47f;
-    color: white;
     border: none;
-    padding: 10px 10px 10px 10px;
-    
-    border-radius: 3px;
+    background-color: #00AA00;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 10px;
+
+    color: white;
+
+    font-size: 15px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    transition: background-color 300ms ease-in;
 }
 
 .deny-button {
-    text-align: center;
-    background-color: #f25f54;
-    color: white;
-    padding: 10px 10px 10px 10px;
-    
     border: none;
-    
-    border-radius: 3px;
+    background-color: #FF5555;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 10px;
+
+    color: white;
+
+    font-size: 15px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    transition: background-color 300ms ease-in;
 }
 
 .reply-button {
-    text-align: center;
-    background-color: #007fc4;
-    color: white;
-    padding: 10px 10px 10px 10px;
-    
-    margin-top: 5px;
-    
     border: none;
-    
+    background-color: #5555FF;
+    font-family: 'Roboto', sans-serif;
+
     float: right;
-    
-    border-radius: 3px;
+
+    color: white;
+
+    font-size: 15px;
+
+    margin-top: 5px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    transition: background-color 300ms ease-in;
 }
 
 .reply-button:hover {
-    background-color: #006aa3;
+    background-color: #3535ad;
     cursor: pointer;
 }
 
 .accept-button:hover {
-    background-color: #57a357;
+    background-color: #027702;
     cursor: pointer;
 }
 
 .deny-button:hover {
-    background-color: #d43d32;
+    background-color: #a02929;
     cursor: pointer;
 }
 
