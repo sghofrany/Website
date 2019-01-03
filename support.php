@@ -125,16 +125,12 @@ require 'header.php';
            } 
         ?>
 
-        <div>
            
-           <div class="support-info-wrapper">
-                <p class="support-title">NETWORK SUPPORT</p>
-                <p class="support-body">The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.</p>
-           
-           </div>
+        <div class="support-info-wrapper">
+            <p class="support-title">NETWORK SUPPORT</p>
+            <p class="support-body">The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.</p>
         
         </div>
-
 
         <form action="support-create" method="POST">
           <div class="form-group" style="margin-top: 30px;">

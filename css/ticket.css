@@ -2,7 +2,7 @@
    
     display: flex;
 
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+    /* box-shadow: 0px 1px 5px rgba(0,0,0,0.5); */
 
     margin-top: 20px;
     margin-bottom: 20px;
@@ -15,12 +15,12 @@
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 3px 20px #a7a6a6;
 
     margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 15px;
+    /* margin-bottom: 20px; */
     margin-right: 15px;
+
 }
 
 .user-img img {
@@ -48,21 +48,41 @@
     margin-top: 5px;
 
     width: 100%;
-
-    font-family: 'Roboto', sans-serif;
-
 }
+
+.user-name p a {
+    
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+
+    color: #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 3px;
+}
+
 
 .user-date p {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    padding-bottom: 5px;
 
     text-align: center;
 
+    font-size: 13px;
+    color: #CCCCCC;
     font-family: 'Roboto', sans-serif;
-}
 
+    border-bottom: 1px solid #CCCCCC;
+}
+/* 
 .user-rank p {
 
     margin: 0px 0px 0px 0px;
@@ -70,10 +90,8 @@
 
     text-align: center;
 
-    margin-top: 30px;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
     background-color: aqua;
 
@@ -84,6 +102,10 @@
     color: white;
 
     font-weight: bold;
+} */
+
+.user-rank {
+    width: 100%;
 }
 
 .user-status p {
@@ -109,13 +131,12 @@
 
 .text-wrapper {
 
-    display: flex;
+    /* display: flex; */
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     width: 100%;
-    margin-right: 15px;
 
     overflow: hidden;
 	word-wrap: break-word;
@@ -125,13 +146,13 @@
 
 	overflow: hidden;
 	word-wrap: break-word;
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right:5px;
+    
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 20px;
 
     font-family: 'Roboto', sans-serif;
-  
+    color: #646464;
 }
 
 .text-wrapper ul {
@@ -147,21 +168,37 @@
   
 }
 
+.out-title-wrapper {
+    display: block;
+
+    overflow: hidden;
+    word-wrap: break-word;
+
+    margin-top: 20px;
+
+    width: 100%;
+
+    box-shadow: 0px 3px 20px #a7a6a6;
+}
+
+
 #owner {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
     background-color: #bf0b0b;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -172,19 +209,21 @@
 
 #developer {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #1addda;
+    background-color: #55FFFF;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -195,19 +234,21 @@
 
 #plat-admin {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #f75656;
+    background-color: #FF5555;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -218,19 +259,21 @@
 
 #senior-admin {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #f75656;
+    background-color: #FF5555;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -241,19 +284,21 @@
 
 #admin {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #f75656;
+    background-color: #FF5555;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -264,19 +309,21 @@
 
 #senior-mod {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #651d8c;
+    background-color: #AA00AA;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -287,19 +334,21 @@
 
 #mod {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #651d8c;
+    background-color: #AA00AA;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -310,19 +359,21 @@
 
 #partner {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #f235cc;
+    background-color: #FF55FF;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -333,19 +384,21 @@
 
 #famous {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #f235cc;
+    background-color: #FF55FF;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -356,19 +409,21 @@
 
 #youtuber {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #f235cc;
+    background-color: #FF55FF;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -379,19 +434,21 @@
 
 #master {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #398696;
+    background-color: #00AAAA;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -402,19 +459,21 @@
 
 #elite {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #edbe15;
+    background-color: #FFAA00;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -425,19 +484,21 @@
 
 #prime {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #3fed1c;
+    background-color: #55FF55;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -448,19 +509,21 @@
 
 #basic {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #9c9e9c;
+    background-color: #AAAAAA;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -471,19 +534,21 @@
 
 #normal {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #9c9e9c;
+    background-color: #AAAAAA;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -494,19 +559,21 @@
 
 #trainee {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #f9f148;
+    background-color: #FFFF55;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -517,19 +584,21 @@
 
 #host {
 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding: 0px;
 
     text-align: center;
 
-    margin-top: 30px;
+    margin-top: 10px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 10px;
 
-    background-color: #651d8c;
+    background-color: #AA00AA;
 
-    width: 100%;
+    /* width: 100%; */
+
+    padding-right: 5px;
+    padding-left: 5px;
 
     font-family: 'Roboto', sans-serif;
 
@@ -537,49 +606,3 @@
 
     font-weight: bold;
 }
-
-/* #blacklisted {
-
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-
-    text-align: center;
-
-    margin-top: 30px;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    background-color: #651d8c;
-
-    width: 100%;
-
-    font-family: 'Roboto', sans-serif;
-
-    color: white;
-
-    font-weight: bold;
-}
-
-#banned {
-
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-
-    text-align: center;
-
-    margin-top: 30px;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    background-color: #651d8c;
-
-    width: 100%;
-
-    font-family: 'Roboto', sans-serif;
-
-    color: white;
-
-    font-weight: bold;
-} */

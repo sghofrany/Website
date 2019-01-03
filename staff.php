@@ -7,6 +7,7 @@ require 'header.php';
 <head>
     <title>PvPTemple</title>
     <link rel="stylesheet" type="text/css" href="css/staff.css">
+    <link rel="stylesheet" type="text/css" href="css/support.css">
 </head>
 
 <body>
@@ -37,7 +38,11 @@ require 'header.php';
             mysqli_close($connection);
 
         ?>
-     
+        <div class="support-info-wrapper">
+            <p class="support-title">THE STAFF TEAM</p>
+            <p class="support-body">The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.</p>
+        
+        </div>
 
         <p class="staff-title">OWNER</p>
 
