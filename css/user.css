@@ -2,14 +2,23 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.profile-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.user-wrapper {
+    width: 25%;
+}
+
 .user {
 
     margin: 0px;
     padding: 0px;
 
-    margin-top: 30px;
-
-    width: 25%;
+    width: 100%;
 
     box-shadow: 0px 3px 20px #a7a6a6;
 
@@ -23,7 +32,7 @@
 .user-name {
     width: 100%;
     
-    color: #646464;
+    color: #CCCCCC;
     font-size: 16;
     padding-bottom: 5px;
 }
@@ -35,7 +44,7 @@
 
     margin-top: 30px;
 
-    width: 25%;
+    width: 100%;
 
     box-shadow: 0px 3px 20px #a7a6a6;
 }
@@ -164,3 +173,91 @@
     font-size: 12px;
     text-align: right;
 }
+
+.info-wrapper {
+    width: 75%;
+    margin-left: 20px;
+}
+
+.info-title {
+
+    box-shadow: 0px 3px 20px #a7a6a6;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    margin: 0px;
+
+    margin-bottom: 20px;
+}
+
+.info-title .title {
+    margin: 0px;
+    width: 80%;
+    color: #CCCCCC;
+    font-weight: bold;
+}
+
+.info-title .status {
+    margin: 0px;
+    width: 20%;
+    text-align: center;
+
+    background-color: red;
+    color: white;
+    border-radius: 30px;
+
+}
+
+.dropbtn {
+    background-color: white;
+    color: #b3b3b3;
+    padding: 0px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    /* padding-bottom: 10px; */
+    /* margin-bottom: 10px; */
+    border: 1px solid black;
+}
+
+.dropdown-content {
+
+    margin: 0;
+    margin-top: 1px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+
+    color: #b3b3b3;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 52px;
+    padding-right: 52px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
