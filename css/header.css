@@ -2,6 +2,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
+.wrapper {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
 /* Navigation bar */
 
 .navigation {

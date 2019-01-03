@@ -97,6 +97,13 @@ textarea[name=support-body] {
     transition: background-color 300ms ease-in;
 }
 
+.button-wrapper {
+    display: flex;
+    float: right;
+
+    align-items: center;
+}
+
 .admin-button {
 
     background-color: #FF5555;

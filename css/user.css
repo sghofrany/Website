@@ -1,146 +1,162 @@
-body {
-    font-family: 'Oswald', sans-serif;
-}
-
-#monkey {
-    min-width: 100%;
-    min-height: 100%;
+* {
+    font-family: 'Roboto', sans-serif;
 }
 
 .user {
-    display: block;
-    background-color: white;
-    
-    margin-top: 5px;
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
-    
-    transition: transform 300ms ease-out, box-shadow 300ms ease-out;
-    height: 100%;
 
-    z-index: 1;
-}
+    margin: 0px;
+    padding: 0px;
 
-.user:hover {
-    transform: scale(1.01);
-    box-shadow: 0px 1px 5px rgba(203, 150, 6, 0.63);
-    
-}
-
-.user-image {
-    width: 100%;
-    text-align: center;
-
-}
-
-.image {
-    
     margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 50px;
-    margin-right: 50px;  
-    
-    border-radius: 40%;
-}
 
-.user-text {
-    
-    margin: 0px 0px 0px 0px;
+    width: 25%;
 
-    font-size: 150%;
+    box-shadow: 0px 3px 20px #a7a6a6;
 
     text-align: center;
+}
+
+.user-image img {
+    width: 100%;
+}
+
+.user-name {
+    width: 100%;
     
-    max-width: 100%;
+    color: #646464;
+    font-size: 16;
+    padding-bottom: 5px;
+}
+
+.user-info {
+
+    margin: 0px;
+    padding: 0px;
+
+    margin-top: 30px;
+
+    width: 25%;
+
+    box-shadow: 0px 3px 20px #a7a6a6;
 }
 
 .user-rank {
-    margin: 0px 0px 0px 0px;
+    padding-top: 15px;
 
-    font-size: 100%;
-    
-    text-align: center;
-    max-width: 100%;
     width: 100%;
 }
 
-.rank {
-    background-color: #20f9f6;
+.user-rank p {
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    background-color: #55FFFF;
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
 }
 
+.separator-wrapper {
+    display: block;
+    width: 100%;
+}
 
+.separator {
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
 
-.info {
+.last-seen {
+
     display: flex;
-    margin-top: 5px;
-    padding-left: 30px;
-    padding-top: 5px;
-    
-/*    border: 10px solid black;*/
+    flex-direction: row;
+
+    width: 100%;
+
+}
+
+.last-seen #p1 {
+
+    padding-left: 10%;
+
+    width: 50%;
   
+    margin: 0px;
+
+    color: #646464;
+    font-size: 12px;
+
 }
 
-.practice {
-    margin-bottom: 0;
-    margin-left: 10px;
-    transition: transform 300ms ease-out, background-color 300ms ease-out, color 300ms ease-out;
+.last-seen #p2 {
+
+    padding-right: 10%;
+  
+    margin: 0px;
+
+    width: 50%;
     
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    color: #646464;
+    font-size: 12px;
+    text-align: right;
+
 }
 
-.practice:hover {
-    transform: scale(1.01);
-    background-color: #e8b52c;
-    color: white;
+.name-history {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
-.uhc {
-    margin-bottom: 0;
-    margin-left: 10px; 
+.name-history .name {
 
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    
-/*    transition: transform 300ms ease-out, background-color 300ms ease-out, color 300ms ease-out;*/
-    
-    transition: border-bottom;
-    
+    padding-left: 10%;
+    margin: 0px;
+    width: 50%;
+   
+    color: #CCCCCC;
+    font-size: 12px;
 }
 
-.uhc:hover {
-/*
-    transform: scale(1.01);
-    background-color: #e8b52c;
-    color: white;
-*/
-    
-    border-bottom: 1px solid black;
+.name-history .name-date {
+
+    padding-right: 10%;
+    margin: 0px;
+    width: 50%;
+
+    color: #CCCCCC;
+    font-size: 12px;
+    text-align: right;
 }
 
-.skywars {
-    margin-bottom: 0;
-    margin-left: 10px; 
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    
-/*    transition: transform 300ms ease-out, background-color 300ms ease-out, color 300ms ease-out;*/
-    
-    transition: border-bottom;
-    
+.punishment {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
-.skywars:hover {
-/*
-    transform: scale(1.01);
-    background-color: #e8b52c;
-    color: white;
-*/
-    
-    border-bottom: 1px solid black;
+.punishment #p1 {
+
+    padding-left: 10%;
+    margin: 0px;
+    width: 50%;
+   
+    color: #CCCCCC;
+    font-size: 12px;
+}
+
+.punishment #p2 {
+
+    padding-right: 10%;
+    margin: 0px;
+    width: 50%;
+
+    color: #CCCCCC;
+    font-size: 12px;
+    text-align: right;
 }

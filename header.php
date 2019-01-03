@@ -10,8 +10,6 @@ session_start();
         <title>PvPTemple</title>
         
         <link rel="stylesheet" type="text/css" href="css/header.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
 
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         
