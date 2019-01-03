@@ -17,7 +17,7 @@
 
             <div class="user">
                 <div class="user-img">
-                    <img src="https://visage.surgeplay.com/head/160/05cc5c6a48534abfa4c807372696dc0f" alt='Staff Image'>
+                    <img src="https://visage.surgeplay.com/head/128/05cc5c6a48534abfa4c807372696dc0f" alt='Staff Image'>
                 </div>
                 
                 <div class="user-name">
@@ -46,7 +46,7 @@
                 </div>
 
 
-                <p style=" padding-left: 10%; color: #646464; margin:0px; font-size: 13px;">NAME HISTORY</p>
+                <p style=" padding-left: 10%; color: #CCCCCC; font-weight: bold; margin:0px; font-size: 13px;">NAME HISTORY</p>
 
                 <div class="name-history">
                     <p class="name">Irantwomiles</p>
@@ -60,10 +60,8 @@
 
                 <div class="punishment">
                     <p id="p1">Punishments</p>
-                    <p id="p2">100</p>
+                    <p id="p2">100 total</p>
                 </div>
-
-                <p class="separator"></p>
 
             </div>
 
