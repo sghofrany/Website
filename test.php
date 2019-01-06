@@ -79,14 +79,55 @@
                 <div class="dropdown" style="width: 20%;">
                     <button class="dropbtn" style="width: 100%;">SELECT GAME</button>
                     <div class="dropdown-content">
-                        <a href="leaderboard?game=nodebuff_elo">NoDebuff</a>
-                        <a href="leaderboard?game=debuff_elo">Debuff</a>
-                        <a href="leaderboard?game=builduhc_elo">BuildUHC</a>
-                        <a href="leaderboard?game=gapple_elo">Gapple</a>
+                        <a href="#">Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="elo-wrapper">
+                    <div class="elo-box" style="margin-right: 1.3%">
+                        <p class="ladder">NODEBUFF</p>
+                        <p class="elo">1000</p>
+                    </div>
+
+                    <div class="elo-box" style="margin-right: 1.3%">
+                        <p class="ladder">NODEBUFF</p>
+                        <p class="elo">1000</p>
+                    </div>
+
+                    <div class="elo-box" style="margin-right: 1.3%">
+                        <p class="ladder">NODEBUFF</p>
+                        <p class="elo">1000</p>
+                    </div>
+
+                    <div class="elo-box">
+                        <p class="ladder">NODEBUFF</p>
+                        <p class="elo">1000</p>
+                    </div>
+
+                    <div class="elo-box" style="margin-right: 1.3%">
+                        <p class="ladder">NODEBUFF</p>
+                        <p class="elo">1000</p>
+                    </div>
+
+                    <div class="elo-box" style="margin-right: 1.3%">
+                        <p class="ladder">NODEBUFF</p>
+                        <p class="elo">1000</p>
+                    </div>
+
+                    <div class="elo-box" style="margin-right: 1.3%">
+                        <p class="ladder">NODEBUFF</p>
+                        <p class="elo">1000</p>
+                    </div>
+
+                    <div class="elo-box">
+                        <p class="ladder">NODEBUFF</p>
+                        <p class="elo">1000</p>
                     </div>
                 </div>
 
             </div>
+        
+        
         </div>
 
 

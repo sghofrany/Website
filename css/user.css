@@ -194,7 +194,7 @@
     margin-bottom: 20px;
 }
 
-.info-title .title {
+.info-title .profile-title {
     margin: 0px;
     width: 80%;
     color: #CCCCCC;
@@ -213,12 +213,14 @@
 }
 
 .dropbtn {
-    background-color: white;
-    color: #b3b3b3;
+    background-color: #0d97af;
+    color: white;
     padding: 0px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+
+    border-radius: 30px;
   }
   
 .dropdown {
@@ -229,7 +231,6 @@
     padding-top: 0px;
     /* padding-bottom: 10px; */
     /* margin-bottom: 10px; */
-    border: 1px solid black;
 }
 
 .dropdown-content {
@@ -260,4 +261,249 @@
     display: block;
 }
 
+.elo-wrapper {
+    width: 100%;
+}
 
+.elo-box {
+    width: 24%;
+    float: left;
+    box-shadow: 0px 3px 20px #a7a6a6;
+    margin-top: 10px;
+    padding: 10px;
+
+    
+}
+
+.ladder {
+    text-align: left;
+    border-bottom: 1px solid #CCCCCC;
+    color: #CCCCCC;
+    margin-bottom: 3px;
+}
+
+.elo {
+    text-align: left;
+    color: #CCCCCC;
+    margin-bottom: 0px;
+}
+
+
+#owner {
+
+    background-color: #bf0b0b;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#developer {
+
+
+    background-color: #55FFFF;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#plat-admin {
+
+    background-color: #FF5555;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+
+}
+
+#senior-admin {
+
+    background-color: #FF5555;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#admin {
+
+    background-color: #FF5555;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#senior-mod {
+    background-color: #AA00AA;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#mod {
+
+    background-color: #AA00AA;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#partner {
+
+    background-color: #FF55FF;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#famous {
+
+    background-color: #FF55FF;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#youtuber {
+
+    background-color: #FF55FF;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#master {
+
+    background-color: #00AAAA;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#elite {
+
+    background-color: #FFAA00;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#prime {
+    background-color: #55FF55;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#basic {
+
+    background-color: #AAAAAA;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#normal {
+
+    background-color: #AAAAAA;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#trainee {
+
+
+    background-color: #FFFF55;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+#host {
+
+    background-color: #AA00AA;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+}
