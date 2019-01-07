@@ -96,79 +96,78 @@
 
                             <div class="user-rank">
                             <?php
-                        
-
-                            if($player_rank === "Owner") {
-                        ?>
-                        <p id="developer">DEVELOPER</p>
-                            <p id="owner"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Developer") {
-                        ?>
-                            <p id="developer"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Platform-Admin") {
-                        ?>
-                            <p id="plat-admin"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Senior-Admin") {
-                        ?>
-                            <p id="senior-admin"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Admin") {
-                        ?>
-                            <p id="admin"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Senior-Mod") {
-                        ?>
-                            <p id="senior-mod"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Mod") {
-                        ?>
-                            <p id="mod"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Partner") {
-                        ?>
-                            <p id="partner"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Famous") {
-                        ?>
-                            <p id="famous"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "YouTuber") {
-                        ?>
-                            <p id="youtuber"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Master") {
-                        ?>
-                            <p id="master"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Elite") {
-                        ?>
-                            <p id="elite"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Prime") {
-                        ?>
-                            <p id="prime"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Basic") {
-                        ?>
-                            <p id="basic"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Normal") {
-                        ?>
-                            <p id="normal"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Trainee") {
-                        ?>
-                            <p id="trainee"><?php echo($player_rank); ?></p>
-                        <?php
-                            } elseif($player_rank === "Host") {
-                        ?>
-                            <p id="host"><?php echo($player_rank); ?></p>
-                        <?php
-                            }
-                        ?>
+                            
+                                if($player_rank === "Owner") {
+                            ?>
+                            <p id="developer">DEVELOPER</p>
+                                <p id="owner"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Developer") {
+                            ?>
+                                <p id="developer"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Platform-Admin") {
+                            ?>
+                                <p id="plat-admin"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Senior-Admin") {
+                            ?>
+                                <p id="senior-admin"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Admin") {
+                            ?>
+                                <p id="admin"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Senior-Mod") {
+                            ?>
+                                <p id="senior-mod"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Mod") {
+                            ?>
+                                <p id="mod"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Partner") {
+                            ?>
+                                <p id="partner"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Famous") {
+                            ?>
+                                <p id="famous"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "YouTuber") {
+                            ?>
+                                <p id="youtuber"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Master") {
+                            ?>
+                                <p id="master"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Elite") {
+                            ?>
+                                <p id="elite"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Prime") {
+                            ?>
+                                <p id="prime"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Basic") {
+                            ?>
+                                <p id="basic"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Normal") {
+                            ?>
+                                <p id="normal"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Trainee") {
+                            ?>
+                                <p id="trainee"><?php echo($player_rank); ?></p>
+                            <?php
+                                } elseif($player_rank === "Host") {
+                            ?>
+                                <p id="host"><?php echo($player_rank); ?></p>
+                            <?php
+                                }
+                            ?>
                             </div>
 
                             <div class="separator-wrapper">

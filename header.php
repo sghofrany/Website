@@ -64,8 +64,8 @@ session_start();
             <ul class="left-nav">
                 <li class="left-li"><a href="index"><img class="header-logo" src="img/logo.png" alt="logo"></a></li>
                 <li class="left-li"><a class="item" href="support">support</a></li>
-                <li class="left-li"><a class="item" href="#">shop</a></li>
-                <li class="left-li"><a class="item" href="leaderboard">stats</a></li>
+                <li class="left-li"><a class="item" href="leaderboard">leaderboards</a></li>
+                <li class="left-li"><a class="item" href="http://shop.pvptemple.com/">store</a></li>
                 <li class="left-li"><a class="item" href="staff">staff</a></li>
             </ul>
 
