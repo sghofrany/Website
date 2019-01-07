@@ -198,27 +198,17 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 576px) {
-    
+@media only screen and (max-width: 800px) {
+
+    .wrapper {
+        margin: 0px;
+    }
+
+    .left-nav {
+        margin: 0px;
+    }
+
     .right-nav {
-        width: 30%;
+        margin: 0px;
     }
-
-    .left-nav { 
-        width: 70%;
-        border-right: 1px solid white;
-    }
-
-    .righ-li {
-        height: 100%;
-    }
-
-    .righ-left {
-        height: 100%;
-    }
-
-    #nav-mobile {
-        transition: visibility 300ms ease-in-out;
-    }
-
 }

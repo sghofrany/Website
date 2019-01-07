@@ -143,3 +143,14 @@ td a:hover {
   }
   
 
+@media only screen and (max-width: 800px) {
+
+    .all-tables {
+        display: block;
+        width: 100%;
+    }
+
+    .table-wrapper {
+        width: 100%;
+    }
+}

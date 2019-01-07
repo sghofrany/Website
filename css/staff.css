@@ -40,3 +40,14 @@
     border-bottom: 1px solid #CCCCCC;
     margin-top: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .staff-wrapper {
+        display: block;
+        width: 100%;
+
+       
+    }
+
+}

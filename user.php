@@ -212,7 +212,7 @@
                             <!-- <p class="status">BANNED</p> -->
                         </div>
 
-                        <div class="dropdown" style="width: 20%;">
+                        <div class="dropdown">
                             <button class="dropbtn" style="width: 100%;">SELECT GAME</button>
                             <div class="dropdown-content">
                                 <a href="#">Coming Soon</a>
