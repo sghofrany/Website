@@ -99,7 +99,6 @@
                             
                                 if($player_rank === "Owner") {
                             ?>
-                            <p id="developer">DEVELOPER</p>
                                 <p id="owner"><?php echo($player_rank); ?></p>
                             <?php
                                 } elseif($player_rank === "Developer") {
