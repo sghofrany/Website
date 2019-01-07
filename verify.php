@@ -2,12 +2,12 @@
 
 require 'header.php';
 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+// if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    if(isset($_POST['verify-users'])) {
-        require 'verify-user.php';
-    }
-}
+//     if(isset($_POST['verify-users'])) {
+//         require 'verify-user.php';
+//     }
+// }
 
 ?>
 
