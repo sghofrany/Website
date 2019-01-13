@@ -120,7 +120,7 @@ include 'header.php';
                         <?php
                             } elseif($player_rank === "Developer") {
                         ?>
-                            <p id="developer"><?php echo($player_rank); ?></p>
+                            <p id="developer"><?php echo(strtoupper($player_rank)); ?></p>
                         <?php
                             } elseif($player_rank === "Platform-Admin") {
                         ?>

@@ -19,7 +19,7 @@
 }
 
 #title {
-    width: 90%;
+    width: 85%;
     display: flex;
 
     align-items: center;
@@ -34,7 +34,7 @@
 }
 #resolved {
 
-    width: 10%;
+    width: 15%;
     
     display: flex;
     justify-content: center;
