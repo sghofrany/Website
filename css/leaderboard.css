@@ -103,6 +103,8 @@ td a:hover {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    background-color: #f6f6f6;
+    border-radius: 5px;
   }
   
   .dropdown {
@@ -111,8 +113,7 @@ td a:hover {
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px;
-    /* padding-bottom: 10px; */
-    /* margin-bottom: 10px; */
+    background-color: #f6f6f6;
 
   }
   
