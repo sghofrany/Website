@@ -11,3 +11,4 @@ $database = "users";
 // $database = "users";
 
 $connection = mysqli_connect($servername, $username, $password, $database);
+echo("Connection made");

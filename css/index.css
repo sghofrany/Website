@@ -12,6 +12,22 @@
  
 }
 
+#one {
+    margin-right: 2%;
+}
+
+#two {
+    margin-left: 2%;
+}
+
+#three {
+    margin-right: 2%;
+}
+
+#four {
+    margin-left: 2%;
+}
+
 .info-title {
     color:#CCCCCC;
     border-bottom: 1px solid #CCCCCC;
@@ -35,6 +51,10 @@
     .info-wrapper {
         display: block;
         width: 100%;
+        margin-top: 30px;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
     }
 
 }

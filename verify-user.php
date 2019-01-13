@@ -5,6 +5,7 @@ require 'database/database.php';
 include 'libs/utils.php';
 
 if(!isset($_POST['verify_button'])) {
+
     header("Location: verify");
     exit();
 }
@@ -20,7 +21,6 @@ $_SESSION['status'] = 0;
 
 //Requested Method is not POST
 if($_SERVER['REQUEST_METHOD'] != 'POST') {
-    header("Location: verify");
     exit();
 }
 

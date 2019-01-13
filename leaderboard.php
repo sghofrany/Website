@@ -34,6 +34,7 @@
 	<title>PvPTemple</title>
     <link rel="stylesheet" type="text/css" href="css/leaderboard.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>

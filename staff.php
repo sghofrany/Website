@@ -8,6 +8,7 @@ require 'header.php';
     <title>PvPTemple</title>
     <link rel="stylesheet" type="text/css" href="css/staff.css">
     <link rel="stylesheet" type="text/css" href="css/support.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>

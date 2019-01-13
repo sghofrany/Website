@@ -82,27 +82,6 @@
 
     border-bottom: 1px solid #CCCCCC;
 }
-/* 
-.user-rank p {
-
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-
-    text-align: center;
-
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    background-color: aqua;
-
-    width: 100%;
-
-    font-family: 'Roboto', sans-serif;
-
-    color: white;
-
-    font-weight: bold;
-} */
 
 .user-rank {
     width: 100%;
@@ -605,4 +584,14 @@
     color: white;
 
     font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .body-wrapper {
+        width: 100%;
+    }
+
 }
