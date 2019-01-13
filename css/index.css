@@ -1,4 +1,9 @@
 
+.index-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .info-wrapper {
     display: relative;
     float: left;
@@ -22,10 +27,12 @@
 
 #three {
     margin-right: 2%;
+    margin-bottom: 30px;
 }
 
 #four {
     margin-left: 2%;
+    margin-bottom: 30px;
 }
 
 .info-title {
