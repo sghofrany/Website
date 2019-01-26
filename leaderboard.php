@@ -90,28 +90,6 @@
 
             <div class="table-wrapper" style="margin-right: 1%;">
 
-                <?php
-                    // $type = "";
-
-                    // if(!isset($_GET['type'])) {
-                    //     $elo = "win";
-                    // } else {
-                    //     $elo  = $_GET['type'];
-                    // }
-
-                    // $elo_query = "SELECT practice_season_4_data.player_id, practice_season_4_data.$elo, practice_season_4_data.$win, practice_season_4_data.$loss, players.player_id, players.name FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id ORDER BY $elo DESC LIMIT 20";
-
-                    // $result = mysqli_query($connection, $elo_query);
-
-                    // $num = 1;
-
-                    // $elo_data = array();
-
-                    // while($info = mysqli_fetch_assoc($result)) {
-                    //     $elo_data[] = $info;
-                    // }
-                ?>
-
                 <div class="table-title">
                     <div style="width: 90%;">
                         <p>Win/Loss</p>
@@ -190,7 +168,9 @@
 
     </div>
 
-
+        <?php
+            include 'footer.php';
+        ?>
 
 </body>
 

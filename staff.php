@@ -209,7 +209,7 @@ require 'header.php';
 
     </div>
     <?php
-    //require 'footer.php';
+        include 'footer.php';
     ?>
 </body>
 

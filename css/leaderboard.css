@@ -56,6 +56,8 @@
     border-radius: 5px;
 
     background-color: #f6f6f6;
+
+    margin-bottom: 30px;
 }
 
 .table-title {
@@ -83,6 +85,8 @@ table {
 td {
     color: #b3b3b3;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 td a {
@@ -114,6 +118,7 @@ td a:hover {
     padding-right: 0px;
     padding-top: 0px;
     background-color: #f6f6f6;
+    border-radius: 5px;
 
   }
   

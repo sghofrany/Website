@@ -58,12 +58,9 @@ require 'header.php';
             
         </div>
 
-        <div class="footer">
-            <div class="wrapper">
-                <p>testing</p>
-
-            </div>
-        </div>
+        <?php
+            include 'footer.php';
+        ?>
     </div>
 
     <!--  -->
