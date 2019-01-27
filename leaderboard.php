@@ -25,6 +25,19 @@
         $elo_data[] = $info;
     }
 
+    $global_query = "SELECT * FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id";
+
+    $global_query = "SELECT *, SUM(practice_season_4_data.nodebuff_elo + practice_season_4_data.debuff_elo + practice_season_4_data.soup_elo + practice_season_4_data.gapple_elo + practice_season_4_data.sumo_elo + practice_season_4_data.builduhc_elo + practice_season_4_data.axe_elo) as global_elo FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id GROUP BY players.player_id ORDER BY global_elo DESC LIMIT 20";
+
+  
+    $global_result = mysqli_query($connection, $global_query);
+
+    $global_elo = array();
+
+    while($g = mysqli_fetch_assoc($global_result)) {
+        $global_elo[] = $g;
+    }
+
     mysqli_close($connection);
 ?>
 
@@ -79,39 +92,19 @@
                 </div>
 
                 <table>
-
-                    <tr>
-                        <td>1.</td>
-                        <td>Irantwomiles</td>
-                        <td>1000</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="table-wrapper" style="margin-right: 1%;">
-
-                <div class="table-title">
-                    <div style="width: 90%;">
-                        <p>Win/Loss</p>
-                    </div>  
-
-                    <div class="dropdown" style="width: 10%;">
-                        <button class="dropbtn" style="width: 100%;"><i class="fa fa-caret-down" aria-hidden="true"></i></button>
-                        <div class="dropdown-content">
-                            <a href="leaderboard?type=win">Win</a>
-                            <a href="leaderboard?type=loss">Loss</a>
-                        </div>
-                    </div>
-                   
-                </div>
-
-                <table>
-
-                    <tr>
-                        <td>1.</td>
-                        <td>Irantwomiles</td>
-                        <td>1000</td>
-                    </tr>
+                <?
+                foreach($global_elo as $g) {
+                ?>
+                <tr>
+                    <td><?php echo($num); ?></td>
+                    <td><a href="user?name=<?php echo($g['name']); ?>"><?php echo($g['name']); ?></a></td>
+                    <td><?php echo(round($g['global_elo']/7)); ?></td>
+                </tr>
+                <?php
+                $num++;
+                }
+                $num = 1;
+                ?>
                 </table>
             </div>
 
