@@ -14,11 +14,6 @@ if(!isset($_GET['key'])) {
     exit();
 }
 
-if(!isset($_GET['name'])) {
-    header("Location: index");
-    exit();
-}
-
 $key = mysqli_real_escape_string($connection, $_GET['key']);
 $username = mysqli_real_escape_string($connection, $_GET['name']);
 
