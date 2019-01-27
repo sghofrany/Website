@@ -15,12 +15,8 @@ if(!isset($_GET['key'])) {
 }
 
 $key = mysqli_real_escape_string($connection, $_GET['key']);
-$username = mysqli_real_escape_string($connection, $_GET['name']);
 
 $password = mysqli_real_escape_string($connection, $_POST['password']);
-
-$uuid = get_uuid($username);
-$uuid = ugly_uuid($uuid);
 
 $_SESSION['status'] = 0;
 
@@ -31,11 +27,11 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 //Inputs are empty
 if(empty($password)) {
-    header("Location: verify?key=$key&name=$username");
+    header("Location: verify?key=$key");
     exit();
 }
 
-$query = "SELECT * FROM user WHERE password_key='$key' AND uuid='$uuid'";
+$query = "SELECT * FROM user WHERE password_key='$key'";
 $result = mysqli_query($connection, $query);
 $rows = mysqli_num_rows($result);
 

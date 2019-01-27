@@ -173,10 +173,14 @@
                                 <p class="separator"></p>
                             </div>
                             
+                            <div class="first-join">
+                                <p class="p1">FIRST JOIN</p>
+                                <p class="p2"><?php echo($last_seen); ?></p>
+                            </div>
 
                             <div class="last-seen">
-                                <p id="p1">LAST SEEN</p>
-                                <p id="p2"><?php echo($last_seen); ?></p>
+                                <p class="p1">LAST SEEN</p>
+                                <p class="p2"><?php echo($last_seen); ?></p>
                             </div>
 
                             <div class="separator-wrapper">

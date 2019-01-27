@@ -80,7 +80,8 @@
     margin-top: 8px;
 }
 
-.last-seen {
+
+.first-join {
 
     display: flex;
     flex-direction: row;
@@ -89,7 +90,7 @@
 
 }
 
-.last-seen #p1 {
+.first-join .p1 {
 
     padding-left: 10%;
 
@@ -103,7 +104,44 @@
 
 }
 
-.last-seen #p2 {
+.first-join .p2 {
+
+    padding-right: 10%;
+  
+    margin: 0px;
+
+    width: 50%;
+    
+    color: #646464;
+    font-size: 12px;
+    text-align: right;
+
+}
+
+.last-seen {
+
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
+}
+
+.last-seen .p1 {
+
+    padding-left: 10%;
+
+    width: 50%;
+  
+    margin: 0px;
+
+    color: #CCCCCC;
+    font-weight: bold;
+    font-size: 12px;
+
+}
+
+.last-seen .p2 {
 
     padding-right: 10%;
   

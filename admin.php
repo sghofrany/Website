@@ -183,10 +183,6 @@
                                 <p id="p2"><?php echo($last_seen); ?></p>
                             </div>
 
-                            <div class="separator-wrapper">
-                                <p class="separator"></p>
-                            </div>
-
                         </div>
 
                     </div>
