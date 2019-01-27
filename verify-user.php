@@ -5,14 +5,24 @@ require 'database/database.php';
 include 'libs/utils.php';
 
 if(!isset($_POST['verify_button'])) {
-
     header("Location: verify");
     exit();
 }
 
-$key = mysqli_real_escape_string($connection, $_POST['key']);
+if(!isset($_GET['key'])) {
+    header("Location: index");
+    exit();
+}
+
+if(!isset($_GET['name'])) {
+    header("Location: index");
+    exit();
+}
+
+$key = mysqli_real_escape_string($connection, $_GET['key']);
+$username = mysqli_real_escape_string($connection, $_GET['name']);
+
 $password = mysqli_real_escape_string($connection, $_POST['password']);
-$username = mysqli_real_escape_string($connection, $_POST['username']);
 
 $uuid = get_uuid($username);
 $uuid = ugly_uuid($uuid);
@@ -25,8 +35,8 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 }
 
 //Inputs are empty
-if(empty($key) || empty($password) || empty($username)) {
-    header("Location: verify");
+if(empty($password)) {
+    header("Location: verify?key=$key&name=$username");
     exit();
 }
 
