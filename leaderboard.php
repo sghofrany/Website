@@ -92,7 +92,7 @@
                 </div>
 
                 <table>
-                <?
+                <?php
                 foreach($global_elo as $g) {
                 ?>
                 <tr>
