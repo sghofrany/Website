@@ -198,11 +198,19 @@ function get_name_history($uuid) {
                                 $size = sizeof($history);
 
                                 for ($i = 0; $i < $size; $i++) {
+
+                                    $date = date("d/m/Y", $history[$i]->changedToAt / 1000);
+
+                                    if($i == 0) {
+                                        $date = "initial";
+                                    } elseif ($i == ($size - 1)) {
+                                        $date = "current";
+                                    }
                                 ?>
 
                                 <p class="name"><?php echo($history[$i]->name); ?></p>
                                 
-                                <p class="name-date"><?php echo(date("d/m/Y", $history[$i]->changedToAt / 1000)); ?></p>
+                                <p class="name-date"><?php echo($date); ?></p>
 
                                 <?php
                                  }
