@@ -1,7 +1,5 @@
 <?php
 
-
-
 function get_rank($uuid) {
 
     require 'database/rank-database.php';

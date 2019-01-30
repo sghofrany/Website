@@ -1,4 +1,14 @@
 <?php
+
+function get_name_history($uuid) {
+    $json_response = file_get_contents('https://api.mojang.com/user/profiles/' . $uuid . '/names');
+
+    $obj = json_decode($json_response);
+
+    return $obj;
+}
+
+
     require "header.php";
     require 'database/rank-database.php';
 
@@ -49,17 +59,6 @@
     $elo_rows = mysqli_num_rows($elo_result);
 
     $elo_info = mysqli_fetch_assoc($elo_result);
-
-
-    // $elo_data = array();
-
-    // while($elo = mysqli_fetch_assoc($elo_result)) {
-    //     $elo_data[] = $elo;
-    // }
-
-    // $global = 0;
-
-    // foreach()
 
 ?>
 
@@ -175,12 +174,12 @@
                             
                             <div class="first-join">
                                 <p class="p1">FIRST JOIN</p>
-                                <p class="p2"><?php echo($last_seen); ?></p>
+                                <p class="p2"><?php echo date("M jS, Y",strtotime($last_seen)); ?></p>
                             </div>
 
                             <div class="last-seen">
                                 <p class="p1">LAST SEEN</p>
-                                <p class="p2"><?php echo($last_seen); ?></p>
+                                <p class="p2"><?php echo date("M jS, Y",strtotime($last_seen)); ?></p>
                             </div>
 
                             <div class="separator-wrapper">
@@ -191,8 +190,23 @@
                             <p style=" padding-left: 10%; color: #CCCCCC; font-weight: bold; margin:0px; font-size: 13px;">NAME HISTORY</p>
 
                             <div class="name-history">
-                                <p class="name">Irantwomiles</p>
-                                <p class="name-date">12/12/12</p>
+                                
+                                <?php
+                                
+                                $history = get_name_history(str_replace("-", "", $uuid));
+
+                                $size = sizeof($history);
+
+                                for ($i = 0; $i < $size; $i++) {
+                                ?>
+
+                                <p class="name"><?php echo($history[$i]->name); ?></p>
+                                
+                                <p class="name-date"><?php echo(date("d/m/Y", $history[$i]->changedToAt / 1000)); ?></p>
+
+                                <?php
+                                 }
+                                ?>
                             </div>
 
                             <div class="separator-wrapper">

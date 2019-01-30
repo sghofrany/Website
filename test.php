@@ -1,140 +1,30 @@
 <?php
-    require 'header.php';
-?>
+  
+// $date = '2019-01-15 12:01:12';
+// $date1 = '2019-01-19 12:07:12';
 
-<html>
-
-    <head>
-        <title>Test</title>
-        <link rel="stylesheet" type="text/css" href="css/user.css">
-    </head>
-
-<body>
+// function dateDifference($date_1 , $date_2 , $differenceFormat = '%d Day %h Hours' )
+// {
+//     $datetime1 = date_create($date_1);
+//     $datetime2 = date_create($date_2);
     
-    <div class="wrapper">
-
-        <div class="profile-wrapper">
-
-            <div class="user-wrapper">
-
-                <div class="user">
-                    <div class="user-img">
-                        <img src="https://visage.surgeplay.com/head/128/05cc5c6a48534abfa4c807372696dc0f" alt='Staff Image'>
-                    </div>
-                    
-                    <div class="user-name">
-                        <p>Irantwomiles</p>
-                    </div>
-                </div>
-
-                <div class="user-info">
-
-                    <div class="user-rank">
-                        <p id="developer">DEVELOPER</p>
-                    </div>
-
-                    <div class="separator-wrapper">
-                        <p class="separator"></p>
-                    </div>
-                    
-
-                    <div class="last-seen">
-                        <p id="p1">LAST SEEN</p>
-                        <p id="p2">12/12/12</p>
-                    </div>
-
-                    <div class="separator-wrapper">
-                        <p class="separator"></p>
-                    </div>
-
-
-                    <p style=" padding-left: 10%; color: #CCCCCC; font-weight: bold; margin:0px; font-size: 13px;">NAME HISTORY</p>
-
-                    <div class="name-history">
-                        <p class="name">Irantwomiles</p>
-                        <p class="name-date">12/12/12</p>
-                    </div>
-        
-                    <div class="separator-wrapper">
-                        <p class="separator"></p>
-                    </div>
-
-
-                    <div class="punishment">
-                        <p id="p1">Punishments</p>
-                        <p id="p2">100 total</p>
-                    </div>
-
-                </div>
-            
-            </div>
-
-            <div class="info-wrapper">
-
-                <div class="info-title">
-                    <p class="title">IRANTWOMILE'S PROFILE</p>
-                    <p class="status">BANNED</p>
-                </div>
-
-                <div class="dropdown" style="width: 20%;">
-                    <button class="dropbtn" style="width: 100%;">SELECT GAME</button>
-                    <div class="dropdown-content">
-                        <a href="#">Coming Soon</a>
-                    </div>
-                </div>
-
-                <div class="elo-wrapper">
-                    <div class="elo-box" style="margin-right: 1.3%">
-                        <p class="ladder">NODEBUFF</p>
-                        <p class="elo">1000</p>
-                    </div>
-
-                    <div class="elo-box" style="margin-right: 1.3%">
-                        <p class="ladder">NODEBUFF</p>
-                        <p class="elo">1000</p>
-                    </div>
-
-                    <div class="elo-box" style="margin-right: 1.3%">
-                        <p class="ladder">NODEBUFF</p>
-                        <p class="elo">1000</p>
-                    </div>
-
-                    <div class="elo-box">
-                        <p class="ladder">NODEBUFF</p>
-                        <p class="elo">1000</p>
-                    </div>
-
-                    <div class="elo-box" style="margin-right: 1.3%">
-                        <p class="ladder">NODEBUFF</p>
-                        <p class="elo">1000</p>
-                    </div>
-
-                    <div class="elo-box" style="margin-right: 1.3%">
-                        <p class="ladder">NODEBUFF</p>
-                        <p class="elo">1000</p>
-                    </div>
-
-                    <div class="elo-box" style="margin-right: 1.3%">
-                        <p class="ladder">NODEBUFF</p>
-                        <p class="elo">1000</p>
-                    </div>
-
-                    <div class="elo-box">
-                        <p class="ladder">NODEBUFF</p>
-                        <p class="elo">1000</p>
-                    </div>
-                </div>
-
-            </div>
-        
-        
-        </div>
-
-
+//     $interval = date_diff($datetime1, $datetime2);
     
-    </div>
+//     return $interval->format($differenceFormat);
+    
+// }
 
+// // echo dateDifference($date, $date1);
+// echo date("M jS, Y",strtotime($date));
 
-</body>
+//https://api.mojang.com/user/profiles/05cc5c6a48534abfa4c807372696dc0f/names
 
-</html>
+$json_response = file_get_contents('https://api.mojang.com/user/profiles/05cc5c6a48534abfa4c807372696dc0f/names');
+
+$obj = json_decode($json_response);
+
+$size = sizeof($obj);
+
+for ($i = 0; $i < $size; $i++) {
+    echo $i . " ".  $obj[$i]->name . "<br>";
+}

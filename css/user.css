@@ -68,7 +68,8 @@
 }
 
 .separator-wrapper {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
@@ -156,13 +157,14 @@
 }
 
 .name-history {
-    display: flex;
-    flex-direction: row;
+    display: block;
+    /* flex-direction: row; */
     width: 100%;
 }
 
 .name-history .name {
 
+    float: left;
     padding-left: 10%;
     margin: 0px;
     width: 50%;
@@ -172,7 +174,7 @@
 }
 
 .name-history .name-date {
-
+    float: right;
     padding-right: 10%;
     margin: 0px;
     width: 50%;

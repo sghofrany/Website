@@ -179,8 +179,8 @@
                             
 
                             <div class="last-seen">
-                                <p id="p1">LAST SEEN</p>
-                                <p id="p2"><?php echo($last_seen); ?></p>
+                                <p class="p1">LAST SEEN</p>
+                                <p class="p2"><?php echo date("M jS, Y",strtotime($last_seen)); ?></p>
                             </div>
 
                         </div>
