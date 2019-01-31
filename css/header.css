@@ -212,3 +212,23 @@ body {
         margin: 0px;
     }
 }
+
+#search {
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: #F6F6F6;
+    color: #C7C7C7;
+    border: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#search::placeholder {
+    color: #C7C7C7;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#search:focus {
+    outline: none;
+}

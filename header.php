@@ -70,6 +70,7 @@ session_start();
             </ul>
 
             <ul class="right-nav">
+                
                 <?php
                     if(logged_in()) {
                 ?>
@@ -91,6 +92,13 @@ session_start();
                 <?php
                 }
                 ?>
+                <li class="right-li">
+                    <div class="search-container">
+                        <form action="search.php" method="POST" style="margin: 0px;">
+                            <input id="search" type="text" placeholder="search for players..." name="search">
+                        </form>                    
+                    </div>
+                </li>
             </ul>
         </div>
 
