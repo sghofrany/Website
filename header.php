@@ -94,7 +94,7 @@ session_start();
                 ?>
                 <li class="right-li">
                     <div class="search-container">
-                        <form action="search.php" method="POST" style="margin: 0px;">
+                        <form action="search" method="POST" style="margin: 0px;">
                             <input id="search" type="text" placeholder="search for players..." name="search">
                         </form>                    
                     </div>

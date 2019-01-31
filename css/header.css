@@ -206,10 +206,28 @@ body {
 
     .left-nav {
         margin: 0px;
+        margin-left: 5px;
     }
 
     .right-nav {
+        width: 100%;
         margin: 0px;
+        display: block;
+        padding: 0px;
+    }
+
+    .right-li {
+        /* width: 0%; */
+        float: left;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+
+
+    .navigation {
+        display: block;
     }
 }
 
