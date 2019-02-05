@@ -163,7 +163,7 @@ function has_modify_permission($uuid) {
 
     $rank = get_rank($clean_uuid);
 
-    if($rank === "Owner" || $rank === "Developer" || $rank === "Platform-Admin" || $rank === "Senior-Admin" || $rank === "Admin" || $rank === "Senior-Mod") {
+    if($rank === "Owner" || $rank === "Developer" || $rank === "Manager" || $rank === "Senior-Admin" || $rank === "Admin" || $rank === "Senior-Mod") {
         return true;
     }
 
@@ -177,7 +177,7 @@ function has_view_permission($uuid) {
 
     $rank = get_rank($clean_uuid);
 
-    if($rank === "Owner" || $rank === "Developer" || $rank === "Platform-Admin" || $rank === "Senior-Admin" || $rank === "Admin" || $rank === "Senior-Mod" || $rank === "Mod" || $rank === "Trainee") {
+    if($rank === "Owner" || $rank === "Developer" || $rank === "Manager" || $rank === "Senior-Admin" || $rank === "Admin" || $rank === "Senior-Mod" || $rank === "Mod" || $rank === "Trainee") {
         return true;
     }
 

@@ -24,7 +24,7 @@ require 'header.php';
 
             require 'database/rank-database.php';
 
-            $query = "SELECT * FROM players WHERE (rank='Owner' OR rank='Developer' OR rank='Platform-Admin' OR rank='Senior-Admin' OR rank='Admin' OR rank='Senior-Mod' OR rank='Mod' OR rank='Trainee')";
+            $query = "SELECT * FROM players WHERE (rank='Owner' OR rank='Developer' OR rank='Manager' OR rank='Senior-Admin' OR rank='Admin' OR rank='Senior-Mod' OR rank='Mod' OR rank='Trainee')";
                                     
             $result = mysqli_query($connection, $query);
 
@@ -85,13 +85,13 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">PLATFORM ADMIN</p>
+        <p class="staff-title">Manager</p>
 
         <div class="main-wrapper">
             <?php
                 //Owner
                 foreach($data as $row) {
-                    if($row['rank'] == "Platform-Admin") {
+                    if($row['rank'] == "Manager") {
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>

@@ -109,7 +109,7 @@
                             ?>
                                 <p id="developer"><?php echo($player_rank); ?></p>
                             <?php
-                                } elseif($player_rank === "Platform-Admin") {
+                                } elseif($player_rank === "Manager") {
                             ?>
                                 <p id="plat-admin"><?php echo($player_rank); ?></p>
                             <?php
