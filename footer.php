@@ -14,7 +14,7 @@
                 </ul>
 
                 <ul class="right-footer">
-                    <li>media</li>
+                    <li><a href="media">media</a></li>
                     <li>rules</li>
                     <li>terms of service</li>
                 </ul>
