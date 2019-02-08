@@ -250,3 +250,7 @@ body {
 #search:focus {
     outline: none;
 }
+
+.form-wrapper {
+    margin: 0px;
+}

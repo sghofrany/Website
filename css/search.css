@@ -1,0 +1,30 @@
+.search-wrapper {
+    display: block;
+    text-align: center;
+    width: 20%;
+
+    box-shadow: 0px 3px 20px #a7a6a6;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+.search-name a {
+    text-decoration: none;
+    color: #CCCCCC;
+    transition: color 300ms ease-in;
+}
+
+.search-name a:hover {
+    text-decoration: none;
+    color: #8a8a8a;
+}
+
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #CCCCCC;
+    margin-top: 30px;
+}
