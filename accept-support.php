@@ -8,7 +8,7 @@ if(!isset($_POST['accept-submit'])) {
     exit();
 }
 
-if(!has_permission($_SESSION['uuid'])) {
+if(!has_modify_permission($_SESSION['uuid'])) {
     header("Location: support-list");
     exit();
 }
