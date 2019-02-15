@@ -7,9 +7,9 @@ if(!isset($_GET['search'])) {
     exit();
 }
 
-$search = $_GET['search'];
-
 require 'database/rank-database.php';
+
+$search = mysqli_real_escape_string($connection, $_GET['search']);
 
 $query = "SELECT * FROM players WHERE name='$search'";
 $result = mysqli_query($connection, $query);

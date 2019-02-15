@@ -18,9 +18,9 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 }
 
 $uuid = $_SESSION['uuid'];
-$tid = $_GET['id'];
+$tid = mysqli_real_escape_string($connection, $_GET['id']);
 
-$body = $_POST['editor'];
+$body = mysqli_real_escape_string($connection, $_POST['editor']);
 
 $date = date("Y-m-d");
 

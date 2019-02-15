@@ -5,15 +5,12 @@
     $elo = "";
 
     if(!isset($_GET['game'])) {
-        $elo = "nodebuff_elo";
+        $elo = mysqli_real_escape_string($connection, "nodebuff_elo");
     } else {
-        $elo  = $_GET['game'];
+        $elo  = mysqli_real_escape_string($connection, $_GET['game']);
     }
-
-    $win = str_replace("_elo", "_wins", $elo);
-    $loss = str_replace("_elo", "_losses", $elo);
-
-    $elo_query = "SELECT practice_season_4_data.player_id, practice_season_4_data.$elo, practice_season_4_data.$win, practice_season_4_data.$loss, players.player_id, players.name FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id ORDER BY $elo DESC LIMIT 20";
+    
+    $elo_query = "SELECT practice_season_4_data.player_id, practice_season_4_data.$elo, players.player_id, players.name FROM practice_season_4_data JOIN players ON practice_season_4_data.player_id = players.player_id ORDER BY $elo DESC LIMIT 20";
 
     $result = mysqli_query($connection, $elo_query);
 
