@@ -10,7 +10,7 @@ require 'header.php';
 
     <div class="wrapper">
 
-        <form action="verify-user" method="POST">
+        <form action="verify-user?key=<?php echo($_GET['key']); ?>" method="POST">
 
             <div class="form-group">
                 <label for="pwd">Password</label>

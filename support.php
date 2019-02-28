@@ -42,10 +42,10 @@ require 'header.php';
     </div>
 
     <?php
-            include 'footer.php';
-            exit();
+        include 'footer.php';
+        exit();
+    }
 
-        }
     ?>
 
     <div class="wrapper">
@@ -120,17 +120,17 @@ require 'header.php';
             ?>
             
          </div>
-
+    </div>
         <?php
+            include 'footer.php';
            exit();
            } 
         ?>
 
-           
+        <div class="wrapper">
         <div class="support-info-wrapper">
             <p class="support-title">NETWORK SUPPORT</p>
             <p class="support-body">The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.The worse hand disappears across the fiddle. Whatever vicar scatters the nervous outline. The cooling revenue denotes the arrow. A stroke institutes each alphabet.</p>
-        
         </div>
 
         <form action="support-create" method="POST">
@@ -158,6 +158,7 @@ require 'header.php';
          </div>
 
         </form>
+    </div>
     </div>
     <?php
         include 'footer.php';
