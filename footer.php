@@ -5,7 +5,7 @@
 
     <body>
         
-    <footer>
+    <footer class="footer">
         <div class="wrapper">
             <div class="footer-content">
                 <ul class="left-footer">

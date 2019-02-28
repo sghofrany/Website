@@ -45,7 +45,7 @@ require 'header.php';
         
         </div>
 
-        <p class="staff-title">Partner</p>
+        <p class="staff-title">PARTNER</p>
 
         <div class="main-wrapper">
             <?php
@@ -65,7 +65,7 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">Famous</p>
+        <p class="staff-title">FAMOUS</p>
 
         <div class="main-wrapper">
             <?php
@@ -85,13 +85,13 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">Youtuber</p>
+        <p class="staff-title">YOUTUBER</p>
 
         <div class="main-wrapper">
             <?php
              
                 foreach($data as $row) {
-                    if($row['rank'] == "Youtuber") {
+                    if($row['rank'] == "YouTuber") {
                         echo(
                         "<div class='staff-wrapper'>
                             <div class='staff-img'>

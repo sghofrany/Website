@@ -85,7 +85,7 @@ require 'header.php';
             ?>
         </div>
 
-        <p class="staff-title">Manager</p>
+        <p class="staff-title">MANAGER</p>
 
         <div class="main-wrapper">
             <?php
