@@ -115,8 +115,8 @@ session_start();
                         <form action="login" method="POST">
                             <div class="form-group">
 
-                                <label for="usr">  Email</label>
-                                <input type=text id="usr" class="form-control" aria-describedby="emailHelp" placeholder="Enter your email" name="username">
+                                <label for="usr">  Username</label>
+                                <input type=text id="usr" class="form-control" aria-describedby="emailHelp" placeholder="Enter your username" name="username">
 
                             </div>
                             <div class="form-group">

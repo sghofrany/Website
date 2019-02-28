@@ -8,7 +8,7 @@ require 'header.php';
 
 <body>
 
-    <div class="wrapper">
+    <div class="wrapper" style="margin-top: 30px;">
 
         <form action="verify-user?key=<?php echo($_GET['key']); ?>" method="POST">
 
